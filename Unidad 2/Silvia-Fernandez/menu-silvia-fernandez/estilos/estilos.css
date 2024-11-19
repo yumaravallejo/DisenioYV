@@ -1,0 +1,138 @@
+* {box-sizing: border-box;}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+div#menu {
+    display: flex;
+    flex-direction: column;
+    padding: 1.3rem;
+}
+
+div#menu li {
+    list-style-type: none; 
+}
+
+div#menu li a{
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+div#menu > span.cerrar {
+    text-align:right;
+    cursor: pointer;
+}
+
+div#menu > span.cerrar > img {
+    color: black;
+    width: 3rem;
+}
+
+div#menu > h2 {
+    text-transform: uppercase;
+    text-align:left;
+    font-size: 1.45rem;
+    letter-spacing:  0.8rem ;
+}
+
+nav#main-menu > ul {
+    display: flex;
+    flex-direction: column;
+    margin:0;
+    padding:0;
+}
+
+nav#main-menu > ul > li {
+    margin-top: 1rem;
+    padding: 0.5rem 0;
+}
+
+
+nav#main-menu > ul > li:nth-child(1){
+    margin: 0;
+}
+
+nav#main-menu > ul > li:nth-child(1):hover ul {
+    display: flex;
+    flex-direction: column;
+}
+
+nav#main-menu > ul > li:nth-child(1) ul > li:nth-child(1){
+    text-transform: uppercase;
+}
+
+nav#main-menu > ul > li:nth-child(1)  img {
+    cursor: pointer;
+    height: 1.1rem;
+    vertical-align: middle;
+    margin-left: 0.2rem;
+}
+
+
+nav#main-menu > ul > li:nth-child(1) > ul {
+    display: none;
+}
+
+nav#main-menu > ul > li:nth-child(1) > ul > li {
+    margin-top: 1.3rem;
+}
+
+nav#social-menu > ul {
+    display: flex;
+    margin-top: 3.5rem;
+    padding: 0;
+}
+
+nav#social-menu > ul > li img {
+    width: 2rem;
+    margin-right: 2rem;
+}
+
+nav#social-menu > ul > li span {
+    display: none;
+}
+
+nav#idioma-menu {
+    margin-top: 2rem;
+    
+}
+
+nav#idioma-menu > span {
+    display: flex;
+    cursor: pointer;
+}
+
+nav#idioma-menu > span:hover > ul{
+    display: flex;
+}
+
+nav#idioma-menu > span img {
+    height: 1rem;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+nav#idioma-menu > ul {
+    display: none;
+}
+
+nav#idioma-menu > ul > li a{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+
+nav#idioma-menu > ul > li img{
+    width: 2rem;
+}
+
+nav#idioma-menu:hover ul{
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 4rem;
+}

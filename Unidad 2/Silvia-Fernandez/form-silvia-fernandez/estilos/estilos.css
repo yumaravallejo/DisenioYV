@@ -1,0 +1,44 @@
+* {box-sizing: border-box;}
+
+body {
+    font-family: 'Open Sans', sans-serif; 
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+main > h2 {
+    text-align: center;
+}
+
+main > form {
+    display: flex;
+    flex-direction: column;
+}
+
+main > form label {
+    margin-top: 0.5rem;
+}
+
+main > form input {
+    padding: 0.5rem;
+}
+
+main > form > div {
+    display: flex;
+    align-items: center;
+}
+
+main > form > div > select#pais {
+    flex: 0 5%;
+}
+
+main > form > div > input {
+    flex: 1 90%;
+}
+
+main > form select {
+    padding: 0.5rem;
+}

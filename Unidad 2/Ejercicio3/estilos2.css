@@ -1,0 +1,53 @@
+* {
+    box-sizing:border-box;
+}
+
+body {margin:0}
+
+header, article, nav, main, footer, aside {
+    border: 1px solid lightgrey;
+    text-align:center;
+    height:10rem;
+}
+
+header{background-color: lightgreen;}
+
+nav {
+    background-color: orange;
+    order:-1;
+}
+
+article {
+    background-color: purple;
+}
+
+aside {
+    background-color: lightgray;
+}
+
+footer {
+    background-color: lightblue;
+}
+
+div#contenido, main {
+    display:flex;
+    flex-flow: column;
+}
+
+@media (min-width: 768px) {
+    main {
+        flex-flow: row;
+    }
+
+    nav {
+        flex-grow: 0.3;
+    }
+
+    article {
+        flex-grow: 1;
+    }
+
+    aside {
+        flex-grow: 0.3;
+    }
+}

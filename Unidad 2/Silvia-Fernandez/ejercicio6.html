@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Cita - Silvia Fernández</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 300px;
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        .button {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            
+        }
+        .button:hover {
+            background-color: #444;
+        }
+
+        label {
+            text-align: left
+        }
+
+        .telef {
+            display: flex;
+        }
+
+        .telef select {
+            width: 10%;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h2>Reserva de Cita</h2>
+        <form action="ejercicio6.html" method="POST">
+            <label for="nombre">Nombre: *</label>
+            <input type="text" id="nombre" name="nombre" maxlength="25" pattern="[A-Za-záéíóúÁÉÍÓÚñÑ]+" required>
+
+            <label for="apellidos">Apellidos: *</label>
+            <input type="text" id="apellidos" name="apellidos" maxlength="50" pattern="[A-Za-záéíóúÁÉÍÓÚñÑ]+" required>
+
+            <label for="telefono">Teléfono: *</label>
+            <div class="telef">
+                <select name="bandera" id="bandera" title="Selecciona tu país" required>
+                    <option value="España">🇪🇦</option>
+                    <option value="Inglaterra">🇬🇧</option>
+                    <option value="Francia">🇫🇷</option>
+                    <option value="Italia">🇮🇹</option>
+                </select>
+                <input type="tel" id="telefono" name="telefono" placeholder="612345678" maxlength="9" required>
+            </div>
+            <label for="email">Email: *</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="puntoVenta">Selecciona tu punto de Venta: *</label>
+            <select id="puntoVenta" name="puntoVenta" title="Selecciona tu punto de venta" required>
+                <option value="">Selecciona un país</option>
+                <option value="1">Madrid</option>
+                <option value="2">Navarra</option>
+                <option value="3">Barcelona</option>
+                <option value="4">Málaga</option>
+                <option value="5">Pamplona</option>
+            </select>
+
+            <label for="tipoVestido">Tipo de Vestido: *</label>
+            <select id="tipoVestido" name="tipoVestido" title="Selecciona qué tipo de vestido quieres" required>
+                <option value="">Selecciona un tipo de vestido</option>
+                <option value="vestidoNovia">Vestio de novia</option>
+                <option value="vestidoFiesta">Vestido de fiesta</option>
+            </select>
+
+            <label for="fechaCita">Fecha de cita: *</label>
+            <input type="date" id="fechaCita" name="fechaCita" required pattern="\d{2}/\d{2}/\d{2}$">
+
+            <button type="submit" class="button">Reservar</button>
+        </form>
+    </main>
+
+</body>
+</html>
