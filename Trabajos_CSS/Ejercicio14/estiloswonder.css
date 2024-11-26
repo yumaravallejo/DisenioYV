@@ -56,51 +56,50 @@ header>nav#menu-principal>label {
 	align-items: center;
 }
 
-label > span.hamburguer-line {
-	transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-span.hamburguer-line:nth-child(1) {
+label > span {
 	position: absolute;
-	top: 35%;
-	left: 30%;
 	background: grey;
 	width: 2rem;
 	height: .3rem;
 	border-radius: 0.2rem;
+	transition: background 0s .25s;} 
+	/* Cuando quiero que empiece y el retardo */
+
+span.hamburguer-line:nth-child(1) {
+	top: 35%;
+	left: 30%;
+	transition: top .25s ease .25s, transform .25s ease 0s ;
+
 }
 
 span.hamburguer-line:nth-child(2) {
-	position: absolute;
 	top: 50%;
 	left: 30%;
-	background: grey;
-	width: 2rem;
-	height: .3rem;
-	border-radius: 0.2rem;
+	transition: top .25s ease .25s, transform .25s ease 0s ;
 }
 
 span.hamburguer-line:nth-child(3) {
-	position: absolute;
 	top: 65%;
 	left: 30%;
-	background: grey;
-	width: 2rem;
-	height: .3rem;
-	border-radius: 0.2rem;
+	transition: top .25s ease .25s, transform .25s ease 0s ;
+
 }
 
 #hamburguer-icon:checked+label>span:nth-child(1) {
-	transform: translate(0px, 12px) rotate(46deg);
+	top: 50%; 
+	transform: rotate(46deg);
+	transition-delay: 0s, .025s;
 }
 
 #hamburguer-icon:checked+label>span:nth-child(2) {
-	opacity: 0;
+	background: none;
 	/* Hide the middle line */
 }
 
 #hamburguer-icon:checked+label>span:nth-child(3) {
-	transform: translate(0px, -12px)rotate(-44deg);
+	top: 50%; 
+	transform: rotate(-44deg);
+	transition-delay: 0s, .025s;
 }
 
 header>nav#menu-principal>ul#menu>li {

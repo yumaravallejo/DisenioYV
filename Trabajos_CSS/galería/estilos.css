@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url(images/Texture-background/99.jpg);
+}
+
+ul.polaroids {
+    margin-top: 3rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    row-gap: 5rem;
+    column-gap: 1.5rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 1rem 3rem;
+}
+
+ul.polaroids>li {
+    flex-basis: 19%;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0.2rem 0.5rem rgb(87, 87, 87);
+
+}
+
+ul.polaroids>li>a>img {
+    width: 90%;
+    height: auto;
+    margin-top: 6%;
+}
+
+ul.polaroids>li>a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: larger;
+    text-decoration: none;
+    color: black;
+}
+
+
+ul.polaroids>li:nth-child(2n){
+    transform: rotate(2deg);
+}
+
+ul.polaroids>li:nth-child(2n+1) {
+    transform: rotate(-6deg);
+}
+
+ul.polaroids>li:nth-child(8n+2) {
+    transform: rotate(-10deg);
+}
+
+ul.polaroids>li:nth-child(6n+1) {
+    transform: rotate(8deg);
+}
+
+/*Poner hover siempre despues de los principales por si se 
+hiciera un cambio que pueda generar un fallo del hover*/
+ul.polaroids>li:hover{
+    transform: scale(1.15);
+}
+
+ul.polaroids>li>a[title]::after {
+    content: attr(title);
+    padding: 10% 0;
+}
