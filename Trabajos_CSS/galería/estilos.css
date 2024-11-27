@@ -25,7 +25,7 @@ ul.polaroids>li {
     background-color: white;
     text-align: center;
     box-shadow: 0 0.2rem 0.5rem rgb(87, 87, 87);
-
+    transition-duration: .25s;
 }
 
 ul.polaroids>li>a>img {
@@ -38,31 +38,22 @@ ul.polaroids>li>a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: larger;
     text-decoration: none;
     color: black;
 }
 
-
-ul.polaroids>li:nth-child(2n){
+ul.polaroids>li:nth-child(odd){
     transform: rotate(2deg);
 }
 
-ul.polaroids>li:nth-child(2n+1) {
+ul.polaroids>li:nth-child(even) {
     transform: rotate(-6deg);
-}
-
-ul.polaroids>li:nth-child(8n+2) {
-    transform: rotate(-10deg);
-}
-
-ul.polaroids>li:nth-child(6n+1) {
-    transform: rotate(8deg);
 }
 
 /*Poner hover siempre despues de los principales por si se 
 hiciera un cambio que pueda generar un fallo del hover*/
 ul.polaroids>li:hover{
+    transition-duration: .25s;
     transform: scale(1.15);
 }
 
