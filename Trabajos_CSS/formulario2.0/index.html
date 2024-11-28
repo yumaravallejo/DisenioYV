@@ -14,13 +14,13 @@
         <form action="#" method="POST">
             <span class="cnt-input">
                 <input class="inp-esp" type="text" id="nombre" name="nombre"  autofocus maxlength="25"
-                    pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$" title="Inserte su nombre">
+                    pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$" title="Inserte su nombre" required>
                 <label class="lbl" for="nombre"><span class="txt-plch">Nombre</span></label>
             </span>
 
             <span class="cnt-input">
                 <input class="inp-esp" type="text" id="apellidos" name="apellidos"  maxlength="50"
-                    pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$" title="Inserte su apellido">
+                    pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$" title="Inserte su apellido" required>
                 <label class="lbl" for="apellidos"><span class="txt-plch">Apellidos</span></label>
             </span>
 
@@ -40,7 +40,7 @@
             <span class="cnt-input">
                 <input class="inp-esp" type="email" id="email" name="email"  maxlength="25"
                     title="Inserte su dirección de correo electrónico"
-                    pattern="[a-zA-Z0-9. %+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                    pattern="[a-zA-Z0-9. %+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
                 <label class="lbl" for="email"><span class="txt-plch">Email</span></label>
             </span>
 
