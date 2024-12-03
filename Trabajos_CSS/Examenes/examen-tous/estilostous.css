@@ -1,0 +1,103 @@
+/* ESTILOS GENÉRICOS */
+* {box-sizing: border-box;}
+
+body {font-family: "Barlow Semi Condensed", sans-serif; margin:0 auto; color: rgb(255, 136, 195);}
+
+ul {list-style-type: none; padding: 0}
+a {color: rgb(255, 136, 195); text-decoration: none; display: block; ;}
+
+/* ESTILOS DE MODO MÓVIL */
+header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > p#publi {
+    background-color: black;
+    flex-basis: 100%;
+    color: white;
+    margin: 0;
+    line-height: 3rem;
+    padding-left: 1rem;
+
+}
+
+header > nav#bloque-iconos {
+    flex-basis: 20%;
+    order: 3;
+    display: flex;
+    flex-flow: row nowrap;
+    column-gap: 0.7rem;
+    padding-right: 0.5rem;
+}
+
+header > nav#bloque-iconos span {
+   display: none;
+}
+
+header > nav#bloque-iconos i {
+    font-size: 1.4rem;
+    color: rgb(255, 136, 195);
+
+ }
+
+header > picture#logo {
+    flex-basis: 25%;
+    order: 2;
+    
+}
+
+header > picture#logo > img {
+    width: 10rem;
+    padding-top: .2rem
+}
+
+header > nav#menu-principal {
+    flex-basis: 10%;
+    order:1;
+    padding-left: 1rem;
+}
+
+header > nav#menu-principal > label {
+    cursor: pointer;
+}
+
+header > nav#menu-principal > label > span{
+    font-size: 2rem;
+    color: rgb(255, 136, 195);
+}
+
+header > nav#menu-principal > input {
+    display: none;
+}
+
+header > nav#menu-principal a {padding:.2rem 1rem} 
+
+header > nav#menu-principal a:hover {background-color: rgb(255, 136, 195); color: white;}
+
+header > nav#menu-principal > input:checked + ul {
+    display: flex;
+    position: absolute;
+    flex-flow: column;
+    background-color: white;
+    flex-basis: 100%;
+    left: 0;
+
+}
+
+header > nav#menu-principal> ul{
+    display: none;
+}
+
+
+/* ESTILOS DE MODO TABLET */
+@media (min-width: 600px) {
+    
+}
+
+/* ESTILOS DE MODO DESKTOP */
+@media (min-width: 1024px) {
+
+}
