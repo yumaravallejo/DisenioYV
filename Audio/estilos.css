@@ -1,0 +1,21 @@
+* {box-sizing: border-box;}
+
+div#reproductor {
+    background-color: black;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+i {
+    color: white ;
+    font-size: 1.5rem;
+}
