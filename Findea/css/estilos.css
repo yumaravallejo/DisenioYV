@@ -1,6 +1,192 @@
-header {
-  display:flex;
-  flex-flow: column;
-  justify-content:center;
-  background-color: red;
+* {
+  box-sizing: border-box;
 }
+
+body {
+  font-family: "Gantari", serif;  margin: 0;
+}
+
+/* VARIABELES DE COLOR */
+:root {
+  --azul-oscuro: #2B538F;
+  --azul-claro: #188DFA;
+  --rojo-claro: #FF0C01;
+  --rojo-oscuro: #A40700;
+  --gris-fondo: #F5F5F5;
+  --gris-oscuro: #8C8C8C;
+}
+
+/* GENERALES */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: var(--azul-claro);
+}
+
+a#pinterest:hover > img {
+  src: url("https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/pinterest-a.svg")
+}
+
+/* MODO MÓVIL */
+
+header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0 1rem;
+  align-content: center;
+  padding-top: 4rem;
+  padding-bottom: .5rem;
+}
+
+header > picture {
+  text-align: center;
+}
+
+header>picture>img {
+  width: 8rem;
+}
+
+nav#menu {
+  display: flex;
+  flex-flow: column;
+  padding-right: 2.43rem
+}
+
+header > nav > input {
+  display: none;
+}
+
+nav>input#hamburger:checked+*+nav.main-menu {
+  left: 0;
+}
+
+label.menu-toggle {
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  border-radius: 0.2rem;
+}
+
+label.menu-toggle>span {
+  position: absolute;
+  background: black;
+  width: 2rem;
+  height: .2rem;
+  border-radius: 0.2rem;
+}
+
+label span:nth-child(1) {
+  top: 0.7em;
+  transition: top .25s ease .25s, transform .25s ease 0s;
+
+}
+
+label span:nth-child(2) {
+  top: 1.4em;
+
+}
+
+label span:nth-child(3) {
+  top: 2em;
+  transition: top .25s ease .25s, transform .25s ease 0s;
+
+}
+
+nav>input:checked+label>span:nth-child(1) {
+  top: 1.4em;
+  transform: rotate(45deg);
+  transition-delay: 0s, .025s;
+
+}
+
+nav>input:checked+label>span:nth-child(2) {
+  background: none;
+}
+
+nav>input:checked+label>span:nth-child(3) {
+  top: 1.4em;
+  transform: rotate(-45deg);
+  transition-delay: 0s, .025s;
+
+}
+
+nav.main-menu {
+  display: flex;
+  flex-flow: column;
+  background-color: white;
+  align-items: center;
+  row-gap: 3.5rem;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  height: 86%;
+  padding-top: 3rem;
+  top: 7rem;
+  left: -100%;
+  transition: left .50s ease 0s
+}
+
+nav.main-menu > a{
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+
+
+nav.main-menu > span#buscador {
+  width: 19rem;
+  position: relative;
+  height: 1.7rem;
+}
+
+nav.main-menu > span#buscador > img {
+  position: absolute;
+  width: .8rem;
+  top: .45rem;
+  left: .5rem;
+}
+
+nav.main-menu > span#buscador > span {
+  position: absolute;
+  left: 1.5rem;
+  top: .35rem;
+  color: var(--gris-oscuro);
+  font-size: .9rem;
+}
+
+nav.main-menu > span#buscador > input{
+  width: 100% ;
+  height: 100%;
+  padding-left: 1.7rem
+}
+
+#buscador input:focus ~ .texto-buscar,
+#buscador input:not(:placeholder-shown) ~ .texto-buscar {
+  display: none;
+}
+
+
+nav#utilidades-usuario {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav#utilidades-usuario > a > img {
+  width: 1.8rem;
+}
+
+nav#utilidades-usuario > a span {
+  display: none;
+}
+
+/* MODO TABLET */
+
+/* MODO DESKTOP */

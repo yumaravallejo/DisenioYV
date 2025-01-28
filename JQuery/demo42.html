@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Evento hover</title>
+    <meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $("ul#menu > li")
+          .on("mouseenter", function () {
+            $(this).css("background-color", "lightblue");
+          })
+          .on("mouseleave", function () {
+            $(this).css("background-color", "white");
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <ul id="menu">
+      <li>NOVEDADES</li>
+      <li>MUJER</li>
+      <li>HOMBRE</li>
+      <li>KIDS</li>
+      <li>ACCESORIOS</li>
+    </ul>
+  </body>
+</html>
