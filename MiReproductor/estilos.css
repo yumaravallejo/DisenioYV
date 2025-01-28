@@ -1,0 +1,48 @@
+* {box-sizing: border-box;}
+
+div#reproductor {
+    position: fixed;
+    left:15%;
+    bottom: 20px;
+    background-color: black;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 70%;
+}
+
+div#botones{
+    display: flex;
+    justify-content: space-evenly;
+    flex:33%;
+}
+
+div#volumen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex:33%;
+}
+
+button {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer; 
+}
+
+i {
+    color: white ;
+    font-size: 1.2rem;
+}
+
+i#btnPlay {
+    align-content: center;
+    color: black;
+    background-color: white;
+    width: 2.5rem;
+    height:2.5rem;
+    border-radius: 100%;
+}

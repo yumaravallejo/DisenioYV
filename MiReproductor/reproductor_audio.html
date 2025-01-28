@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reproductor de Audio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="estilos.css" />
+</head>
+
+<body>
+    <div id="reproductor">
+        <div id="botones">
+            <button id="restart">
+                <i class="fa fa-refresh" title="Parar Canción" alt="Parar Canción"></i>
+            </button>
+            <button id="parar">
+                <i class="fa fa-stop" title="Parar Canción" alt="Botón para parar el audio"></i>
+            </button>
+        </div>
+        <button id="reproducir" name="reproducir">
+            <i id="btnPlay" class="fa fa-play" aria-hidden="true" title="Pausar y continuar audio"
+                alt="Pausar y continuar audio"></i>
+        </button>
+        <div id="volumen">
+            <i class="uil uil-volume-up" id="iconVolumen"></i>
+            <input type="range" min="0" step="1" max="100" value="100" id="barraVolumen" />
+            <span class="slide-value" id="valorVolumen" style="color: white">100</span>
+        </div>
+        <audio id="audio" class="audio" src="town-10169.mp3"></audio>
+    </div>
+
+    <!-- Dentro de la etiqueta audio controls para que se vean los controles y loop para que se repita continuamente-->
+    <!-- <script type="module">
+        /*Si no quieres usar el html puedes usar:
+            const audio = new Audio("sound.mp3");
+        */
+        const audio = document.querySelector(".audio");
+        // audio.controls = true; Que aparezcan los controles
+        // audio.loop = true; Al acabar empezará de nuevo
+        audio.play();
+    </script> -->
+    <!-- Poner siempre el script bajo el html -->
+    <script src="funciones-reproductor-audio.js"></script>
+</body>
+
+</html>

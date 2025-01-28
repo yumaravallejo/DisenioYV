@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Vídeo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+    <div class="contenedor">
+        <video id="video" src="videos/videos/trailer.mp4"></video>
+
+        <div class="barra-control">
+            <span id="duracion">
+                <span id="tiempoInicio">0:00</span>
+                <input type="range" id="barraTiempo" value="0" max="100">
+                <span id="tiempoFinal"></span>
+
+                <button id="fullscreen"><i class="fa fa-expand"></i></button>
+            </span>
+
+            <button id="lento"><i class="fa fa-minus"></i></button>
+            <button id="rapido"><i class="fa fa-plus"></i></button>
+
+
+            <button id="parar"><i class="fa fa-stop"></i></button>
+            <button id="atras"><i class="fa fa-backward"></i></button>
+            <button id="reproducir"><i id="btnPlay" class="fas fa-play"></i></button>
+            <button id="adelante"><i class="fa fa-forward"></i></button>
+            <button id="restart"><i class="fa fa-redo"></i></button>            
+
+            <span id="volumen">
+                <input type="range" id="volume" value="1" max="1" step="0.01">
+                <button id="mute"><i id="btnMute" class="fa fa-volume-up"></i></button>
+            </span>
+
+           
+        </div>
+    </div>
+    <script src="funciones-reproductor.js"></script>
+</body>
+</html>
