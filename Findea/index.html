@@ -42,7 +42,7 @@
             <a href="#" class="item-menu">Esculturas</a>
             <a href="#" class="item-menu">Otros diseños</a>
             <a href="#" class="item-menu">Personalizaciones</a>
-            <nav>
+            <nav id="redes">
               <a href="#">
                 <img
                   id="pinterest"
@@ -126,14 +126,17 @@
             <section class="slider1 slider-section">
               <h2>Colección</h2>
               <h3>Nombre Autor</h3>
+              <a href="#" class="slider-a"></a>
             </section>
             <section class="slider2 slider-section">
               <h2>Colección</h2>
               <h3>Nombre Autor</h3>
+              <a href="#" class="slider-a"></a>
             </section>
             <section class="slider3 slider-section">
               <h2>Colección</h2>
               <h3>Nombre Autor</h3>
+              <a href="#" class="slider-a"></a>
             </section>
           </div>
             <div class="btn-left">
@@ -143,11 +146,93 @@
             <div class="btn-right">
               <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/arrow.svg"
               alt="Icono de flecha derecha" title="Siguiente Slider" />
+            </div>
+            <div class="positioner">
+              <span class="position"></span>
+              <span class="position"></span>
+              <span class="position"></span>
             </div>     
           </div>
-      </main>
 
-      <footer></footer>
+          <h1>Artistas TOP del momento</h1>
+          <section id="artistas-top">
+            <article id="artista1" class="item-inicial">
+              <a href="#" class="articulo">
+                Nombre Artista
+              </a>
+            </article>
+            <article id="artista2" class="item-inicial">
+              <a href="#" class="articulo">
+                Nombre Artista
+              </a>
+            </article>
+            <article id="artista3" class="item-inicial">
+              <a href="#" class="articulo">
+                Nombre Artista
+              </a>
+            </article>
+            <article id="artista4" class="item-inicial">
+              <a href="#" class="articulo">
+                Nombre Artista
+              </a>
+            </article>
+            <article id="artista5" class="item-inicial">
+              <a href="#" class="articulo">
+                Nombre Artista
+              </a>
+            </article>
+          </section>
+      </main>
+      <footer>
+        <nav id="redes">
+          <a href="#">
+            <img
+              id="pinterest"
+              src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/pinterest-b.svg"
+              alt="Icono de Pinterest"
+              title="Ir a pinterest"
+            />
+          </a>
+          <a href="#">
+            <img
+              id="facebook"
+              src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/facebook-b.svg"
+              alt="Icono de Facebook"
+              title="Ir a Facebook"
+            />
+          </a>
+          <a href="#">
+            <img
+              id="instagram"
+              src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/instagram-b.svg"
+              alt="Icono de Instagram"
+              title="Ir a Instagram"
+            />
+          </a>
+          <a href="#">
+            <img
+              id="email"
+              src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/mail-b.svg"
+              alt="Icono de mail"
+              title="Contactar vía email"
+            />
+          </a>
+        </nav>
+        <form id="newsletter" action="#" method="post">
+          <label for="newsletter">¡Suscríbete a nuestra newsletter!</label><br>
+          <input type="email" name="newsletter" id="newsletter" placeholder="Correo Electrónico">
+          <button type="submit">
+            <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/newsletter-icon.svg">
+          </button>
+          <p>Al suscribirte estás aceptando nuestra política de datos</p>
+          <span class="error-newsletter">¡Ups ha ocurrido algo! Inténtalo de nuevo más tarde</span>
+        </form>
+        
+        <div class="politica">
+          <span><a href="#">Accesibilidad</a> | <a href="#">Política de privacidad de datos</a> | <a href="#">Cookies</a></span>
+          <small>&copy; 2025 FINDEA Todos los derechos reservados</small>
+        </div>
+      </footer>
     </div>
     <script src="js/script.js"></script>
   </body>
