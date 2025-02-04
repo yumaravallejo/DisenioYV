@@ -78,10 +78,14 @@ function posicionar() {
   });
 }
 
-hamburgerCheckbox.on("change", function () {
+$("#hamburger").on("change", function () {
   if (hamburgerCheckbox.checked) {
     body.classList.add("no-scroll");
   } else {
     body.classList.remove("no-scroll");
   }
 });
+
+function volver() {
+  window.history.back();
+}
