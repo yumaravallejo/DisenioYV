@@ -1,0 +1,146 @@
+* {box-sizing: border-box}
+
+body {font-family: Arapey, Sans-serif; max-width: 29rem; margin: 0 auto;}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: black;
+    padding: 0.2rem 0;
+    text-decoration: none;
+    display: block;
+}
+
+header > nav#menu-principal > ul > li > a:hover {
+    background-color: lightgrey;
+}
+
+header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > picture > img {
+    width: 6rem ;
+}
+
+header > picture {
+    order: 3;
+}
+
+header > nav#menu-principal {
+    order: 1;
+}
+
+header > nav#menu-principal > input {
+   display: none;
+}
+
+header > nav#menu-principal > input:checked + ul#menu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    max-width: 29rem;
+    background-color: white;
+    border-bottom: 1px solid black
+ }
+
+header > nav#menu-principal > ul#menu {
+    display: none;
+}
+
+header > nav#menu-principal > label >  span {
+   padding: 0 0.5rem;
+   cursor: pointer;
+   font-size: 1.4rem;
+}
+
+header > nav#buscador {
+    order: 2;
+}
+
+header > nav > ul {
+    padding: 0 0.5rem;
+}
+
+header > nav#menu-principal > ul {
+    padding: 0;
+}
+
+header > nav#compra {
+    order: 5;
+}
+
+header > nav#hidden {
+    visibility: hidden;
+    order: 4;
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+main > article.item {
+    display: flex;
+    flex-flow : column;
+    flex: 0 49%;
+    text-align: center;
+}
+
+main > article.item > a:nth-child(2) {
+  order: 1;
+}
+
+main > article.item > a > picture > img {
+    height: 100%;
+    max-width: 100%;
+}
+
+main > article.item > a:nth-child(1)  {
+    order: 2;
+    font-size: 0.9rem;
+}
+
+main > article.item > p {
+    order: 3;
+    font-size: 0.8rem;
+}
+
+footer {
+    display: flex;
+    flex-flow: column; 
+}
+
+footer > nav#menu-adicional{
+    display: flex;
+    flex-flow: row 
+}
+
+footer > nav#menu-adicional > ul{
+    padding: 0;
+    flex:100%;
+}
+
+footer > nav#menu-adicional > ul > li > a{
+    font-size: 0.8rem;
+    border-bottom: 1px solid lightgrey;
+
+}
+
+footer > nav#iconos-sociales > ul  {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    column-gap: 1rem ;
+    flex-flow: row wrap;
+
+}
+
+
