@@ -52,6 +52,8 @@ let operacion = 0,
   counter = 0,
   widthImg = 100 / sliderSection.length;
 
+
+
 $(".btn-left").on("click", () => {
   counter = (counter - 1 + sliderSection.length) % sliderSection.length;
   operacion = counter * widthImg;
@@ -63,6 +65,26 @@ $(".btn-left").on("click", () => {
 });
 
 $(".btn-right").on("click", () => {
+  counter = (counter + 1) % sliderSection.length;
+  operacion = counter * widthImg;
+
+  slider.style.transform = `translate(-${operacion}%)`;
+  slider.style.transition = "all ease .6s";
+
+  posicionar();
+});
+
+$(".btn-left-peq").on("click", () => {
+  counter = (counter - 1 + sliderSection.length) % sliderSection.length;
+  operacion = counter * widthImg;
+
+  slider.style.transform = `translate(-${operacion}%)`;
+  slider.style.transition = "all ease .6s";
+
+  posicionar();
+});
+
+$(".btn-right-peq").on("click", () => {
   counter = (counter + 1) % sliderSection.length;
   operacion = counter * widthImg;
 
