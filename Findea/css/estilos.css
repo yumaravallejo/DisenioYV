@@ -38,12 +38,22 @@ a#pinterest:hover>img {
   src: url("https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/pinterest-a.svg")
 }
 
-.cerrar-sesion-btn {
-  /* background-color: var(--rojo-claro);
-  font-weight: bold;
+.btn-peq {
+  font-weight: 500;
   border: none;
-  border-radius: 30%; */
+  border-radius: 3rem;
+  align-content: center;
+  color: white;
+  width: 22rem;
+  height: 6rem;
+  font-size: 2.8rem;
 }
+
+.enlace {
+  text-decoration: underline;
+  color: var(--azul-oscuro);
+}
+
 /* ----- MODO MÓVIL (principal) ------ */
 /* Header  --------------------------------- */
 header {
@@ -270,7 +280,7 @@ section.slider-section>h3 {
 }
 
 section.slider-section>h3.peque {
-  margin-top: 2.5rem;
+  margin-top: 1rem;
   font-size: 4.2rem;
 }
 
@@ -370,7 +380,7 @@ section.slider-section>a>img {
 }
 
 div.container-carousel-peq {
-  width:70%;
+  width:80%;
   height: 30rem;
   overflow: hidden;
   position: relative;
@@ -463,16 +473,22 @@ main#user-profile {
   text-align: center;
   flex-flow: column;
   align-items: center;
+
 }
 
 main#user-profile > h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  font-weight: 650;
+  margin-top: 4rem;
+  margin-bottom: 3rem
 }
 
 main#user-profile > img {
-  width: 17rem;
-  height: 16rem;
+  width: 20rem;
+  height: 19rem;
   border-radius: 100%;
+  border: 1px solid black;
+  margin-bottom: 1rem
 }
 
 input[type='file']#editar-pic {
@@ -482,8 +498,70 @@ input[type='file']#editar-pic {
 label[for='editar-pic'] {
   font-weight: bold;
   color: var(--azul-oscuro);
+  font-size: 2.3rem;
 }
 
+section#propiedades-user {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-items: center;
+  margin-top: 6rem;
+}
+
+section#propiedades-user > h2 {
+  text-align: left;
+  margin-left: 6rem;
+  flex: 100%;
+  font-size: 3.8rem;
+  font-weight: 550;
+}
+
+section#propiedades-user > input[type='text'] {
+  flex: 100%;
+  margin: 0 6rem;
+  padding: 2rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--gris-oscuro);
+  border-radius: 2rem;
+  color: var(--gris-oscuro);
+}
+
+section#propiedades-user > input[type='text']#descripcion {
+  padding-bottom: 12rem;
+}
+
+nav#botones{
+  flex: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  column-gap: 1rem;
+}
+
+nav#botones > a:nth-child(1), nav#botones > a:nth-child(4) {
+  font-size: 2.5rem;
+  flex: 100%;
+  margin-top: 1rem;
+}
+
+nav#botones > a:nth-child(2){
+  margin-top: 6rem;
+  background-color: var(--rojo-claro);
+}
+
+nav#botones > a:nth-child(3){
+  margin-top: 6rem;
+  background-color: var(--azul-claro);
+}
+
+nav#botones > a:nth-child(4){
+  margin-top: 4rem;
+  margin-bottom: 15rem;
+  color: var(--gris-oscuro);
+  font-weight: 600;
+}
 
 /* Footer  --------------------------------- */
 

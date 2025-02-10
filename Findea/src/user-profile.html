@@ -97,13 +97,11 @@
             <h1>nombredeusuario</h1>
             <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/usuario.webp"
                 alt="imagen de perfil de usuario">
-            <label for="editar-pic">Editar imagen</label>
+            <label for="editar-pic">Editar foto</label>
             <input type="file" id="editar-pic">
 
             <section id="propiedades-user">
-                <textarea name="descripcion" id="descripcion">
-                    Descripción
-                </textarea>
+                <input type="text" name="descripcion" id="descripcion" value="Descripción" />
                 <input type="text" name="ubicacion" value="Ubicación">
                 <input type="text" name="enlace" value="Enlace a tu web">
                 <input type="text" name="Móvil" value="Móvil">
@@ -141,50 +139,15 @@
                     </div>
                 </div>
             
-                <div id="botones">
-                    <a class="verTodo" href="mis-trabajos.html"></a>
-                    <a class="cerrar-sesion-btn" href="cerrar-sesion.html">Cerrar Sesión</a>
-                    <a class="editar-btn" href="editar-perfil.html">Editar</a>
+                <nav id="botones">
+                    <a class="enlace" href="mis-trabajos.html">Ver Todo / Editar</a>
+                    <a class="btn-peq" href="cerrar-sesion.html">Cerrar Sesión</a>
+                    <a class="btn-peq" href="editar-perfil.html">Editar</a>
                     <a class="eliminar-cuenta-btn" href="eliminar-cuenta.html">Eliminar Cuenta</a>
-                </div>
+                </nav>
             </section>
         </main>
 
-        <footer>
-            <nav id="redes">
-                <a href="#">
-                    <img id="pinterest" src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/pinterest-b.svg"
-                        alt="Icono de Pinterest" title="Ir a pinterest" />
-                </a>
-                <a href="#">
-                    <img id="facebook" src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/facebook-b.svg"
-                        alt="Icono de Facebook" title="Ir a Facebook" />
-                </a>
-                <a href="#">
-                    <img id="instagram" src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/instagram-b.svg"
-                        alt="Icono de Instagram" title="Ir a Instagram" />
-                </a>
-                <a href="#">
-                    <img id="email" src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/mail-b.svg"
-                        alt="Icono de mail" title="Contactar vía email" />
-                </a>
-            </nav>
-            <form id="newsletter" action="#" method="post">
-                <label for="newsletter">¡Suscríbete a nuestra newsletter!</label><br>
-                <input type="email" name="newsletter" id="newsletter" placeholder="Correo Electrónico">
-                <button type="submit">
-                    <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/newsletter-icon.svg">
-                </button>
-                <p>Al suscribirte estás aceptando nuestra política de datos</p>
-                <span class="error-newsletter">¡Ups ha ocurrido algo! Inténtalo de nuevo más tarde</span>
-            </form>
-
-            <div class="politica">
-                <span><a href="accesibilidad.html">Accesibilidad</a> | <a href="politica-privacidad.html">Política de
-                        privacidad de datos</a> | <a onclick="mostrarCookies()">Cookies</a></span>
-                <small>&copy; 2025 FINDEA Todos los derechos reservados</small>
-            </div>
-        </footer>
         <!-- SCRIPT -->
         <!-- <script src="../js/script.js"></script> -->
         <script src="https://web-estatica-yvv.s3.us-east-1.amazonaws.com/script.js"></script>
