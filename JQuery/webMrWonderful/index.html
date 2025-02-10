@@ -243,7 +243,8 @@
           }
         });
 
-        $("#menu-hambur")
+		//Sin animaciones
+        // $("#menu-hambur")
           //   .on("mouseenter", function() {
           // 	$('.hamburguer-line').css('background', 'black')
           //   })
@@ -254,15 +255,18 @@
         //     $("#menu").toggle();
         //   });
 
+
+		//Con animaciones
+		//Esto hace que las animaciones no se aniden --> .stop(true,true)
         $("#menu-hambur")
           .on("mouseenter", function () {
-            $(".hamburguer-line").animate({ "background-color": "black" }, 500);
+            $(".hamburguer-line").stop(true,true).animate({ "background-color": "black" }, 500);
           })
           .on("mouseleave", function () {
-            $(".hamburguer-line").animate({ "background-color": "#808080" }, 500);
+            $(".hamburguer-line").stop(true,true).animate({ "background-color": "#808080" }, 500);
           })
 		  .on("click", function () {
-            $("#menu").fadeToggle();
+            $("#menu").stop(true,true).fadeToggle();
           });
       });
     </script>

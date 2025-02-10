@@ -570,6 +570,7 @@ footer>div.politica {
   display: flex;
   flex-flow: row wrap;
   font-size: 2.1rem;
+  border: 1px solid red;
   row-gap: 1rem;
   align-content: center;
   text-align: center;
@@ -578,8 +579,8 @@ footer>div.politica {
 
 footer>form#newsletter>span.error-newsletter {
   color: var(--rojo-claro);
-  visibility: hidden;
-  font-size: 1.8rem;
+  display: none;
+  font-size: 1.9rem;
   flex: 100%;
 }
 

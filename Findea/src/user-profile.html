@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <title>Findea</title>
     <meta charset="utf-8" />
     <meta content="Yumara Vallejo Vallejo" name="author" />
@@ -10,14 +10,17 @@
     <meta name="lang" content="es-ES" />
     <link rel="stylesheet" href="../css/estilos.css" />
     <!-- <link rel="stylesheet" href="https://web-estatica-yvv.s3.us-east-1.amazonaws.com/estilos.css"/> -->
-    <link rel="shortcut icon" href="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/Logo-Findea.svg" />
+    <link
+      rel="shortcut icon"
+      href="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/Logo-Findea.svg"
+    />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <style>
-        /* Tipo de letra Gantari */
-        @import url("https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&display=swap");
+      /* Tipo de letra Gantari */
+      @import url("https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&display=swap");
     </style>
-</head>
+  </head>
 
 <body>
     <div id="contenedor">
@@ -97,45 +100,54 @@
             <label for="editar-pic">Editar imagen</label>
             <input type="file" id="editar-pic">
 
+            <section id="propiedades-user">
+                <textarea name="descripcion" id="descripcion">
+                    Descripción
+                </textarea>
+                <input type="text" name="ubicacion" value="Ubicación">
+                <input type="text" name="enlace" value="Enlace a tu web">
+                <input type="text" name="Móvil" value="Móvil">
 
-            <h2>Mis trabajos</h2>
-            <div class="container-carousel-peq">
-                <div class="carruseles" id="slider">
-                  <section class="slider1 slider-section">
-                    <h3 class="peque">Colección</h3>
-                    <a href="perfil_artista.html" class="slider-a"></a>
-                  </section>
-                  <section class="slider2 slider-section">
-                    <h3 class="peque">Colección</h3>
-                    <a href="perfil_artista.html" class="slider-a"></a>
-                  </section>
-                  <section class="slider3 slider-section">
-                    <h3 class="peque">Colección</h3>
-                    <a href="perfil_artista.html" class="slider-a"></a>
-                  </section>
+
+                <h2>Mis trabajos</h2>
+                <div class="container-carousel-peq">
+                    <div class="carruseles" id="slider">
+                        <section class="slider1 slider-section">
+                            <h3 class="peque">Colección</h3>
+                            <a href="perfil_artista.html" class="slider-a"></a>
+                        </section>
+                        <section class="slider2 slider-section">
+                            <h3 class="peque">Colección</h3>
+                            <a href="perfil_artista.html" class="slider-a"></a>
+                        </section>
+                        <section class="slider3 slider-section">
+                            <h3 class="peque">Colección</h3>
+                            <a href="perfil_artista.html" class="slider-a"></a>
+                        </section>
+                    </div>
+
+                    <div class="btn-left-peq">
+                        <img  src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/arrow.svg"
+                        alt="Icono de flecha izquierda" title="Anterior Slider" />
+                    </div>
+                    <div class="btn-right-peq">
+                        <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/arrow.svg"
+                        alt="Icono de flecha derecha" title="Siguiente Slider" />
+                    </div>
+                    <div class="positioner">
+                        <span class="position"></span>
+                        <span class="position"></span>
+                        <span class="position"></span>
+                    </div>
                 </div>
-                  <div class="btn-left-peq">
-                    <img  src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/arrow.svg"
-                    alt="Icono de flecha izquierda" title="Anterior Slider" />
-                  </div>
-                  <div class="btn-right-peq">
-                    <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/arrow.svg"
-                    alt="Icono de flecha derecha" title="Siguiente Slider" />
-                  </div>
-                  <div class="positioner">
-                    <span class="position"></span>
-                    <span class="position"></span>
-                    <span class="position"></span>
-                  </div>     
+            
+                <div id="botones">
+                    <a class="verTodo" href="mis-trabajos.html"></a>
+                    <a class="cerrar-sesion-btn" href="cerrar-sesion.html">Cerrar Sesión</a>
+                    <a class="editar-btn" href="editar-perfil.html">Editar</a>
+                    <a class="eliminar-cuenta-btn" href="eliminar-cuenta.html">Eliminar Cuenta</a>
                 </div>
-            </div>
-
-
-            <div id="botones">
-                <a class="cerrar-sesion-btn" href="cerrar-sesion.html">Cerrar Sesión</a>
-                <a class="editar-btn" href="editar-perfil.html">Editar</a>
-                <a class="eliminar-cuenta-btn" href="eliminar-cuenta.html">Eliminar Cuenta</a>
-            </div>
+            </section>
         </main>
 
         <footer>
