@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Findea</title>
+    <meta charset="utf-8" />
+    <meta content="Yumara Vallejo Vallejo" name="author" />
+    <meta content="Sitio Web de la página Findea" name="description" />
+    <meta content="findea, arte, pintura, escultura, diseño" name="keywords" />
+    <meta name="robots" content="index, follow" />
+    <meta name="lang" content="es-ES" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <!-- <link rel="stylesheet" href="https://web-estatica-yvv.s3.us-east-1.amazonaws.com/estilos.css"/> -->
+    <link
+      rel="shortcut icon"
+      href="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/Logo-Findea.svg"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+      /* Tipo de letra Gantari */
+      @import url("https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+  </head>
+
+<body>
+    <div id="contenedor">
+        <header>
+            <nav id="menu">
+                <input type="checkbox" id="hamburger" />
+                <label for="hamburger" class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <nav class="main-menu">
+                    <span id="buscador">
+                        <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/buscador.svg"
+                            alt="Icono de lupa" />
+                        <input type="text" name="buscador" placeholder="Buscar" />
+                    </span>
+                    <a href="sec-pinturas.html" class="item-menu">Pinturas</a>
+                    <a href="sec-esculturas.html" class="item-menu">Esculturas</a>
+                    <a href="sec-designs.html" class="item-menu">Otros diseños</a>
+                    <a href="sec-personalizaciones.html" class="item-menu">Personalizaciones</a>
+                    <nav id="redes">
+                        <a href="#">
+                            <img id="pinterest"
+                                src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/pinterest-n.svg"
+                                alt="Icono de Pinterest" title="Ir a pinterest" />
+                        </a>
+                        <a href="#">
+                            <img id="facebook"
+                                src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/facebook-n.svg"
+                                alt="Icono de Facebook" title="Ir a Facebook" />
+                        </a>
+                        <a href="#">
+                            <img id="instagram"
+                                src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/instagram-n.svg"
+                                alt="Icono de Instagram" title="Ir a Instagram" />
+                        </a>
+                        <a href="#">
+                            <img id="email" src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/mail-n.svg"
+                                alt="Icono de mail" title="Contactar vía email" />
+                        </a>
+                    </nav>
+                </nav>
+            </nav>
+            <a href="https://web-estatica-yvv.s3.us-east-1.amazonaws.com/index.html">
+                <picture id="logo-findea">
+                    <source srcset="
+                https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/Logo-Findea.svg
+              " type="image/svg+xml" />
+                    <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/Logo-Findea.svg"
+                        alt="Logo Findea" />
+                </picture>
+            </a>
+            <nav id="utilidades-usuario">
+                <a href="wish-list.html">
+                    <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/a%C3%B1adido.svg"
+                        alt="Icono de lista de deseos" title="Lista de deseos" />
+                    <span>Lista de Deseos</span>
+                </a>
+                <a href="user-profile.html">
+                    <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/icono-usuario.svg"
+                        alt="Icono de perfil de usuario" title="Perfil de usuario" />
+                    <span>Perfil de usuario</span>
+                </a>
+                <a href="user-cart.html">
+                    <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/icono-carrito.svg"
+                        alt="Icono de carrito de compras" title="Carrito de compras" />
+                    <span>Carrito</span>
+                </a>
+            </nav>
+        </header>
+
+        <main id="user-profile">
+            <h1>nombredeusuario</h1>
+            <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/usuario.webp"
+                alt="imagen de perfil de usuario">
+            <label for="editar-pic">Editar foto</label>
+            <input type="file" id="editar-pic">
+
+            <section id="propiedades-user">
+                <input type="text" name="descripcion" id="descripcion" value="Descripción" />
+                <input type="text" name="ubicacion" value="Ubicación">
+                <input type="text" name="enlace" value="Enlace a tu web">
+                <input type="text" name="Móvil" value="Móvil">
+
+
+                <h2>Mis trabajos</h2>
+                <div class="container-carousel-peq">
+                    <div class="carruseles" id="slider">
+                        <section class="slider1 slider-section">
+                            <h3 class="peque">Colección</h3>
+                            <a href="perfil_artista.html" class="slider-a"></a>
+                        </section>
+                        <section class="slider2 slider-section">
+                            <h3 class="peque">Colección</h3>
+                            <a href="perfil_artista.html" class="slider-a"></a>
+                        </section>
+                        <section class="slider3 slider-section">
+                            <h3 class="peque">Colección</h3>
+                            <a href="perfil_artista.html" class="slider-a"></a>
+                        </section>
+                    </div>
+
+                    <div class="btn-left-peq">
+                        <img  src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/arrow.svg"
+                        alt="Icono de flecha izquierda" title="Anterior Slider" />
+                    </div>
+                    <div class="btn-right-peq">
+                        <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/arrow.svg"
+                        alt="Icono de flecha derecha" title="Siguiente Slider" />
+                    </div>
+                    <div class="positioner">
+                        <span class="position"></span>
+                        <span class="position"></span>
+                        <span class="position"></span>
+                    </div>
+                </div>
+            
+                <nav id="botones">
+                    <a class="enlace" href="mis-trabajos.html">Ver Todo / Editar</a>
+                    <a class="btn-peq" href="cerrar-sesion.html">Cerrar Sesión</a>
+                    <a class="btn-peq" href="editar-perfil.html">Editar</a>
+                    <a class="eliminar-cuenta-btn" href="eliminar-cuenta.html">Eliminar Cuenta</a>
+                </nav>
+            </section>
+        </main>
+
+        <!-- SCRIPT -->
+        <!-- <script src="../js/script.js"></script> -->
+        <script src="https://web-estatica-yvv.s3.us-east-1.amazonaws.com/script.js"></script>
+
+</body>
+
+</html>

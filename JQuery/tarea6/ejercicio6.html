@@ -101,6 +101,23 @@
           .on("focusout", function () {
             $(this).css("outline", "none");
           });
+
+        $('#email')
+          .on("select", function(){
+            $('#mensaje-seleccion').show()
+        })
+        .on("focusout", function () {
+          $('#mensaje-seleccion').hide()
+          });
+
+
+        $('#met-contacto')
+          .on("change", function(e){
+            if ($(this).val() != "")
+              $('#info-contacto').text("Has seleccionado "+ $(this).val()).show()
+            else 
+            $('#info-contacto').hide()
+        });
       });
     </script>
   </body>

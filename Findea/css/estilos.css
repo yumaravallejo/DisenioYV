@@ -1,10 +1,13 @@
 * {
   box-sizing: border-box;
-  margin: 0; padding: 0
+  margin: 0;
+  padding: 0
 }
 
 body {
-  font-family: "Gantari", serif;  margin: 0; padding: 0;
+  font-family: "Gantari", serif;
+  margin: 0;
+  padding: 0;
 }
 
 body.no-scroll {
@@ -31,8 +34,24 @@ a:hover {
   color: var(--azul-claro);
 }
 
-a#pinterest:hover > img {
+a#pinterest:hover>img {
   src: url("https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/pinterest-a.svg")
+}
+
+.btn-peq {
+  font-weight: 500;
+  border: none;
+  border-radius: 3rem;
+  align-content: center;
+  color: white;
+  width: 22rem;
+  height: 6rem;
+  font-size: 2.8rem;
+}
+
+.enlace {
+  text-decoration: underline;
+  color: var(--azul-oscuro);
 }
 
 /* ----- MODO MÓVIL (principal) ------ */
@@ -47,9 +66,9 @@ header {
   height: 9.5rem;
 }
 
-header > picture {
+header>picture {
   text-align: center;
-  
+
 }
 
 header>a>picture>img {
@@ -66,7 +85,7 @@ nav#menu {
   flex: 20%;
 }
 
-header > nav > input {
+header>nav>input {
   display: none;
 }
 
@@ -135,38 +154,39 @@ nav.main-menu {
   top: 9.4rem;
   left: -100%;
   transition: left .50s ease 0s;
-  z-index: 9999; /* Aseguramos que esté por encima de todo */
+  z-index: 9999;
+  /* Aseguramos que esté por encima de todo */
 }
 
-nav.main-menu > nav#redes {
+nav.main-menu>nav#redes {
   display: flex;
   flex-flow: row nowrap;
   column-gap: 1.5rem;
 }
 
-nav.main-menu > nav#redes > a > img {
+nav.main-menu>nav#redes>a>img {
   width: 4rem;
 }
 
-nav.main-menu > a{
+nav.main-menu>a {
   font-size: 3rem;
   font-weight: 600;
 }
 
-nav.main-menu > span#buscador {
+nav.main-menu>span#buscador {
   width: 37rem;
   position: relative;
   height: 4rem;
 }
 
-nav.main-menu > span#buscador > img {
+nav.main-menu>span#buscador>img {
   position: absolute;
   width: 2rem;
   top: .9rem;
   left: 1rem;
 }
 
-nav.main-menu > span#buscador > span {
+nav.main-menu>span#buscador>span {
   position: absolute;
   left: 1.5rem;
   top: .35rem;
@@ -174,8 +194,8 @@ nav.main-menu > span#buscador > span {
   font-size: .9rem;
 }
 
-nav.main-menu > span#buscador > input{
-  width: 100% ;
+nav.main-menu>span#buscador>input {
+  width: 100%;
   height: 100%;
   padding-left: 4rem;
   font-size: 2rem;
@@ -191,17 +211,18 @@ nav#utilidades-usuario {
   flex: 20%;
 }
 
-nav#utilidades-usuario > a {
+nav#utilidades-usuario>a {
   width: 3.7rem;
 }
 
-nav#utilidades-usuario > a > img {
+nav#utilidades-usuario>a>img {
   width: 100%;
 }
 
-nav#utilidades-usuario > a span {
+nav#utilidades-usuario>a span {
   display: none;
 }
+
 
 /* Main - Carrusel  --------------------------------- */
 
@@ -226,53 +247,57 @@ div.carruseles {
 section.slider-section {
   width: calc(100% / 3);
   height: 100%;
-  background-size: cover; 
+  background-size: cover;
   text-align: center;
 }
 
 .slider1 {
-  background-position: 0 -10rem; 
-  background-image: url("https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/margaritas.webp") ;
+  background-position: 0 -10rem;
+  background-image: url("https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/margaritas.webp");
 }
 
 .slider2 {
-  background-position: 0 -10rem; 
+  background-position: 0 -10rem;
   background-image: url("https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/goddess-185457_1280.webp");
 }
 
 .slider3 {
-  background-position: 0 -2rem; 
   background-image: url("https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/tattoo-2894318_1920.webp");
 }
 
-section.slider-section > h2 {
+section.slider-section>h2 {
   margin-top: 1rem;
   color: white;
   -webkit-text-stroke: 1px black;
   font-size: 4.5rem;
 }
 
-section.slider-section > h3 {
+section.slider-section>h3 {
   margin-top: -1rem;
   color: white;
   -webkit-text-stroke: .8px black;
   font-size: 3.5rem;
 }
 
-section.slider-section > a > img {
+section.slider-section>h3.peque {
+  margin-top: 1rem;
+  font-size: 4.2rem;
+}
+
+section.slider-section>a>img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 .positioner {
-  position:absolute;
+  position: absolute;
   display: flex;
   justify-content: space-between;
   width: 5rem;
   bottom: 1%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   height: 1.5rem;
 }
 
@@ -288,39 +313,83 @@ section.slider-section > a > img {
   background-color: var(--azul-claro);
 }
 
-.btn-left, .btn-right {
+.btn-left,
+.btn-right {
   position: absolute;
   top: 50%;
   cursor: pointer;
   user-select: none;
 }
 
-.btn-left > img, .btn-right > img{
+.btn-left>img,
+.btn-right>img {
   width: 3.5rem;
 }
 
-.btn-left:hover, .btn-right:hover {
+.btn-left:hover,
+.btn-right:hover {
   background-color: #82828229;
-} 
+}
 
 .btn-left {
   padding: 100%;
   padding-left: .7rem;
   padding-right: 1rem;
-  transform: translate(0,-50%);
-} 
+  transform: translate(0, -50%);
+}
 
 .btn-right {
   right: 0;
   padding: 100%;
   padding-left: .6rem;
   padding-right: 1rem;
-  transform: translate(0,-50%) rotate(180deg) ;
+  transform: translate(0, -50%) rotate(180deg);
+}
+
+.btn-left-peq,
+.btn-right-peq {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn-left-peq>img,
+.btn-right-peq>img {
+  width: 3.5rem;
+}
+
+.btn-left-peq:hover,
+.btn-right-peq:hover {
+  background-color: #82828229;
+}
+
+.btn-left-peq {
+  padding: 100%;
+  padding-left: .7rem;
+  padding-right: 1rem;
+  transform: translate(0, -50%);
+}
+
+.btn-right-peq {
+  right: 0;
+  padding: 100%;
+  padding-left: .6rem;
+  padding-right: 1rem;
+  transform: translate(0, -50%) rotate(180deg);
+}
+
+div.container-carousel-peq {
+  width:80%;
+  height: 30rem;
+  overflow: hidden;
+  position: relative;
+
 }
 
 /* Main - Articulos  --------------------------------- */
 
-main > h1 {
+main#index>h1 {
   background-color: var(--azul-oscuro);
   color: white;
   padding: 1.8rem 0;
@@ -328,7 +397,7 @@ main > h1 {
   font-size: 3.5rem;
 }
 
-main > section#artistas-top {
+main#index>section#artistas-top {
   padding: 4rem 2.5rem;
   display: flex;
   flex-flow: row wrap;
@@ -337,14 +406,14 @@ main > section#artistas-top {
   background-color: var(--gris-fondo);
 }
 
-main > section#artistas-top > article.item-inicial {
+main#index>section#artistas-top>article.item-inicial {
   flex: 100%;
   text-align: center;
   align-items: center;
   border-radius: 20px;
   line-height: 17rem;
   background-size: cover;
-  
+
 }
 
 a.articulo {
@@ -355,7 +424,7 @@ a.articulo {
   -webkit-text-stroke: 1px black;
   text-shadow: 2px 1px 2px black;
   font-weight: bold;
-  
+
 }
 
 /* a.articulo:hover {
@@ -398,14 +467,110 @@ article#artista7 {
   background-image: url("https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/maquillajito.webp");
 }
 
+/* Main - USER-PROFILE  --------------------------------- */
+main#user-profile {
+  display: flex;
+  text-align: center;
+  flex-flow: column;
+  align-items: center;
+
+}
+
+main#user-profile > h1 {
+  font-size: 3.5rem;
+  font-weight: 650;
+  margin-top: 4rem;
+  margin-bottom: 3rem
+}
+
+main#user-profile > img {
+  width: 20rem;
+  height: 19rem;
+  border-radius: 100%;
+  border: 1px solid black;
+  margin-bottom: 1rem
+}
+
+input[type='file']#editar-pic {
+  display: none;
+}
+
+label[for='editar-pic'] {
+  font-weight: bold;
+  color: var(--azul-oscuro);
+  font-size: 2.3rem;
+}
+
+section#propiedades-user {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-items: center;
+  margin-top: 6rem;
+}
+
+section#propiedades-user > h2 {
+  text-align: left;
+  margin-left: 6rem;
+  flex: 100%;
+  font-size: 3.8rem;
+  font-weight: 550;
+}
+
+section#propiedades-user > input[type='text'] {
+  flex: 100%;
+  margin: 0 6rem;
+  padding: 2rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--gris-oscuro);
+  border-radius: 2rem;
+  color: var(--gris-oscuro);
+}
+
+section#propiedades-user > input[type='text']#descripcion {
+  padding-bottom: 12rem;
+}
+
+nav#botones{
+  flex: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  column-gap: 1rem;
+}
+
+nav#botones > a:nth-child(1), nav#botones > a:nth-child(4) {
+  font-size: 2.5rem;
+  flex: 100%;
+  margin-top: 1rem;
+}
+
+nav#botones > a:nth-child(2){
+  margin-top: 6rem;
+  background-color: var(--rojo-claro);
+}
+
+nav#botones > a:nth-child(3){
+  margin-top: 6rem;
+  background-color: var(--azul-claro);
+}
+
+nav#botones > a:nth-child(4){
+  margin-top: 4rem;
+  margin-bottom: 15rem;
+  color: var(--gris-oscuro);
+  font-weight: 600;
+}
+
 /* Footer  --------------------------------- */
 
 footer {
   background-color: black;
   display: flex;
   padding: 0 3rem;
-  padding-top: 2.4rem ;
-  padding-bottom: 1.5rem ;
+  padding-top: 2.4rem;
+  padding-bottom: 1.5rem;
   flex-flow: column;
   row-gap: 1.5rem;
   color: white;
@@ -413,17 +578,17 @@ footer {
   justify-content: center;
 }
 
-footer > nav#redes {
+footer>nav#redes {
   display: flex;
   flex-flow: row nowrap;
   column-gap: 1rem;
 }
 
-footer > nav#redes > a {
+footer>nav#redes>a {
   width: 4rem;
 }
 
-footer > nav#redes > a > img {
+footer>nav#redes>a>img {
   width: 100%;
 }
 
@@ -435,13 +600,13 @@ form#newsletter {
   justify-content: space-between;
 }
 
-footer > form#newsletter > label {
+footer>form#newsletter>label {
   color: white;
   flex: 100%;
   font-size: 2.5rem;
 }
 
-footer > form#newsletter > input {
+footer>form#newsletter>input {
   flex-basis: 77%;
   padding: 1.6rem 0;
   padding-left: 2rem;
@@ -449,7 +614,7 @@ footer > form#newsletter > input {
   font-weight: 500;
 }
 
-footer > form#newsletter > button {
+footer>form#newsletter>button {
   background-color: var(--azul-claro);
   outline: none;
   border: none;
@@ -461,40 +626,42 @@ footer > form#newsletter > button {
   cursor: pointer;
 }
 
-footer > form#newsletter > button > img {
+footer>form#newsletter>button>img {
   width: 5rem;
 }
 
-footer > form#newsletter > button:hover {
+footer>form#newsletter>button:hover {
   background-color: var(--azul-oscuro);
 }
 
-footer > form#newsletter > p {
+footer>form#newsletter>p {
   color: white;
   flex: 100%;
   font-size: 1.8rem;
 }
 
-footer a{
+footer a {
   color: white;
 }
 
-footer > div.politica {
+footer>div.politica {
   display: flex;
   flex-flow: row wrap;
   font-size: 2.1rem;
+  border: 1px solid red;
   row-gap: 1rem;
   align-content: center;
   text-align: center;
   justify-content: center;
 }
 
-footer > form#newsletter > span.error-newsletter {
-  color:var(--rojo-claro);
-  visibility: hidden;
-  font-size: 1.8rem;
+footer>form#newsletter>span.error-newsletter {
+  color: var(--rojo-claro);
+  display: none;
+  font-size: 1.9rem;
   flex: 100%;
 }
+
 /* MODO TABLET */
 
 /* MODO DESKTOP */
