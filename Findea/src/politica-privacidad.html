@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Findea</title>
+    <meta charset="utf-8" />
+    <meta content="Yumara Vallejo Vallejo" name="author" />
+    <meta content="Sitio Web de la página Findea" name="description" />
+    <meta content="findea, arte, pintura, escultura, diseño" name="keywords" />
+    <meta name="robots" content="index, follow" />
+    <meta name="lang" content="es-ES" />
+    <!-- <link rel="stylesheet" href="../css/estilos.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://findea-web.s3.us-east-1.amazonaws.com/estilos.css"
+    />
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+      /* Tipo de letra Gantari */
+      @import url("https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+  </head>
+  <body>
+    <div id="contenedor">
+      <header>
+        <nav id="menu">
+          <input type="checkbox" id="hamburger" />
+          <label for="hamburger" class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <nav class="main-menu">
+            <span id="buscador">
+              <img
+                src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/buscador.svg"
+                alt="Icono de lupa"
+              />
+              <input type="text" name="buscador" placeholder="Buscar" />
+            </span>
+
+            <a
+              href="https://findea-web.s3.us-east-1.amazonaws.com/sec-pinturas.html"
+              class="item-menu"
+              >Pinturas</a
+            >
+            <a
+              href="https://findea-web.s3.us-east-1.amazonaws.com/sec-esculturas.html"
+              class="item-menu"
+              >Esculturas</a
+            >
+            <a
+              href="https://findea-web.s3.us-east-1.amazonaws.com/sec-designs.html"
+              class="item-menu"
+              >Otros diseños</a
+            >
+            <a
+              href="https://findea-web.s3.us-east-1.amazonaws.com/sec-personalizaciones.html"
+              class="item-menu"
+              >Personalizaciones</a
+            >
+
+            <nav id="redes">
+              <a href="#">
+                <img
+                  id="pinterest"
+                  src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/pinterest-n.svg"
+                  alt="Icono de Pinterest"
+                  title="Ir a pinterest"
+                />
+              </a>
+              <a href="#">
+                <img
+                  id="facebook"
+                  src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/facebook-n.svg"
+                  alt="Icono de Facebook"
+                  title="Ir a Facebook"
+                />
+              </a>
+              <a href="#">
+                <img
+                  id="instagram"
+                  src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/instagram-n.svg"
+                  alt="Icono de Instagram"
+                  title="Ir a Instagram"
+                />
+              </a>
+              <a href="#">
+                <img
+                  id="email"
+                  src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/mail-n.svg"
+                  alt="Icono de mail"
+                  title="Contactar vía email"
+                />
+              </a>
+            </nav>
+          </nav>
+        </nav>
+        <a href="https://findea-web.s3.us-east-1.amazonaws.com/index.html">
+          <picture id="logo-findea">
+            <source
+              srcset="
+                https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/Logo-Findea.svg
+              "
+              type="image/svg+xml"
+            />
+            <img
+              src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/Logo-Findea.svg"
+              alt="Logo Findea"
+              title="Ir al inicio"
+            />
+          </picture>
+        </a>
+        <nav id="utilidades-usuario">
+          <a
+            href="https://findea-web.s3.us-east-1.amazonaws.com/src/wish-list.html"
+          >
+            <img
+              src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/a%C3%B1adido.svg"
+              alt="Icono de lista de deseos"
+              title="Lista de deseos"
+            />
+            <span>Lista de Deseos</span>
+          </a>
+          <a
+            href="https://findea-web.s3.us-east-1.amazonaws.com/src/user-profile.html"
+          >
+            <img
+              src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/icono-usuario.svg"
+              alt="Icono de perfil de usuario"
+              title="Perfil de usuario"
+            />
+            <span>Perfil de usuario</span>
+          </a>
+          <a
+            href="https://findea-web.s3.us-east-1.amazonaws.com/src/user-cart.html"
+          >
+            <img
+              src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/icono-carrito.svg"
+              alt="Icono de carrito de compras"
+              title="Carrito de compras"
+            />
+            <span>Carrito</span>
+          </a>
+        </nav>
+      </header>
+
+      <main id="politica-privacidad">
+        <span class="titulo">
+          <img
+            id="atras"
+            src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/atras.svg"
+            alt="Flecha atrás"
+          />
+          <h1>Política de Privacidad</h1>
+        </span>
+
+        <div class="texto">
+          <p>
+            <strong>Fecha de entrada en vigor:</strong> 22/10/2024 En Findea (en
+            adelante, "nosotros", "nuestro" o "la Empresa"), nos comprometemos a
+            proteger y respetar su privacidad. Esta Política de Privacidad
+            explica cómo recopilamos, utilizamos y protegemos sus datos
+            personales cuando utiliza nuestro sitio web [www.findea.com] (en
+            adelante, "el Sitio") y otros servicios que ofrecemos (en conjunto,
+            los "Servicios").
+          </p>
+          <p>
+              <h2>1. Información que Recopilamos</h2>
+              Podemos recopilar y procesar los siguientes datos personales sobre usted:
+              <ol>
+                <li>
+                  Información proporcionada por el usuario 
+                  <ul>
+                    <li>Nombre, dirección de correo electrónico, número de teléfono, y cualquier otra información que
+                      usted nos proporcione al completar formularios en nuestro Sitio.
+                    </li>
+                    <li>Información que usted comparte cuando se comunica con nosotros, como
+                      comentarios o preguntas a través de formularios de contacto o
+                      correos electrónicos.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Información que recopilamos automáticamente
+                  <ul>
+                    <li>Datos sobre su dispositivo, como la dirección IP, tipo de navegador,
+                      sistema operativo y configuración de zona horaria.</li>
+                    <li>Información de uso del Sitio, como las páginas que visita, el tiempo que pasa en
+                      cada página y cómo interactúa con nuestros Servicios.</li>
+                    <li>Cookies y tecnologías similares para rastrear su actividad en el Sitio. Puede
+                      consultar nuestra Política de Cookies para más detalles.</li>
+                  </ul>
+                </li>
+                <li>
+                  Información de terceros Podemos recibir información suya de
+                    terceros, como socios comerciales o proveedores de servicios de
+                    análisis, para mejorar nuestra capacidad de ofrecer servicios
+                    personalizados.
+                </li>
+              </ol>            
+          </p>
+          <p>
+            <h2>2. Uso de Datos Personales</h2>
+            Utilizamos sus datos personales para los siguientes fines:
+            <ul>
+              <li>
+                Provisión del Servicio: Para proporcionarle los servicios que solicita, gestionar su cuenta, procesar pagos o transacciones, y comunicarnos con usted en relación con los servicios contratados.
+              </li>
+              <li>
+                Mejoras en el Sitio: Para personalizar su experiencia, analizar el uso del Sitio, y mejorar nuestros productos y servicios.
+              </li>
+              <li>
+                Marketing: Para enviarle comunicaciones comerciales y promocionales, siempre que tengamos su consentimiento explícito, o cuando esté permitido por la ley.
+              </li>
+              <li>
+                Cumplimiento Legal: Para cumplir con nuestras obligaciones legales y regulatorias, y proteger nuestros derechos y los de terceros.
+              </li>
+            </ul>    
+          </p>
+          <p>
+            <h2>3. Compartir su Información</h2>
+            No compartimos ni vendemos sus datos personales a terceros, salvo en los siguientes casos:            
+            <ul>
+              <li>
+                Proveedores de servicios: Compartimos su información con terceros que nos ayudan a operar nuestro Sitio o proveer nuestros Servicios, como servicios de hosting, procesamiento de pagos o análisis de datos. Estos terceros están obligados a mantener su información segura y usarla únicamente según nuestras instrucciones.              
+              </li>
+              <li>
+                Requisitos legales: Podemos divulgar su información si estamos legalmente obligados a hacerlo o si creemos de buena fe que dicha acción es necesaria para cumplir con la ley o proteger los derechos, la propiedad o la seguridad de la Empresa o de terceros.
+              </li>
+            </ul>   
+          </p>
+          <p>
+            <h2>4. Protección de sus Datos</h2>
+            Nos comprometemos a proteger la información que recopilamos. Implementamos medidas técnicas y organizativas adecuadas para garantizar que sus datos personales estén protegidos contra el acceso no autorizado, la divulgación, la alteración o la destrucción.           
+          </p>
+          <p>
+            <h2>5. Retención de Datos</h2>
+            Conservaremos sus datos personales solo durante el tiempo que sea necesario para cumplir con los fines descritos en esta Política de Privacidad, o durante el tiempo exigido por la ley.          
+          </p>
+          <p>
+            <h2>7. Transferencias Internacionales</h2>
+            Si transferimos sus datos personales fuera del Espacio Económico Europeo (EEE), garantizamos que dichas transferencias se realicen de acuerdo con las leyes aplicables y que se proporcionen garantías adecuadas para proteger sus datos personales.          
+          </p>
+          <p>
+            <h2>8. Cambios en esta Política de Privacidad</h2>
+            Nos reservamos el derecho de modificar esta Política de Privacidad en cualquier momento. Cualquier cambio será publicado en esta página, y, cuando sea necesario, le notificaremos sobre los cambios por otros medios apropiados.
+          </p>
+          <p>
+            <h2>9. Contacto</h2>
+            Si tiene alguna pregunta sobre esta Política de Privacidad o sobre el tratamiento de sus datos personales, puede ponerse en contacto con nosotros en:            
+            <ul>
+              <li>
+                Correo electrónico: findea@gmail.com
+              </li>
+              <li>
+                Dirección postal: 29670
+              </li>
+            </ul>  
+            Es recomendable que adaptes esta política a las prácticas específicas de tu negocio y consultes con un abogado especializado para asegurarte de que cumpla con todas las leyes aplicables en tu región.
+          </p>
+        </div>
+      </main>
+
+      <footer>
+        <nav id="redes">
+          <a href="#">
+            <img
+              id="pinterest"
+              src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/pinterest-b.svg"
+              alt="Icono de Pinterest"
+              title="Ir a pinterest"
+            />
+          </a>
+          <a href="#">
+            <img
+              id="facebook"
+              src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/facebook-b.svg"
+              alt="Icono de Facebook"
+              title="Ir a Facebook"
+            />
+          </a>
+          <a href="#">
+            <img
+              id="instagram"
+              src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/instagram-b.svg"
+              alt="Icono de Instagram"
+              title="Ir a Instagram"
+            />
+          </a>
+          <a href="#">
+            <img
+              id="email"
+              src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/mail-b.svg"
+              alt="Icono de mail"
+              title="Contactar vía email"
+            />
+          </a>
+        </nav>
+
+        <label for="newsletter">¡Suscríbete a nuestra newsletter!</label><br />
+        <input
+          type="email"
+          name="newsletter"
+          id="newsletter"
+          placeholder="Correo Electrónico"
+        />
+        <button id="subscribe-btn" class="bac-azul suscb">
+          <img
+            src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/newsletter-icon.svg"
+          />
+        </button>
+        <p>Al suscribirte estás aceptando nuestra política de datos</p>
+        <span class="error-newsletter"
+          >¡Ups ha ocurrido algo! Inténtalo de nuevo más tarde</span
+        >
+
+        <div class="politica">
+          <a
+            href="https://findea-web.s3.us-east-1.amazonaws.com/src/accesibilidad.html"
+            >Accesibilidad</a
+          >&nbsp;|&nbsp;<a
+            href="https://findea-web.s3.us-east-1.amazonaws.com/src/politica-privacidad.html"
+            >Política de privacidad de datos</a
+          >&nbsp;|&nbsp;<a id="cookies">Cookies</a>
+          <small>&copy; 2025 FINDEA Todos los derechos reservados</small>
+        </div>
+      </footer>
+    </div>
+
+    <!-- SCRIPT -->
+    <!-- <script src="js/script.js"></script> -->
+    <script src="https://findea-web.s3.us-east-1.amazonaws.com/script.js"></script>
+  </body>
+</html>

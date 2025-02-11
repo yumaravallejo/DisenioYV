@@ -91,5 +91,6 @@ $(".bac-azul")
     }
    
     // Muestra u oculta el menú de la lista
-    $("#todas-listas").toggle();
+    $("#todas-listas").slideToggle(200);
 });
+
