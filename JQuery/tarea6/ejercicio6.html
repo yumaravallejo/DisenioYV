@@ -104,12 +104,8 @@
 
         $('#email')
           .on("select", function(){
-            $('#mensaje-seleccion').show()
+            $('#mensaje-seleccion').slideDown(200).delay(1000).slideUp(200)
         })
-        .on("focusout", function () {
-          $('#mensaje-seleccion').hide()
-          });
-
 
         $('#met-contacto')
           .on("change", function(e){
