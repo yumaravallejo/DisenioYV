@@ -57,6 +57,10 @@ input, select {
   cursor: pointer;
 }
 
+a.btn-grande {
+  
+}
+
 .enlace {
   text-decoration: underline;
   color: var(--azul-oscuro);
@@ -112,7 +116,7 @@ div.texto {
 
 .singular {
   height: 25rem;
-  flex-basis: calc(50% - 3rem);
+  flex-basis: calc(50% - 1.8rem);
 }
 
 .doble {
@@ -841,7 +845,7 @@ div#detalles-compra {
 
 div#detalles-compra > p {
   text-align: justify;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 
 div#detalles-compra > span, div#detalles-compra > strong {
@@ -931,9 +935,13 @@ section#sect-personalizaciones > h2, section#sect-personalizaciones > p {
 }
 section#sect-personalizaciones>form {
   display: flex;
-  flex-flow: column;
+  flex-flow: row wrap;
   row-gap: 4rem;
 }
+section#sect-personalizaciones>form span.tam {
+  flex: 100%;
+}
+
 section#sect-personalizaciones>form span:nth-child(1){
   margin-top: 1.5rem
 }
@@ -948,6 +956,8 @@ section#sect-personalizaciones>form span input[type="radio"] {
 section#sect-personalizaciones>form textarea {
   border-radius: 2rem;
   border-color: black;
+  flex: 100%;
+  resize: none;
 }
 
 section#sect-personalizaciones> form > input::placeholder {
@@ -960,13 +970,15 @@ section#sect-personalizaciones> form > input {
   border: 1px solid black;
   font-size: 3rem;
   padding-left: 2rem;
+  flex: 100%;
 }
 
-section#sect-personalizaciones> form > button {
+section#sect-personalizaciones> form > a {
   width: 100%;
-  padding: 3rem 0;
   font-weight: bold;
   font-size: 3.5rem;
+  text-align: center;
+  align-items: center;
 }
 
 /* Footer  --------------------------------- */
@@ -998,8 +1010,9 @@ footer > label[for="newsletter"] {
 
 footer > input#newsletter {
   padding: 1.5rem 2rem;
-  padding-right: 9rem;
-  text-align: left;
+  padding-right: 8rem;
+  width: 100%;
+  flex:60%;
   font-size: 2.5rem;
 }
 

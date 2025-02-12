@@ -260,13 +260,13 @@
 		//Esto hace que las animaciones no se aniden --> .stop(true,true)
         $("#menu-hambur")
           .on("mouseenter", function () {
-            $(".hamburguer-line").stop(true,true).animate({ "background-color": "black" }, 500);
+            $(".hamburguer-line").finish().animate({ "background-color": "black" }, 500);
           })
           .on("mouseleave", function () {
-            $(".hamburguer-line").stop(true,true).animate({ "background-color": "#808080" }, 500);
+            $(".hamburguer-line").finish().animate({ "background-color": "#808080" }, 500);
           })
-		  .on("click", function () {
-            $("#menu").stop(true,true).fadeToggle();
+		      .on("click", function () {
+            $("#menu").finish().slideToggle(200);
           });
       });
     </script>

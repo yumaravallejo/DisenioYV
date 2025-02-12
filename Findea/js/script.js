@@ -94,3 +94,7 @@ $(".bac-azul")
     $("#todas-listas").slideToggle(200);
 });
 
+function irHasta(nombre) {
+  window.location.href = "https://findea-web.s3.us-east-1.amazonaws.com/src/"+nombre;
+}
+
