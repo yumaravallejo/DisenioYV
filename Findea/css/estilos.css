@@ -57,10 +57,6 @@ input, select {
   cursor: pointer;
 }
 
-a.btn-grande {
-  
-}
-
 .enlace {
   text-decoration: underline;
   color: var(--azul-oscuro);
@@ -316,152 +312,151 @@ nav#utilidades-usuario>a span {
 }
 
 /* Main - Carrusel  --------------------------------- */
-div.container-carousel {
-  width: 100%;
-  height: 30rem;
+/** ---------------------------------------
+ * Slider 
+ ----------------------------------------*/
+
+ .contenedor-slider {
+  position: relative;
   overflow: hidden;
+  width: 100%;
+}
+
+.contenedor-slider-peq {
+  position: relative;
+  overflow: hidden;
+  width: 80%;
+  height: 30rem;
+}
+
+
+.slider-wrapper {
+  height: 30rem;
+  background: #FFF;
+  display: flex;
+  width: 300%;
+  transition: left 0.5s ease;
   position: relative;
 }
 
-a.slider-a {
+.slider-wrapper li {
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+}
+
+.slider-wrapper .current-slide {
   display: block;
-  padding: 100% 100%;
 }
 
-div.carruseles {
-  width: 300%;
-  height: 100%;
-  display: flex;
+.slider-wrapper img {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
 }
 
-section.slider-section {
-  width: calc(100% / 3);
-  height: 100%;
-  background-size: cover;
+
+/**
+ * ---[Caption] ---------------------- 
+ **/
+
+.slider-wrapper .caption {
+  position: absolute;
+  top: 4rem;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.slider-wrapper h2 {
+  color: white;
+  font-size: 4rem;
   text-align: center;
-}
-
-.slider1 {
-  background-position: 0 -10rem;
-  background-image: url("https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/margaritas.webp");
-}
-
-.slider2 {
-  background-position: 0 -10rem;
-  background-image: url("https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/goddess-185457_1280.webp");
-}
-
-.slider3 {
-  background-image: url("https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/tattoo-2894318_1920.webp");
-}
-
-section.slider-section>h2 {
-  margin-top: 1rem;
-  color: white;
   -webkit-text-stroke: 1px black;
-  font-size: 4.5rem;
 }
 
-section.slider-section>h3 {
-  margin-top: -1rem;
-  color: white;
-  -webkit-text-stroke: .8px black;
-  font-size: 3.5rem;
+
+/**
+ * ---[Botones-Control] ---------------------- 
+ **/
+
+ #preview-img {
+  position: absolute;
+  bottom: 4rem; /* Ajusta la posición según el diseño */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12rem; 
+  height: 10rem;
+  display: none; 
+  overflow: hidden;
 }
 
-section.slider-section>h3.peque {
-  margin-top: 1rem;
-  font-size: 4.2rem;
-}
-
-section.slider-section>a>img {
+#preview-img > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: .8;
 }
 
-.positioner {
-  position: absolute;
+.control-buttons {
   display: flex;
-  justify-content: space-between;
-  width: 5rem;
-  bottom: 1%;
+  column-gap: .8rem;
+  position: absolute;
+  bottom: 0;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 1.5rem;
+  list-style-type: none;
 }
 
-.positioner span {
-  background-color: white;
-  border: 0.1px solid grey;
-  width: 1.5rem;
-  height: auto;
-  border-radius: 100%;
-}
-
-.positioner span:nth-child(1) {
-  background-color: var(--azul-claro);
-}
-
-.btn-left,
-.btn-right {
-  position: absolute;
-  top: 50%;
+.control-buttons li {
+  position: relative;
   cursor: pointer;
-  user-select: none;
+  background: white;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--gris-oscuro);
 }
 
-.btn-left>img,
-.btn-right>img {
-  width: 3.5rem;
+.control-buttons li.active {
+  background: var(--azul-claro);
 }
 
 .btn-left:hover,
+.btn-left-peq:hover,
+.btn-right-peq:hover,
 .btn-right:hover {
-  background-color: #82828229;
+  background-color: #57575779;
 }
 
-.btn-left {
-  padding: 100%;
-  padding-left: .7rem;
-  padding-right: 1rem;
-  transform: translate(0, -50%);
+.btn-left>img,
+.btn-right>img,
+.btn-right-peq>img,
+.btn-left-peq>img {
+  width: 3.5rem;
 }
 
-.btn-right {
-  right: 0;
-  padding: 100%;
-  padding-left: .6rem;
-  padding-right: 1rem;
-  transform: translate(0, -50%) rotate(180deg);
-}
-
+.btn-left,
+.btn-right,
 .btn-left-peq,
-.btn-right-peq {
+.btn-right-peq  {
   position: absolute;
   top: 50%;
   cursor: pointer;
   user-select: none;
 }
 
-.btn-left-peq>img,
-.btn-right-peq>img {
-  width: 3.5rem;
-}
 
-.btn-left-peq:hover,
-.btn-right-peq:hover {
-  background-color: #82828229;
-}
 
-.btn-left-peq {
+.btn-left, .btn-left-peq {
   padding: 100%;
   padding-left: .7rem;
   padding-right: 1rem;
   transform: translate(0, -50%);
 }
 
-.btn-right-peq {
+.btn-right, .btn-right-peq{
   right: 0;
   padding: 100%;
   padding-left: .6rem;
@@ -469,17 +464,7 @@ section.slider-section>a>img {
   transform: translate(0, -50%) rotate(180deg);
 }
 
-div.container-carousel-peq {
-  width:80%;
-  height: 30rem;
-  overflow: hidden;
-  position: relative;
-
-}
-
 /* Main - Articulos  --------------------------------- */
-main#index 
-
 main#index>h1 {
   background-color: var(--azul-oscuro);
   color: white;
@@ -515,11 +500,6 @@ a.articulo {
   font-weight: bold;
 
 }
-
-/* a.articulo:hover {
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.596);
-  border-radius: 20px;
-} */
 
 article#artista1 {
   background-image: url("https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/betta-7101167_1920.webp");
@@ -668,7 +648,7 @@ div#select-lista {
   margin: 5rem;
   border-radius: 1rem;
   background-color: white;
-  z-index: 9999;
+  z-index: 10;
   position: absolute;
   top: 13rem;
 }
