@@ -29,6 +29,11 @@ a {
   text-decoration: none;
 }
 
+.web-enlace{
+  color: var(--azul-claro);
+  text-decoration: underline;
+}
+
 input, select {
   outline: var(--azul-claro);
 }
@@ -130,7 +135,7 @@ div.texto {
 }
 
 
-/* ----- MODO MÓVIL (principal) ------ */
+/* ----- MODO MÃ“VIL (principal) ------ */
 /* Header  --------------------------------- */
 header {
   display: flex;
@@ -152,6 +157,7 @@ header>a>picture>img {
 }
 
 /* Menu - Toggle y Principal  --------------------------------- */
+
 
 nav#menu {
   display: flex;
@@ -239,7 +245,7 @@ nav.main-menu {
   left: -100%;
   transition: left .50s ease 0s;
   z-index: 9999;
-  /* Aseguramos que esté por encima de todo */
+  /* Aseguramos que estÄ†Â© por encima de todo */
 }
 
 nav.main-menu>nav#redes {
@@ -310,11 +316,7 @@ nav#utilidades-usuario>a>img {
 nav#utilidades-usuario>a span {
   display: none;
 }
-
-/* Main - Carrusel  --------------------------------- */
-/** ---------------------------------------
- * Slider 
- ----------------------------------------*/
+/* Main - Slider  --------------------------------- */
 
  .contenedor-slider {
   position: relative;
@@ -383,7 +385,7 @@ nav#utilidades-usuario>a span {
 
  #preview-img {
   position: absolute;
-  bottom: 4rem; /* Ajusta la posición según el diseño */
+  bottom: 4rem; /* Ajusta la posiciÃ³n segÃºn el diseÃ±o */
   left: 50%;
   transform: translateX(-50%);
   width: 12rem; 
@@ -838,7 +840,7 @@ div#detalles-compra > strong {
   text-align: right;
 }
 
-/* Main - ACCESIBILIDAD Y POLÍTICA  --------------------------------- */
+/* Main - ACCESIBILIDAD Y POLÃTICA  --------------------------------- */
 main#politica-privacidad, main#accesibilidad-m {
   background-color: var(--gris-fondo);
 }
@@ -959,6 +961,72 @@ section#sect-personalizaciones> form > a {
   font-size: 3.5rem;
   text-align: center;
   align-items: center;
+}
+
+/* Main - Perfil de Artista  --------------------------------- */
+main#perfil_artista {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 6rem;
+  row-gap: 2rem;
+}
+
+main#perfil_artista > span {
+  flex: 100%;
+  text-align: left;
+  align-items: start;
+  align-content: flex-start;
+}
+
+main#perfil_artista > span > img {
+  width: 4rem;
+  flex: 100% 0;
+  margin-left: 2rem
+}
+
+main#perfil_artista > h1 {
+  margin: 0 auto;
+  font-size: 4rem;
+}
+
+
+main#perfil_artista > img {
+  width: 30rem;
+  align-items: center;
+  margin: 0 auto;
+}
+
+main#perfil_artista p:nth-child(4) {
+  text-align: center;
+  flex: 100% 0;
+}
+
+main#perfil_artista p:nth-child(5) {
+  text-align: justify;
+}
+
+main#perfil_artista > h2 {
+  flex: 100% 0;
+  font-size: 3.5rem;
+  margin-bottom: -1rem;
+}
+
+section#infoContactoUser {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  font-size: 2.3rem;
+  row-gap: 1rem;
+  margin: 2rem 0
+}
+
+section#infoContactoUser > p {
+  display: flex;
+  column-gap: 2rem;
+}
+
+section#infoContactoUser > p > img {
+  width: 3.5rem;
 }
 
 /* Footer  --------------------------------- */
