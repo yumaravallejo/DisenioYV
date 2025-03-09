@@ -24,6 +24,17 @@ body.no-scroll {
   --gris-oscuro: #8C8C8C;
 }
 
+.hide {
+  visibility: hidden;
+}
+
+#precio {
+  color: var(--azul-claro);
+  font-weight: bold;
+  font-size: 4.5rem;
+  flex: 50% 0;
+}
+
 /* GENERALES */
 a {
   text-decoration: none;
@@ -99,11 +110,18 @@ img {
 }
 
 main {
-  padding-bottom: 5rem
+  padding-bottom: 5rem;
+  background-color: var(--gris-fondo);
 }
 
 .bac-azul {
   background-color: var(--azul-claro);
+  color: white;
+}
+
+.bac-azul-osc {
+  background-color: var(--azul-oscuro);
+  color: white;
 }
 
 div.texto {
@@ -134,6 +152,11 @@ div.texto {
   background-color: var(--gris-fondo);
 }
 
+.error{
+  color: var(--rojo-claro);
+  font-size: 1.5rem;
+}
+
 
 /* ----- MODO MÃ“VIL (principal) ------ */
 /* Header  --------------------------------- */
@@ -145,6 +168,7 @@ header {
   align-content: end;
   padding-bottom: .3rem;
   height: 10rem;
+  background-color: white;
 }
 
 header>picture {
@@ -748,12 +772,116 @@ img.img-art {
   width: 100%;
 }
 
+/* Main - ADD-WISH  --------------------------------- */
+main#add-wish{
+  background-color: white;
+  min-height: 65vh;
+}
+section#add-wish-sec {
+  display: flex;
+  flex-flow: column;
+  row-gap: 3rem;
+  padding: 0 5rem;
+}
+
+article.cuadrado {
+  flex: 100% 0;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 1.5rem;
+  cursor: pointer;
+}
+
+article.cuadrado > img:nth-child(1) {
+  height: 5rem;
+  flex: 6rem 0;
+  margin: .5rem;
+}
+
+article.cuadrado > span {
+  font-size: 3rem;
+  flex: 80% 0;
+  color: black;
+}
+
+article.cuadrado > img:nth-child(3) {
+  flex: 4rem 0;
+  margin-right: 2rem;
+}
+
+div#listaNueva {
+  padding: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  z-index: 2;
+  cursor: pointer;
+}
+
+div#listaNueva > p{
+  font-size: 3rem;
+  font-weight: 600;
+  flex: 100% 0;
+  margin-left: 1.5rem
+}
+
+div#listaNueva > div > label {
+  font-size: 2rem;
+}
+
+div#listaNueva > div > input {
+  font-size: 2rem;
+  flex: 100%;
+  padding: 1.9rem 1rem;
+  outline: var(--azul-claro);
+  border: 2px solid black;
+}
+
+div#creandoLista {
+  display: flex;
+  flex-flow: column;
+  padding: 1rem;
+  width: 100%;
+  row-gap: 1rem;
+}
+
+span#error-nombreLista{
+  margin-top: -.7rem;
+  font-size: 1.8rem;
+  display: none;
+}
+
+button.cuadro {
+  border: none;
+  font-size: 3rem;
+  padding: 1.25rem 0;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.select{
+  border: .25rem solid black;
+  color: black;
+}
+
+.unselect {
+  border: 2px solid var(--gris-oscuro);
+  color: var(--gris-oscuro);
+}
+
+article.unselect > div#creandoLista {
+  display: none;
+}
+
+
 /* Main - USER CART  --------------------------------- */
-main#user-cart > span{
+main#user-cart > span, main#add-wish > img#atras{
   flex: 100%;
 }
 
-main#user-cart > img#atras {
+main#user-cart > img#atras, main#add-wish > img#atras {
   width: 4rem;
   margin:0 6rem;
   margin-top: 5rem;
@@ -808,7 +936,7 @@ section#carrito-sect > article.producto-carro> div.info-carrito > span {
   font-size: 2.5rem;
 }
 
-section#carrito-sect > article.producto-carro> div.info-carrito > span#tiempo {
+section#carrito-sect > article.producto-carro> div.info-carrito > span.tiempo {
   color: var(--rojo-claro);
   font-size: 2.5rem;
   font-weight: 600;
@@ -844,7 +972,7 @@ div#detalles-compra > strong {
 main#politica-privacidad, main#accesibilidad-m {
   background-color: var(--gris-fondo);
 }
-main#accesibilidad-m > span:nth-child(3) {
+main#accesibilidad-m > p {
   margin-left: 5rem;
   display: flex;
   column-gap: 1.5rem ;
@@ -852,7 +980,7 @@ main#accesibilidad-m > span:nth-child(3) {
   align-items: center;
 }
 
-main#accesibilidad-m > span:nth-child(3) > img {
+main#accesibilidad-m > p > img {
   width: 5rem;
 }
 
@@ -887,11 +1015,14 @@ article.obra {
   position: relative;
   overflow: hidden;
   border: 2px solid var(--gris-oscuro);
+  cursor: pointer;
 }
 
 article.obra img:nth-child(1) {
   width: 100%;
   height: 100%;
+  cursor: pointer;
+
 }
 
 article.obra img:nth-child(2) {
@@ -899,6 +1030,7 @@ article.obra img:nth-child(2) {
   position: absolute;
   bottom: 02rem;
   right: 2rem;
+  cursor: pointer;
 }
 
 /* Main - PERSONALIZACIONES  --------------------------------- */
@@ -1029,6 +1161,212 @@ section#infoContactoUser > p > img {
   width: 3.5rem;
 }
 
+/* Main - Perfil de Obra Pintura  --------------------------------- */
+main.perfil-obra {
+  padding: 0
+}
+
+main.perfil-obra > section{
+  display: flex;
+  flex-flow: row wrap;
+  overflow: hidden;
+  padding: 5rem;
+  row-gap: .5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main.perfil-obra > section > img:nth-child(1){
+  width: 100%;
+  height: 40rem;
+  border: 1px solid var(--gris-oscuro);
+  flex: 100% 0;
+  border-radius: 2rem;
+  margin-bottom: 2rem
+}
+
+main.perfil-obra > section > h2{
+  flex: 100% 0;
+  font-size: 4.5rem;
+}
+
+main.perfil-obra > section > h3{
+  flex: 100% 0;
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-top: -1rem;
+  cursor: pointer;
+}
+
+main.perfil-obra > section > p{
+  text-align: justify;
+  margin-bottom: 3rem
+}
+
+
+main.perfil-obra > section > span:nth-child(6){
+  flex: 100% 0;
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+main.perfil-obra > section > span:nth-child(3){
+  flex: 50%;
+  text-align: end;
+  height: 5.5rem;
+  cursor: pointer;
+}
+
+main.perfil-obra > section > span > img{
+  width: 5.5rem;
+  height: auto;
+}
+
+main.perfil-obra > section > small{
+  font-size: 2.4rem;
+  margin: 1rem 0;
+  flex: 100% 0;
+}
+
+
+main.perfil-obra > section > button{
+  font-weight: 550;
+}
+
+main.perfil-obra > section#design-sect > img:nth-child(1){
+  order: 1;
+}
+
+main.perfil-obra > section#design-sect > h2{
+  order: 2;
+  flex: 70%;
+}
+
+main.perfil-obra > section#design-sect > h3{
+  order: 4;
+}
+
+
+main.perfil-obra > section#design-sect > p{
+  order: 6;
+}
+
+main.perfil-obra > section#design-sect > span#heart{
+  order: 3;
+}
+
+main.perfil-obra > section#design-sect > small{
+  order: 5;
+}
+
+
+main.perfil-obra > section#design-sect > button{
+  order: 7;
+}
+
+/* Main - Perfil de Obra Pintura  --------------------------------- */
+main.login {
+  background-color: white;
+  min-height: 90vh;
+  padding: 10rem 5rem;
+  margin-top: 7rem;
+  display: flex;
+  flex-flow:column; 
+  position:relative;
+  row-gap: 1rem;
+}
+
+main.login > h1 {
+  font-weight: 400;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+main.login > input {
+  border: 1px solid black;
+  border-radius: 3rem;
+  flex: 9rem 0;
+  font-size: 2.5rem;
+  padding: 0 3rem;
+}
+
+main.login > span {
+  font-size: 2rem;
+  margin-top: -1rem;
+  visibility: hidden;
+}
+
+main.login > button {
+  flex: 9rem 0;
+  border-radius: 3rem;
+  width: 100%;
+}
+
+main.login > img {
+  position: absolute;
+  width: 4rem;
+  height: auto;
+  right: 7rem;
+  top: 33.5rem;
+  cursor: pointer;
+}
+
+main.login > p, 
+main.login > u {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+main.login > p > a {
+  color: var(--azul-oscuro);
+  font-weight: 700;
+}
+
+/* Main - Quitar la sesion (eliminar y cerrar)  --------------------------------- */
+main.fueraSesion {
+  background-color: white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; 
+  min-height: 92vh;
+  padding: 6rem;
+  align-items: center;
+  text-align: center;
+  column-gap: 1rem;
+}
+
+main.fueraSesion > strong {
+  font-size: 4rem;
+  padding: 0 4rem;
+  margin-top: 15rem
+}
+
+main.fueraSesion button {
+  margin-top: -70rem;
+  flex: 47% 0;
+  height: 6rem;
+  border-radius: 3rem;
+  font-size: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-weight: 550;
+  color: white;
+  cursor: pointer;
+}
+
+main.fueraSesion button:nth-child(2) {
+  background-color: var(--gris-oscuro);
+}
+
+main.fueraSesion button:nth-child(3) {
+  background-color: var(--rojo-claro);
+}
+
+
 /* Footer  --------------------------------- */
 footer {
   background-color: black;
@@ -1040,14 +1378,14 @@ footer {
   row-gap: 1rem;
 }
 
-footer > nav#redes {
+footer > nav#redes-f {
   flex: 100%;
   text-align: center;
   margin-top: 4rem;
   margin-bottom: 2rem;
 }
 
-footer > nav#redes > a > img {
+footer > nav#redes-f > a > img {
   width: 4rem;
 }
 
@@ -1067,6 +1405,7 @@ footer > input#newsletter {
 button.suscb {
   background-color: var(--azul-claro);
   width: 12rem;
+  cursor: pointer;
 }
 
 button.suscb > img {
@@ -1078,11 +1417,11 @@ footer > p {
   font-size: 1.9rem;
 }
 
-footer > span.error-newsletter {
+footer > span#error-newsletter {
   color: var(--rojo-claro);
   font-size: 1.9rem;
   margin-top: -1rem;
-  visibility: hidden;
+  display: none;
 }
 
 div.politica {

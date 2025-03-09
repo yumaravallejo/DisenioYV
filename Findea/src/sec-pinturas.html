@@ -131,31 +131,31 @@
       </header>
 
       <main class="fondo-gris">
-        <span class="titulo">
+        <div class="titulo">
             <h1>Pinturas</h1>
-          </span>
+          </div>
         <section id="sect-obras">
-            <article class="obra doble">
+            <article class="obra doble" onclick="irHasta('perfil-pintura.html', 'bird-3342446_1920.webp')">
                 <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/bird-3342446_1920.webp" alt="Imagen de pintura">
                 <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/aniadir-car-a.svg" alt="Imagen de añadir al carrito">
             </article>
-            <article class="obra doble">
+            <article class="obra doble"  onclick="irHasta('perfil-pintura.html', 'lotus-7511897_1920.webp')">
                 <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/lotus-7511897_1920.webp" alt="Imagen de pintura">
                 <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/aniadir-car-a.svg" alt="Imagen de añadir al carrito">
             </article>
-            <article class="obra cuadruple">
+            <article class="obra cuadruple" onclick="irHasta('perfil-pintura.html', 'margaritas.webp')">
                 <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/margaritas.webp" alt="Imagen de pintura">
                 <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/aniadir-car-a.svg" alt="Imagen de añadir al carrito">
             </article>
-            <article class="obra singular">
+            <article class="obra singular" onclick="irHasta('perfil-pintura.html', 'pintura2.webp')">
                 <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/pintura2.webp" alt="Imagen de pintura">
                 <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/aniadir-car-a.svg" alt="Imagen de añadir al carrito">
             </article>
-            <article class="obra singular">
+            <article class="obra singular" onclick="irHasta('perfil-pintura.html', 'pintura3.webp')">
                 <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/pintura3.webp" alt="Imagen de pintura">
                 <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/aniadir-car-a.svg" alt="Imagen de añadir al carrito">
             </article>
-            <article class="obra doble">
+            <article class="obra doble" onclick="irHasta('perfil-pintura.html', 'pinturachina.webp')">
                 <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/pinturachina.webp" alt="Imagen de pintura">
                 <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/aniadir-car-a.svg" alt="Imagen de añadir al carrito">
             </article>
@@ -163,10 +163,10 @@
       </main>
 
       <footer>
-        <nav id="redes">
+        <nav id="redes-f">
           <a href="#">
             <img
-              id="pinterest"
+              id="pinterest-f"
               src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/pinterest-b.svg"
               alt="Icono de Pinterest"
               title="Ir a pinterest"
@@ -174,7 +174,7 @@
           </a>
           <a href="#">
             <img
-              id="facebook"
+              id="facebook-f"
               src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/facebook-b.svg"
               alt="Icono de Facebook"
               title="Ir a Facebook"
@@ -182,7 +182,7 @@
           </a>
           <a href="#">
             <img
-              id="instagram"
+              id="instagram-f"
               src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/instagram-b.svg"
               alt="Icono de Instagram"
               title="Ir a Instagram"
@@ -190,7 +190,7 @@
           </a>
           <a href="#">
             <img
-              id="email"
+              id="email-f"
               src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/mail-b.svg"
               alt="Icono de mail"
               title="Contactar vía email"
@@ -205,13 +205,14 @@
           id="newsletter"
           placeholder="Correo Electrónico"
         />
-        <button id="subscribe-btn" class="bac-azul suscb">
+        <button id="subscribe-btn" class="bac-azul suscb" onclick="comprobar('newsletter')">
           <img
             src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/newsletter-icon.svg"
-          />
+            alt="icono de mail"
+            />
         </button>
         <p>Al suscribirte estás aceptando nuestra política de datos</p>
-        <span class="error-newsletter"
+        <span id="error-newsletter" class="error"
           >¡Ups ha ocurrido algo! Inténtalo de nuevo más tarde</span
         >
 

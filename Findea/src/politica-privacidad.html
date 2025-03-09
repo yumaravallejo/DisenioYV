@@ -127,14 +127,14 @@
       </header>
 
       <main id="politica-privacidad">
-        <span class="titulo">
+        <div class="titulo">
           <img
             id="atras"
             src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/atras.svg"
             alt="Flecha atrás"
           />
           <h1>Política de Privacidad</h1>
-        </span>
+        </div>
 
         <div class="texto">
           <p>
@@ -244,10 +244,10 @@
       </main>
 
       <footer>
-        <nav id="redes">
+        <nav id="redes-f">
           <a href="#">
             <img
-              id="pinterest"
+              id="pinterest-f"
               src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/pinterest-b.svg"
               alt="Icono de Pinterest"
               title="Ir a pinterest"
@@ -255,7 +255,7 @@
           </a>
           <a href="#">
             <img
-              id="facebook"
+              id="facebook-f"
               src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/facebook-b.svg"
               alt="Icono de Facebook"
               title="Ir a Facebook"
@@ -263,7 +263,7 @@
           </a>
           <a href="#">
             <img
-              id="instagram"
+              id="instagram-f"
               src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/instagram-b.svg"
               alt="Icono de Instagram"
               title="Ir a Instagram"
@@ -271,7 +271,7 @@
           </a>
           <a href="#">
             <img
-              id="email"
+              id="email-f"
               src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/mail-b.svg"
               alt="Icono de mail"
               title="Contactar vía email"
@@ -286,13 +286,14 @@
           id="newsletter"
           placeholder="Correo Electrónico"
         />
-        <button id="subscribe-btn" class="bac-azul suscb">
+        <button id="subscribe-btn" class="bac-azul suscb" onclick="comprobar('newsletter')">
           <img
             src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/newsletter-icon.svg"
-          />
+            alt="icono de mail"
+            />
         </button>
         <p>Al suscribirte estás aceptando nuestra política de datos</p>
-        <span class="error-newsletter"
+        <span id="error-newsletter" class="error"
           >¡Ups ha ocurrido algo! Inténtalo de nuevo más tarde</span
         >
 

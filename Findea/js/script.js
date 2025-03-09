@@ -24,11 +24,82 @@ changeImageOnHover("instagram", baseUrl, "instagram");
 changeImageOnHover("email", baseUrl, "mail");
 
 $(function () {
+  $("img#verClave").on("click", function() {
+    const inputClave = $("#clave");
+
+    if (inputClave.attr("type") === "password") {
+      inputClave.attr("type", "text");
+      $(this).attr("src", "https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/no-ver-contra.svg")
+    } else {
+      inputClave.attr("type", "password");
+      $(this).attr("src", "https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/ver-contra.svg")
+
+    }
+  });
+
+  $("div#creandoLista").hide();
+
+  $("#add-wish-sec > article").on("click", function () {
+    if ($(this).hasClass("unselect")) {
+      $(this).removeClass("unselect").addClass("select");
+    } else {
+      $(this).removeClass("select").addClass("unselect");
+    }
+  });
+
+  $("div#listaNueva > p").on("click", function () {
+    if ($(this).parent().hasClass("unselect")) {
+      $(this).parent().removeClass("unselect").addClass("select");
+    } else {
+      $(this).parent().removeClass("select").addClass("unselect");
+    }
+
+    $("div#creandoLista").finish().slideToggle("fast");
+  });
+
+  $("#heart").on("click", function () {
+    if ($(this).children("img").hasClass("clicked")) {
+      $(this).children("img").removeClass("clicked").addClass("no-clicked");
+      $(this)
+        .children("img")
+        .attr(
+          "src",
+          "https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/añadido.svg"
+        );
+      $(this).attr("onclick", "irHasta('add-wish.html')");
+    }
+  });
+
+  $("button#addCart").on("click", function () {
+    if ($(this).hasClass("bac-azul")) {
+      $(this).removeClass("bac-azul").addClass("bac-azul-osc");
+      $(this).html("Ver Carrito");
+      $(this).attr("onclick", "irHasta('user-cart.html')");
+
+    } else {
+      $(this).removeClass("bac-azul-osc").addClass("bac-azul");
+      $(this).html("Añadir al carrito");
+    }
+  });
+});
+
+function addWish() {
+  $(this).children("img").removeClass("no-clicked").addClass("clicked");
+  $(this)
+    .children("img")
+    .attr(
+      "src",
+      "https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/no-añadido.svg"
+    );
+  $(this).attr("onclick", "");
+}
+
+$(function () {
   var SliderModule = (function () {
     var pb = {};
-    pb.elslider = $('#slider');
+    pb.elslider = $("#slider");
     pb.items = {
-      panels: pb.elslider.find('.slider-wrapper > li'),
+      panels: pb.elslider.find(".slider-wrapper > li"),
     };
 
     var SliderInterval,
@@ -36,17 +107,17 @@ $(function () {
       lengthSlider = pb.items.panels.length;
 
     pb.init = function () {
-      var loscontroles = '';
+      var loscontroles = "";
       SliderInit();
 
       // Generar los controles de navegaciÃ³n
       for (var i = 0; i < lengthSlider; i++) {
-        loscontroles += '<li' + (i === 0 ? ' class="active"' : '') + '></li>';
+        loscontroles += "<li" + (i === 0 ? ' class="active"' : "") + "></li>";
       }
-      $('#control-buttons').html(loscontroles);
+      $("#control-buttons").html(loscontroles);
 
       // AcciÃ³n al hacer clic en un control
-      $('#control-buttons li').click(function () {
+      $("#control-buttons li").click(function () {
         var index = $(this).index();
         if (currentSlider !== index) {
           cambiarPanel(index);
@@ -63,23 +134,23 @@ $(function () {
 
       // AcciÃ³n al hacer clic en los botones
       $(".btn-left, .btn-left-peq").on("click", function () {
-        changePanel(-1);  // Mover a la izquierda
+        changePanel(-1); // Mover a la izquierda
       });
 
       $(".btn-right, .btn-right-peq").on("click", function () {
-        changePanel(1);  // Mover a la derecha
+        changePanel(1); // Mover a la derecha
       });
 
       // Mostrar imagen al hacer hover sobre el control
-      $('#control-buttons li').on("mouseenter", function () {
+      $("#control-buttons li").on("mouseenter", function () {
         var index = $(this).index();
-        var imgSrc = pb.items.panels.eq(index).find('img').attr('src');
-        $('#preview-img > img').attr('src', imgSrc);
-        $('#preview-img').show();
+        var imgSrc = pb.items.panels.eq(index).find("img").attr("src");
+        $("#preview-img > img").attr("src", imgSrc);
+        $("#preview-img").show();
       });
 
-      $('#control-buttons li').on("mouseleave", function () {
-        $('#preview-img').hide();
+      $("#control-buttons li").on("mouseleave", function () {
+        $("#preview-img").hide();
       });
     };
 
@@ -94,14 +165,20 @@ $(function () {
 
     var slideToNext = function (nextSlider) {
       var paneles = pb.items.panels;
-      var controles = $('#control-buttons li');
+      var controles = $("#control-buttons li");
 
-      controles.removeClass('active');
-      controles.eq(nextSlider).addClass('active');
+      controles.removeClass("active");
+      controles.eq(nextSlider).addClass("active");
 
-      pb.elslider.find('.slider-wrapper').finish().animate({
-        'margin-left': '-' + (nextSlider * 100) + '%'
-      }, 500);
+      pb.elslider
+        .find(".slider-wrapper")
+        .finish()
+        .animate(
+          {
+            "margin-left": "-" + nextSlider * 100 + "%",
+          },
+          500
+        );
 
       currentSlider = nextSlider;
     };
@@ -117,24 +194,26 @@ $(function () {
     var cambiarPanel = function (indice) {
       clearInterval(SliderInterval);
 
-      var controles = $('#control-buttons li');
-      controles.removeClass('active');
-      controles.eq(indice).addClass('active');
+      var controles = $("#control-buttons li");
+      controles.removeClass("active");
+      controles.eq(indice).addClass("active");
 
-      pb.elslider.find('.slider-wrapper').animate({
-        'margin-left': '-' + (indice * 100) + '%'
-      }, 500);
+      pb.elslider.find(".slider-wrapper").animate(
+        {
+          "margin-left": "-" + indice * 100 + "%",
+        },
+        500
+      );
 
       currentSlider = indice;
       SliderInit();
     };
 
     return pb;
-  }());
+  })();
 
   SliderModule.init();
 });
-
 
 $("#hamburger").on("change", function () {
   if (hamburgerCheckbox.checked) {
@@ -146,7 +225,7 @@ $("#hamburger").on("change", function () {
 
 $("#atras").on("click", function () {
   window.history.back();
-})
+});
 
 $(".bac-rojo")
   .on("mouseleave", function () {
@@ -158,7 +237,8 @@ $(".bac-rojo")
 
 $(".bac-azul")
   .on("mouseleave", function () {
-    $(this).css("background-color", "#188DFA");
+    if (!$(this).hasClass("bac-azul-osc"))
+      $(this).css("background-color", "#188DFA");
   })
   .on("mouseenter", function () {
     $(this).css("background-color", "#2B538F");
@@ -177,6 +257,31 @@ $("#flec-select").on("click", function () {
   $("#todas-listas").slideToggle(200);
 });
 
-function irHasta(nombre) {
-  window.location.href = "https://findea-web.s3.us-east-1.amazonaws.com/src/" + nombre;
+function irHasta(nombre, imagen) {
+  localStorage.clear();
+  const urlImagen =
+    "https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/" + imagen;
+  localStorage.setItem("imagen", urlImagen);
+  console.log("Hola" + urlImagen);
+  window.location.href =
+    "https://findea-web.s3.us-east-1.amazonaws.com/src/" + nombre;
+}
+
+const imagen = localStorage.getItem("imagen");
+$(function () {
+  if (imagen) $("#imagen-producto").attr("src", imagen);
+});
+
+function comprobar(id) {
+  const valor = $("#" + id)
+    .val()
+    .trim();
+  console.log(valor);
+  if (valor == "") {
+    $("#error-" + id).show();
+  } else {
+    $("#error-" + id).hide();
+    $("#creandoLista").finish().slideToggle("fast");
+    $("#creandoLista").parent().removeClass("select").addClass("unselect");
+  }
 }

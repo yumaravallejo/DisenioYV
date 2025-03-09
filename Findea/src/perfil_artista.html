@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -211,6 +210,7 @@
                 src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/tattoo-2894318_1920.webp"
                 width="640"
                 height="419"
+                alt="imagen slider"
               />
               <div class="caption">
                 <h2 class="slider-title">Colección 1</h2>
@@ -220,7 +220,8 @@
             <li>
               <img
                 src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/angel-3740393_1920.webp"
-              />
+                alt="imagen slider"
+                />
               <div class="caption">
                 <h2 class="slider-title">Colección 2</h2>
               </div>
@@ -229,7 +230,8 @@
             <li>
               <img
                 src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/margaritas.webp"
-              />
+                alt="imagen slider"
+                />
               <div class="caption">
                 <h2 class="slider-title">Colección 3</h2>
               </div>
@@ -260,16 +262,16 @@
 
           <!-- Contenedor de la imagen previa al hover -->
           <div id="preview-img" class="preview-img">
-            <img src="" alt="Preview image" />
+            <img src="#" alt="Preview image" />
           </div>
         </section>
       </main>
 
       <footer>
-        <nav id="redes">
+        <nav id="redes-f">
           <a href="#">
             <img
-              id="pinterest"
+              id="pinterest-f"
               src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/pinterest-b.svg"
               alt="Icono de Pinterest"
               title="Ir a pinterest"
@@ -277,7 +279,7 @@
           </a>
           <a href="#">
             <img
-              id="facebook"
+              id="facebook-f"
               src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/facebook-b.svg"
               alt="Icono de Facebook"
               title="Ir a Facebook"
@@ -285,7 +287,7 @@
           </a>
           <a href="#">
             <img
-              id="instagram"
+              id="instagram-f"
               src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/instagram-b.svg"
               alt="Icono de Instagram"
               title="Ir a Instagram"
@@ -293,7 +295,7 @@
           </a>
           <a href="#">
             <img
-              id="email"
+              id="email-f"
               src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/mail-b.svg"
               alt="Icono de mail"
               title="Contactar vía email"
@@ -308,13 +310,14 @@
           id="newsletter"
           placeholder="Correo Electrónico"
         />
-        <button id="subscribe-btn" class="bac-azul suscb">
+        <button id="subscribe-btn" class="bac-azul suscb" onclick="comprobar('newsletter')">
           <img
             src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/newsletter-icon.svg"
-          />
+            alt="icono de mail"
+            />
         </button>
         <p>Al suscribirte estás aceptando nuestra política de datos</p>
-        <span class="error-newsletter"
+        <span id="error-newsletter" class="error"
           >¡Ups ha ocurrido algo! Inténtalo de nuevo más tarde</span
         >
 
