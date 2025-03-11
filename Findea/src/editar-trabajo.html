@@ -147,7 +147,7 @@
             <h1>Editar Obra</h1>
         </div>
 
-        <form method="get" action="https://findea-web.s3.us-east-1.amazonaws.com/src/editar-perfil.html">
+        <form method="get" action="https://findea-web.s3.us-east-1.amazonaws.com/src/mis-trabajos.html">
             <p>
                 <label for="nombre">Nombre</label><br>
                 <input type="text" name="nombre" id="nombre" placeholder="Nombre *" value="Nombre Obra" required>
@@ -179,18 +179,19 @@
 
             <p>
                 <label for="descripcion">Dirección de envío</label><br>
-                <textarea name="descripcion" id="descripcion" placeholder="Descripción...">Lorem ipsum dolor sit amet consectetur. Eget urna sodales id venenatis urna elementum nunc ipsum sed. Rhoncus sed lorem amet adipiscing. Sit felis tristique ac viverra. Libero viverra auctor nisl tristique congue. Ac libero id et ac posuere est nunc. Morbi ullamcorper eu ut adipiscing.
-                    </textarea>
+                <textarea name="descripcion" id="descripcion" placeholder="Descripción..." required>
+                  Lorem ipsum dolor sit amet consectetur. Eget urna sodales id venenatis urna elementum nunc ipsum sed. Rhoncus sed lorem amet adipiscing. Sit felis tristique ac viverra. Libero viverra auctor nisl tristique congue. Ac libero id et ac posuere est nunc. Morbi ullamcorper eu ut adipiscing.
+                </textarea>
             </p>
 
             <p>
-                <label for="imagen">Añadir Imágen</label><br>
-                <input type="file" name="imagen" id="imagen" accept="image/*">
+                <label for="foto">Añadir Imágen</label><br>
+                <input type="file" name="foto" id="foto" accept="image/*" required>
             </p>
 
             <div>
                 <button class="btn-peq bac-gris-osc" onclick="irHasta('mis-trabajos.html')">Volver atrás</button>
-                <button class="btn-peq bac-azul" onclick="irHasta('mis-trabajos.html')">Añadir</button>
+                <button type="submit" class="btn-peq bac-azul">Añadir</button>
             </div>
         </form>
     </main>

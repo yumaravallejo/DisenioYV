@@ -26,7 +26,7 @@ body.no-scroll {
 
 #subir {
   width: 8rem;
-  position:fixed;
+  position: fixed;
   z-index: 2;
   bottom: 15rem;
   right: 3rem;
@@ -44,12 +44,12 @@ input.errorInput {
   border: 2px solid var(--rojo-claro);
 }
 
-input.normal{
+input.normal {
   border: 2px solid black;
 }
 
 .sombra {
-  box-shadow: -5px 6px .5rem  rgb(104, 104, 104);
+  box-shadow: -5px 6px .5rem rgb(104, 104, 104);
 }
 
 .hide {
@@ -68,7 +68,7 @@ a {
   text-decoration: none;
 }
 
-.web-enlace{
+.web-enlace {
   color: var(--azul-claro);
   text-decoration: underline;
 }
@@ -80,7 +80,8 @@ input {
   padding: 0 1rem;
 }
 
-input, select {
+input,
+select {
   outline: var(--azul-claro);
 }
 
@@ -121,13 +122,13 @@ input, select {
   background-color: var(--azul-oscuro);
   color: white;
   display: flex;
-  position:relative;
+  position: relative;
   justify-content: center;
   padding: .5rem 0;
   flex: 100%;
 }
 
-.titulo > img {
+.titulo>img {
   width: 3.5rem;
   position: absolute;
   left: 4rem;
@@ -135,7 +136,7 @@ input, select {
   cursor: pointer;
 }
 
-.titulo > h1 {
+.titulo>h1 {
   text-align: center;
   font-size: 4rem;
 }
@@ -154,7 +155,7 @@ main {
   color: white;
 }
 
-.bac-rojo{
+.bac-rojo {
   background-color: #FF0C01;
   color: white;
 }
@@ -192,7 +193,7 @@ div.texto {
   background-color: var(--gris-fondo);
 }
 
-.error{
+.error {
   color: var(--rojo-claro);
   font-size: 1.5rem;
 }
@@ -386,7 +387,7 @@ nav#utilidades-usuario>a span {
 }
 
 /* Main - Slider  --------------------------------- */
- .contenedor-slider {
+.contenedor-slider {
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -440,18 +441,19 @@ nav#utilidades-usuario>a span {
   -webkit-text-stroke: 1px black;
 }
 
- #preview-img {
+#preview-img {
   position: absolute;
-  bottom: 4rem; /* Ajusta la posiciÃ³n segÃºn el diseÃ±o */
+  bottom: 4rem;
+  /* Ajusta la posiciÃ³n segÃºn el diseÃ±o */
   left: 50%;
   transform: translateX(-50%);
-  width: 12rem; 
+  width: 12rem;
   height: 10rem;
-  display: none; 
+  display: none;
   overflow: hidden;
 }
 
-#preview-img > img {
+#preview-img>img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -499,7 +501,7 @@ nav#utilidades-usuario>a span {
 .btn-left,
 .btn-right,
 .btn-left-peq,
-.btn-right-peq  {
+.btn-right-peq {
   position: absolute;
   top: 50%;
   cursor: pointer;
@@ -508,14 +510,16 @@ nav#utilidades-usuario>a span {
 
 
 
-.btn-left, .btn-left-peq {
+.btn-left,
+.btn-left-peq {
   padding: 100%;
   padding-left: .7rem;
   padding-right: 1rem;
   transform: translate(0, -50%);
 }
 
-.btn-right, .btn-right-peq{
+.btn-right,
+.btn-right-peq {
   right: 0;
   padding: 100%;
   padding-left: .6rem;
@@ -541,7 +545,7 @@ main#index>section#artistas-top {
 }
 
 main#index>section#artistas-top>article.item-inicial {
-  flex: 100%;
+  flex: 100% 0;
   text-align: center;
   align-items: center;
   border-radius: 20px;
@@ -594,8 +598,14 @@ article#artista7 {
   background-image: url("https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/maquillajito.webp");
 }
 
+article#artista8 {
+  background-position: 0 -10rem;
+  background-image: url("https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/margaritas.webp");
+}
+
 /* Main - USER-PROFILE / EDIT PROFILE  --------------------------------- */
-main#user-profile, main#user-edit {
+main#user-profile,
+main#user-edit {
   display: flex;
   text-align: center;
   flex-flow: column;
@@ -603,18 +613,19 @@ main#user-profile, main#user-edit {
   background-color: white;
 }
 
-main#user-profile > h1 {
+main#user-profile>h1 {
   font-size: 3.5rem;
   font-weight: 650;
   margin-top: 4rem;
   margin-bottom: 3rem
 }
 
-main#user-edit > img {
+main#user-edit>img {
   margin-top: 5em
 }
 
-main#user-profile > img, main#user-edit > img  {
+main#user-profile>img,
+main#user-edit>img {
   width: 20rem;
   height: 19rem;
   border-radius: 100%;
@@ -641,7 +652,7 @@ section#propiedades-user {
   margin-top: 6rem;
 }
 
-section#propiedades-user > h2 {
+section#propiedades-user>h2 {
   text-align: left;
   margin-left: 6rem;
   flex: 100%;
@@ -650,7 +661,7 @@ section#propiedades-user > h2 {
   margin-top: 1rem;
 }
 
-section#propiedades-user > p {
+section#propiedades-user>p {
   flex: 100%;
   margin: 0 6rem;
   padding: 2rem 3rem;
@@ -662,11 +673,11 @@ section#propiedades-user > p {
   text-align: left;
 }
 
-section#propiedades-user > p#descripcion-user {
+section#propiedades-user>p#descripcion-user {
   padding-bottom: 12rem;
 }
 
-nav#botones{
+nav#botones {
   flex: 100%;
   display: flex;
   flex-flow: row wrap;
@@ -674,30 +685,31 @@ nav#botones{
   column-gap: 1rem;
 }
 
-nav#botones > a:nth-child(1), nav#botones > a:nth-child(4) {
+nav#botones>a:nth-child(1),
+nav#botones>a:nth-child(4) {
   font-size: 2.5rem;
   flex: 100%;
   margin-top: 1rem;
 }
 
-nav#botones > a:nth-child(2){
+nav#botones>a:nth-child(2) {
   margin-top: 6rem;
   background-color: var(--rojo-claro);
 }
 
-nav#botones > a:nth-child(3){
+nav#botones>a:nth-child(3) {
   margin-top: 6rem;
   background-color: var(--azul-claro);
 }
 
-nav#botones > a:nth-child(4){
+nav#botones>a:nth-child(4) {
   margin-top: 4.5rem;
   margin-bottom: 15rem;
   color: var(--gris-oscuro);
   font-weight: 500;
 }
 
-form#form-edit-user{
+form#form-edit-user {
   width: 75%;
   display: flex;
   flex-flow: column wrap;
@@ -707,15 +719,15 @@ form#form-edit-user{
   padding-bottom: 10rem
 }
 
-form#form-edit-user > span.error{
+form#form-edit-user>span.error {
   margin-top: -1.5rem;
   font-size: 2rem;
   display: none;
 }
 
-form#form-edit-user > input[type='text'],
-form#form-edit-user > input[type='password'],
-form#form-edit-user > textarea{
+form#form-edit-user>input[type='text'],
+form#form-edit-user>input[type='password'],
+form#form-edit-user>textarea {
   height: 6rem;
   outline-color: var(--azul-claro);
   border-radius: 2rem;
@@ -723,7 +735,7 @@ form#form-edit-user > textarea{
   font-size: 2.2rem;
 }
 
-form#form-edit-user > textarea {
+form#form-edit-user>textarea {
   height: 15rem;
   font-family: Gantari;
   font-size: 2.2rem;
@@ -731,7 +743,7 @@ form#form-edit-user > textarea {
 }
 
 
-form#form-edit-user > a{
+form#form-edit-user>a {
   color: rgb(71, 71, 71);
   border: 2px solid black;
   width: 50%;
@@ -748,21 +760,21 @@ input.errorInput {
   border: 2px solid var(--rojo-claro);
 }
 
-form#form-edit-user > input[type='file']{
+form#form-edit-user>input[type='file'] {
   display: none;
 }
 
-form#form-edit-user > div#btnes-edit {
+form#form-edit-user>div#btnes-edit {
   display: flex;
   justify-content: space-between;
 }
 
-form#form-edit-user > div#btnes-edit > a{
+form#form-edit-user>div#btnes-edit>a {
   text-align: center;
 }
 
 /* Main - WISH-LIST  --------------------------------- */
-main#wish-list{
+main#wish-list {
   display: flex;
   flex-flow: row wrap;
   background-color: var(--gris-fondo);
@@ -780,51 +792,49 @@ div#select-lista {
   top: 13rem;
 }
 
-div#select-lista > p{ 
+div#select-lista>p {
   padding: 1.5rem;
   font-size: 2.3rem;
 }
 
-div#select-lista > a {
+div#select-lista>a {
   position: absolute;
   right: 1rem;
-  top:1rem;
+  top: 1rem;
   width: 4rem;
   cursor: pointer;
 }
 
-div#select-lista > a > img {
+div#select-lista>a>img {
   width: 100%;
-  transform:rotate(0deg);
+  transform: rotate(0deg);
   transition: transform ease .5s;
 }
 
-div#select-lista > ul {
+div#select-lista>ul {
   list-style-type: none;
   display: none;
-}  
+}
 
-div#select-lista > ul > li{
+div#select-lista>ul>li {
   padding: 1.5rem;
 }
 
-div#select-lista > ul > li:hover{
+div#select-lista>ul>li:hover {
   background-color: var(--gris-oscuro);
 }
 
 section#wish-list-sect {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
-  flex: 100%;
+  /* justify-content: space-between; */
   padding: 0 5rem;
   row-gap: 4rem;
-  column-gap: 4rem;
   margin-top: 10rem;
 }
 
-section#wish-list-sect > article.wish-list-a {
-  flex: 40%;
+section#wish-list-sect>article {
+  flex: 48%;
   width: 20rem;
   border: 1px solid var(--gris-oscuro);
   height: 30rem;
@@ -832,10 +842,23 @@ section#wish-list-sect > article.wish-list-a {
   overflow: hidden;
   display: flex;
   flex-flow: column;
+  justify-content: space-between;
   position: relative;
 }
 
-section#wish-list-sect > article.wish-list-a > div.comprar-art{
+section#wish-list-sect>article.wish-list-b>img.img-art {
+  flex: 100%;
+  height: 24rem;
+}
+
+section#wish-list-sect>article.wish-list-b>img.corazon {
+  width: 4.5rem;
+  position: absolute;
+  bottom: .7rem;
+  right: .4rem;
+}
+
+section#wish-list-sect>article.wish-list-a>div.comprar-art {
   height: 6rem;
   width: 100%;
   display: flex;
@@ -843,27 +866,20 @@ section#wish-list-sect > article.wish-list-a > div.comprar-art{
   align-items: center;
   padding-left: 1rem;
   padding-right: .5rem;
-  position:absolute;
+  position: absolute;
   background-color: white;
   bottom: 0;
 }
 
-section#wish-list-sect > article.wish-list-a > img#corazon {
-  position: absolute;
-  bottom: .9rem;
-  right: .4rem;
-  width: 4rem;
-}
-
-img#corazon {
-  flex: 5rem;
+section#wish-list-sect>article.wish-list-a>div>img.corazon {
+  width: 5rem;
 }
 
 img.aniadir-carro {
   flex: 6rem;
 }
 
-div.comprar-art > strong {
+div.comprar-art>strong {
   font-size: 3rem;
   flex: 70%;
 }
@@ -874,10 +890,11 @@ img.img-art {
 }
 
 /* Main - ADD-WISH  --------------------------------- */
-main#add-wish{
+main#add-wish {
   background-color: white;
   min-height: 67vh;
 }
+
 section#add-wish-sec {
   display: flex;
   flex-flow: column;
@@ -899,19 +916,19 @@ article.cuadrado.sombra {
   border: 2px solid black
 }
 
-article.cuadrado > img:nth-child(1) {
+article.cuadrado>img:nth-child(1) {
   height: 5rem;
   flex: 6rem 0;
   margin: .5rem;
 }
 
-article.cuadrado > span {
+article.cuadrado>span {
   font-size: 3rem;
   flex: 80% 0;
   color: black;
 }
 
-article.cuadrado > img:nth-child(3) {
+article.cuadrado>img:nth-child(3) {
   flex: 4rem 0;
   margin-right: 2rem;
 }
@@ -930,18 +947,18 @@ div#listaNueva.sombra {
   border: 2px solid black
 }
 
-div#listaNueva > p{
+div#listaNueva>p {
   font-size: 3rem;
   font-weight: 600;
   flex: 100% 0;
   margin-left: 1.5rem
 }
 
-div#listaNueva > div > label {
+div#listaNueva>div>label {
   font-size: 2rem;
 }
 
-div#listaNueva > div > input {
+div#listaNueva>div>input {
   font-size: 2rem;
   flex: 100%;
   padding: 1.9rem 1rem;
@@ -957,7 +974,7 @@ div#creandoLista {
   row-gap: 1rem;
 }
 
-span#error-nombreLista{
+span#error-nombreLista {
   margin-top: -.7rem;
   font-size: 1.8rem;
   display: none;
@@ -971,7 +988,7 @@ button.cuadro {
   font-weight: 500;
 }
 
-.select{
+.select {
   border: .25rem solid black;
   color: black;
 }
@@ -981,19 +998,21 @@ button.cuadro {
   color: var(--gris-oscuro);
 }
 
-article.unselect > div#creandoLista {
+article.unselect>div#creandoLista {
   display: none;
 }
 
 
 /* Main - USER CART  --------------------------------- */
-main#user-cart > span, main#add-wish > img#atras{
+main#user-cart>span,
+main#add-wish>img#atras {
   flex: 100%;
 }
 
-main#user-cart > img#atras, main#add-wish > img#atras {
+main#user-cart>img#atras,
+main#add-wish>img#atras {
   width: 4rem;
-  margin:0 6rem;
+  margin: 0 6rem;
   margin-top: 5rem;
   margin-bottom: 3rem
 }
@@ -1004,7 +1023,7 @@ section#carrito-sect {
   padding: 0 5rem;
 }
 
-section#carrito-sect > article.producto-carro {
+section#carrito-sect>article.producto-carro {
   display: flex;
   width: 100%;
   height: 23rem;
@@ -1023,13 +1042,13 @@ div.info-carrito {
   flex: 60%;
 }
 
-section#carrito-sect > article.producto-carro > img.img-prod {
+section#carrito-sect>article.producto-carro>img.img-prod {
   flex: 40%;
   border-top-left-radius: 2rem;
   border-bottom-left-radius: 2rem;
 }
 
-section#carrito-sect > article.producto-carro > div.info-carrito > img.basura {
+section#carrito-sect>article.producto-carro>div.info-carrito>img.basura {
   width: 4rem;
   height: 4rem;
   position: absolute;
@@ -1038,15 +1057,15 @@ section#carrito-sect > article.producto-carro > div.info-carrito > img.basura {
   transform: translate(0, -50%);
 }
 
-section#carrito-sect > article.producto-carro> div.info-carrito > p {
+section#carrito-sect>article.producto-carro>div.info-carrito>p {
   font-size: 3rem;
 }
 
-section#carrito-sect > article.producto-carro> div.info-carrito > span {
+section#carrito-sect>article.producto-carro>div.info-carrito>span {
   font-size: 2.5rem;
 }
 
-section#carrito-sect > article.producto-carro> div.info-carrito > span.tiempo {
+section#carrito-sect>article.producto-carro>div.info-carrito>span.tiempo {
   color: var(--rojo-claro);
   font-size: 2.5rem;
   font-weight: 600;
@@ -1063,55 +1082,59 @@ div#detalles-compra {
   row-gap: 3rem;
 }
 
-div#detalles-compra > p {
+div#detalles-compra>p {
   text-align: justify;
   font-size: 1.1rem;
 }
 
-div#detalles-compra > span, div#detalles-compra > strong {
+div#detalles-compra>span,
+div#detalles-compra>strong {
   flex: 60%;
   font-size: 3rem;
 }
 
-div#detalles-compra > strong {
+div#detalles-compra>strong {
   flex: 40%;
   text-align: right;
 }
 
 /* Main - ACCESIBILIDAD Y POLÃTICA  --------------------------------- */
-main#politica-privacidad, main#accesibilidad-m {
+main#politica-privacidad,
+main#accesibilidad-m {
   background-color: var(--gris-fondo);
 }
-main#accesibilidad-m > p {
+
+main#accesibilidad-m>p {
   margin-left: 5rem;
   display: flex;
-  column-gap: 1.5rem ;
+  column-gap: 1.5rem;
   font-size: 3rem;
   align-items: center;
 }
 
-main#accesibilidad-m > p > img {
+main#accesibilidad-m>p>img {
   width: 5rem;
 }
 
-main#politica-privacidad > div.texto h2 {
+main#politica-privacidad>div.texto h2 {
   margin-bottom: -1.5rem;
 }
 
-main#politica-privacidad > * > ol {
+main#politica-privacidad>*>ol {
   list-style-type: lower-alpha;
   margin-left: 2.5rem;
 }
 
-main#politica-privacidad > * > ul {
+main#politica-privacidad>*>ul {
   list-style-type: disc;
   margin-left: 2.5rem;
 }
 
-main#politica-privacidad > * > *  > * > ul {
+main#politica-privacidad>*>*>*>ul {
   list-style-type: disc;
   margin-left: 2rem;
 }
+
 /* Main - OBRAS  --------------------------------- */
 section#sect-obras {
   display: flex;
@@ -1151,27 +1174,34 @@ section#sect-personalizaciones {
   font-size: 3rem;
   row-gap: 2rem;
 }
-section#sect-personalizaciones > h2{
+
+section#sect-personalizaciones>h2 {
   color: var(--azul-oscuro);
 }
-section#sect-personalizaciones > h2, section#sect-personalizaciones > p {
+
+section#sect-personalizaciones>h2,
+section#sect-personalizaciones>p {
   text-align: center;
 }
+
 section#sect-personalizaciones>form {
   display: flex;
   flex-flow: row wrap;
   row-gap: 4rem;
 }
+
 section#sect-personalizaciones>form span.tam {
   flex: 100%;
 }
 
-section#sect-personalizaciones>form span:nth-child(1){
+section#sect-personalizaciones>form span:nth-child(1) {
   margin-top: 1.5rem
 }
-section#sect-personalizaciones>form span{
+
+section#sect-personalizaciones>form span {
   margin-top: -2rem
 }
+
 section#sect-personalizaciones>form span input[type="radio"] {
   width: 3rem;
   height: 3rem;
@@ -1184,11 +1214,11 @@ section#sect-personalizaciones>form textarea {
   resize: none;
 }
 
-section#sect-personalizaciones> form > input::placeholder {
+section#sect-personalizaciones>form>input::placeholder {
   color: #c7c7c7;
 }
 
-section#sect-personalizaciones> form > input {
+section#sect-personalizaciones>form>input {
   border-radius: 2rem;
   height: 10rem;
   border: 1px solid black;
@@ -1197,7 +1227,7 @@ section#sect-personalizaciones> form > input {
   flex: 100%;
 }
 
-section#sect-personalizaciones> form > a {
+section#sect-personalizaciones>form>a {
   width: 100%;
   font-weight: bold;
   font-size: 3.5rem;
@@ -1215,22 +1245,22 @@ section#sect-pers-env {
   align-items: center;
 }
 
-section#sect-pers-env > p:nth-child(1) {
+section#sect-pers-env>p:nth-child(1) {
   margin-top: 3rem;
 }
 
-section#sect-pers-env > h1 {
+section#sect-pers-env>h1 {
   font-size: 4rem;
   color: var(--azul-oscuro);
 }
 
-section#sect-pers-env > a {
+section#sect-pers-env>a {
   font-weight: 700;
   color: var(--azul-claro);
   text-decoration: underline;
 }
 
-section#sect-pers-env > button {
+section#sect-pers-env>button {
   background-color: var(--azul-oscuro);
   font-weight: 600;
   width: 90%;
@@ -1245,26 +1275,26 @@ main#perfil_artista {
   row-gap: 2rem;
 }
 
-main#perfil_artista > span {
+main#perfil_artista>span {
   flex: 100%;
   text-align: left;
   align-items: start;
   align-content: flex-start;
 }
 
-main#perfil_artista > span > img {
+main#perfil_artista>span>img {
   width: 4rem;
   flex: 100% 0;
   margin-left: 2rem
 }
 
-main#perfil_artista > h1 {
+main#perfil_artista>h1 {
   margin: 0 auto;
   font-size: 4rem;
 }
 
 
-main#perfil_artista > img {
+main#perfil_artista>img {
   width: 30rem;
   align-items: center;
   margin: 0 auto;
@@ -1279,7 +1309,7 @@ main#perfil_artista p:nth-child(5) {
   text-align: justify;
 }
 
-main#perfil_artista > h2 {
+main#perfil_artista>h2 {
   flex: 100% 0;
   font-size: 3.5rem;
   margin-bottom: -1rem;
@@ -1294,12 +1324,12 @@ section#infoContactoUser {
   margin: 2rem 0
 }
 
-section#infoContactoUser > p {
+section#infoContactoUser>p {
   display: flex;
   column-gap: 2rem;
 }
 
-section#infoContactoUser > p > img {
+section#infoContactoUser>p>img {
   width: 3.5rem;
 }
 
@@ -1308,7 +1338,7 @@ main.perfil-obra {
   padding: 0
 }
 
-main.perfil-obra > section{
+main.perfil-obra>section {
   display: flex;
   flex-flow: row wrap;
   overflow: hidden;
@@ -1318,7 +1348,7 @@ main.perfil-obra > section{
   align-items: center;
 }
 
-main.perfil-obra > section > img:nth-child(1){
+main.perfil-obra>section>img:nth-child(1) {
   width: 100%;
   height: 40rem;
   border: 1px solid var(--gris-oscuro);
@@ -1327,12 +1357,12 @@ main.perfil-obra > section > img:nth-child(1){
   margin-bottom: 2rem
 }
 
-main.perfil-obra > section > h2{
+main.perfil-obra>section>h2 {
   flex: 100% 0;
   font-size: 4.5rem;
 }
 
-main.perfil-obra > section > h3{
+main.perfil-obra>section>h3 {
   flex: 100% 0;
   font-size: 3.5rem;
   font-weight: 600;
@@ -1340,95 +1370,95 @@ main.perfil-obra > section > h3{
   cursor: pointer;
 }
 
-main.perfil-obra > section > p{
+main.perfil-obra>section>p {
   text-align: justify;
   margin-bottom: 3rem
 }
 
 
-main.perfil-obra > section > span:nth-child(6){
+main.perfil-obra>section>span:nth-child(6) {
   flex: 100% 0;
   font-size: 3rem;
   font-weight: 600;
   margin: 1rem 0;
 }
 
-main.perfil-obra > section > span:nth-child(3){
+main.perfil-obra>section>span:nth-child(3) {
   flex: 50%;
   text-align: end;
   height: 5.5rem;
   cursor: pointer;
 }
 
-main.perfil-obra > section > span > img{
+main.perfil-obra>section>span>img {
   width: 5.5rem;
   height: auto;
 }
 
-main.perfil-obra > section > small{
+main.perfil-obra>section>small {
   font-size: 2.4rem;
   margin: 1rem 0;
   flex: 100% 0;
 }
 
 
-main.perfil-obra > section > button{
+main.perfil-obra>section>button {
   font-weight: 550;
 }
 
-main.perfil-obra > section#design-sect > img:nth-child(1){
+main.perfil-obra>section#design-sect>img:nth-child(1) {
   order: 1;
 }
 
-main.perfil-obra > section#design-sect > h2{
+main.perfil-obra>section#design-sect>h2 {
   order: 2;
   flex: 70%;
 }
 
-main.perfil-obra > section#design-sect > h3{
+main.perfil-obra>section#design-sect>h3 {
   order: 4;
 }
 
 
-main.perfil-obra > section#design-sect > p{
+main.perfil-obra>section#design-sect>p {
   order: 6;
 }
 
-main.perfil-obra > section#design-sect > span#heart{
+main.perfil-obra>section#design-sect>span#heart {
   order: 3;
 }
 
-main.perfil-obra > section#design-sect > small{
+main.perfil-obra>section#design-sect>small {
   order: 5;
 }
 
 
-main.perfil-obra > section#design-sect > button{
+main.perfil-obra>section#design-sect>button {
   order: 7;
 }
 
 /* Main - Perfil de Obra Pintura  --------------------------------- */
-main.login  {
+main.login {
   background-color: white;
   min-height: 90vh;
   padding: 10rem 5rem;
   margin-top: 7rem;
 }
 
-main.login > form {
+main.login>form {
   display: flex;
-  flex-flow:column; 
-  position:relative;
+  flex-flow: column;
+  position: relative;
   row-gap: 1rem;
 }
 
-main.login > h1 {
+main.login>h1 {
   font-weight: 400;
   font-size: 4rem;
   margin-bottom: 3rem;
 }
 
-main.login> * > input {
+main.login>*>input {
   border: 1px solid black;
   border-radius: 3rem;
   flex: 9rem 0;
@@ -1436,19 +1466,19 @@ main.login> * > input {
   padding: 0 3rem;
 }
 
-main.login> * > span {
+main.login>*>span {
   font-size: 2rem;
   margin-top: -1rem;
   visibility: hidden;
 }
 
-main.login> * > button {
+main.login>*>button {
   flex: 9rem 0;
   border-radius: 3rem;
   width: 100%;
 }
 
-main.login> * > img {
+main.login>*>img {
   position: absolute;
   width: 4rem;
   height: auto;
@@ -1457,23 +1487,23 @@ main.login> * > img {
   cursor: pointer;
 }
 
-main.login> * > p, 
-main.login> * > u {
+main.login>*>p,
+main.login>*>u {
   font-size: 2.5rem;
   text-align: center;
   margin: 2rem 0;
 }
 
-main.login> * > p > a {
+main.login>*>p>a {
   color: var(--azul-oscuro);
   font-weight: 700;
 }
 
-main.crear > * > img#verClave {
+main.crear>*>img#verClave {
   top: 27.2rem
 }
 
-main.crear> * > img#verClave2 {
+main.crear>*>img#verClave2 {
   top: 39.7rem
 }
 
@@ -1489,24 +1519,24 @@ main.fueraSesion {
   padding-bottom: 10rem
 }
 
-main.fueraSesion > section {
+main.fueraSesion>section {
   display: flex;
   flex-flow: row wrap;
   row-gap: 4rem;
   column-gap: 1rem;
 }
 
-main.fueraSesion > section > strong:nth-child(1) {
+main.fueraSesion>section>strong:nth-child(1) {
   flex: 100%;
   font-size: 4rem;
   padding: 0 2rem
 }
 
-main.fueraSesion > section > button:nth-child(2) {
+main.fueraSesion>section>button:nth-child(2) {
   flex: 48%;
 }
 
-main.fueraSesion > section > button:nth-child(3) {
+main.fueraSesion>section>button:nth-child(3) {
   flex: 48%;
 }
 
@@ -1516,7 +1546,7 @@ main#envio {
   min-height: 100vh;
 }
 
-main#envio > section {
+main#envio>section {
   margin-top: 2rem;
   display: flex;
   flex-flow: row wrap;
@@ -1525,13 +1555,13 @@ main#envio > section {
   row-gap: 2rem;
 }
 
-main#envio > section > h2 {
+main#envio>section>h2 {
   font-size: 3.5rem;
   font-weight: 550;
   margin-bottom: 2rem;
 }
 
-main#envio > section > article.direccion {
+main#envio>section>article.direccion {
   display: flex;
   flex-flow: row wrap;
   flex: 100% 0;
@@ -1540,7 +1570,7 @@ main#envio > section > article.direccion {
   column-gap: 2rem;
 }
 
-main#envio > section > article.direccion > span.input {
+main#envio>section>article.direccion>span.input {
   margin-top: .5rem;
   height: 3rem;
   border: 1px solid black;
@@ -1549,17 +1579,17 @@ main#envio > section > article.direccion > span.input {
   flex: 3rem
 }
 
-main#envio > section > article.direccion > span.input.select,
-main#metodo-pago > section > article.pago > span.input.select {
-  background-color: var(--azul-claro); 
+main#envio>section>article.direccion>span.input.select,
+main#metodo-pago>section>article.pago>span.input.select {
+  background-color: var(--azul-claro);
 }
 
-main#envio > section > article.direccion > span.input.unselect,
-main#metodo-pago > section > article.pago > span.input.unselect {
+main#envio>section>article.direccion>span.input.unselect,
+main#metodo-pago>section>article.pago>span.input.unselect {
   background-color: white;
 }
 
-main#envio > section > article.direccion > div {
+main#envio>section>article.direccion>div {
   display: flex;
   flex-flow: row wrap;
   column-gap: 1rem;
@@ -1567,22 +1597,22 @@ main#envio > section > article.direccion > div {
   flex: 90%
 }
 
-main#envio > section > article.direccion > div > strong,
-main#envio > section > article.direccion > div > span{
+main#envio>section>article.direccion>div>strong,
+main#envio>section>article.direccion>div>span {
   flex: 100% 0;
 }
 
-main#envio > section > article.direccion > div > span{
+main#envio>section>article.direccion>div>span {
   font-size: 2rem;
   margin-top: -1rem;
   margin-bottom: 1rem;
 }
 
-main#envio > section > article.direccion > div > strong {
+main#envio>section>article.direccion>div>strong {
   font-size: 3rem;
 }
 
-main#envio > section > article.direccion > div > button {
+main#envio>section>article.direccion>div>button {
   width: 12rem;
   height: 4rem;
   font-size: 2rem;
@@ -1592,7 +1622,7 @@ main#envio > section > article.direccion > div > button {
   border-radius: 1rem;
 }
 
-main#envio > section > a {
+main#envio>section>a {
   margin: 2rem 0;
   flex: 50% 0;
   border: 1px solid rgb(66, 66, 66);
@@ -1600,27 +1630,30 @@ main#envio > section > a {
   text-align: center;
   align-content: center;
   font-size: 2.1rem;
-  border-radius:1rem;
+  border-radius: 1rem;
   height: 5rem;
 }
 
-main#envio > section > div, main#metodo-pago > section > div {
+main#envio>section>div,
+main#metodo-pago>section>div {
   flex: 100% 0;
   display: flex;
   justify-content: space-between;
 }
 
-main#envio > section > button {
+main#envio>section>button {
   flex: 47% 0;
 }
 
 /* Main - Add direct  --------------------------------- */
-main#add-direct, main#add-work{
+main#add-direct,
+main#add-work {
   background-color: white;
   min-height: 100vh;
 }
 
-main#add-direct > form,  main#add-work > form{
+main#add-direct>form,
+main#add-work>form {
   padding: 4rem;
   display: flex;
   flex-flow: row wrap;
@@ -1629,27 +1662,27 @@ main#add-direct > form,  main#add-work > form{
   margin-top: 4rem;
 }
 
-main#add-direct > form > p:nth-child(1) {
+main#add-direct>form>p:nth-child(1) {
   flex: 48%;
 }
 
-main#add-direct > form > p > label {
+main#add-direct>form>p>label {
   font-size: 3rem;
   font-weight: 550;
 }
 
-main#add-direct > form > p > input {
+main#add-direct>form>p>input {
   width: 100%;
   height: 5rem;
   font-size: 1.8rem;
   border: 2px solid black;
 }
 
-main#add-direct > form > p:nth-child(2) {
+main#add-direct>form>p:nth-child(2) {
   flex: 48%;
 }
 
-main#add-direct > form > p:nth-child(3) {
+main#add-direct>form>p:nth-child(3) {
   flex: 40%;
   display: flex;
   flex-flow: row wrap;
@@ -1657,11 +1690,11 @@ main#add-direct > form > p:nth-child(3) {
   justify-content: space-between;
 }
 
-main#add-direct > form > p:nth-child(3) > label{
+main#add-direct>form>p:nth-child(3)>label {
   flex: 100%;
 }
 
-main#add-direct > form > p:nth-child(3) > select{
+main#add-direct>form>p:nth-child(3)>select {
   flex: 49% 0;
   border: 2px solid black;
   border-radius: 1rem;
@@ -1670,11 +1703,11 @@ main#add-direct > form > p:nth-child(3) > select{
   padding: 0 1rem;
 }
 
-main#add-direct > form > p:nth-child(3) > input{
+main#add-direct>form>p:nth-child(3)>input {
   flex: 49% 0;
 }
 
-main#add-direct > form > p:nth-child(4) {
+main#add-direct>form>p:nth-child(4) {
   flex: 100%;
   display: flex;
   flex-flow: row wrap;
@@ -1682,19 +1715,19 @@ main#add-direct > form > p:nth-child(4) {
   justify-content: space-between;
 }
 
-main#add-direct > form > p:nth-child(4) > input:nth-child(6) {
+main#add-direct>form>p:nth-child(4)>input:nth-child(6) {
   flex: 49% 0;
 }
 
-main#add-direct > form > p:nth-child(4) > input:nth-child(7) {
+main#add-direct>form>p:nth-child(4)>input:nth-child(7) {
   flex: 49% 0;
 }
 
-main#add-direct > form > p:nth-child(4) > label {
+main#add-direct>form>p:nth-child(4)>label {
   margin-bottom: -7rem
 }
 
-main#add-direct > form >div {
+main#add-direct>form>div {
   flex: 100%;
   display: flex;
   flex-flow: row;
@@ -1706,7 +1739,7 @@ main#metodo-pago {
   background-color: white;
 }
 
-main#metodo-pago > section {
+main#metodo-pago>section {
   margin-top: 2rem;
   display: flex;
   flex-flow: column;
@@ -1715,14 +1748,14 @@ main#metodo-pago > section {
   row-gap: 4rem;
 }
 
-main#metodo-pago > section > h2 {
+main#metodo-pago>section>h2 {
   font-size: 3.5rem;
   font-weight: 550;
   margin-bottom: -2rem;
   margin-top: 4rem;
 }
 
-main#metodo-pago > section > article.pago {
+main#metodo-pago>section>article.pago {
   flex: 100%;
   border: 1px solid black;
   padding: 2rem;
@@ -1732,7 +1765,7 @@ main#metodo-pago > section > article.pago {
   column-gap: 2rem;
 }
 
-main#metodo-pago > section > article.pago > span.input {
+main#metodo-pago>section>article.pago>span.input {
   width: 2rem;
   height: 2rem;
   border: 1px solid black;
@@ -1740,7 +1773,7 @@ main#metodo-pago > section > article.pago > span.input {
   cursor: pointer;
 }
 
-main#metodo-pago > section > article.pago > strong {
+main#metodo-pago>section>article.pago>strong {
   font-size: 3rem;
   font-weight: 550;
 }
@@ -1753,7 +1786,7 @@ main#pago-completo {
   padding: 6rem
 }
 
-main#pago-completo > div {
+main#pago-completo>div {
   display: flex;
   flex-flow: column;
   font-size: 2rem;
@@ -1762,37 +1795,37 @@ main#pago-completo > div {
   padding-top: 10rem
 }
 
-main#pago-completo > div > h1 {
+main#pago-completo>div>h1 {
   color: var(--azul-oscuro);
 }
 
-main#pago-completo > div > p,
-main#pago-completo > div > strong {
+main#pago-completo>div>p,
+main#pago-completo>div>strong {
   font-size: 3rem;
 }
 
-main#pago-completo > div > strong {
+main#pago-completo>div>strong {
   color: var(--azul-oscuro);
 }
 
 /* Main - Add Work  --------------------------------- */
-main#add-work > form > p > input,
-main#add-work > form > p > textarea {
+main#add-work>form>p>input,
+main#add-work>form>p>textarea {
   width: 100%;
   height: 6rem;
   border: 2px solid black;
   border-radius: 1rem;
   font-size: 2.5rem;
   padding: 2rem 2rem;
-} 
+}
 
-main#add-work > form > p:nth-child(2),
-main#add-work > form > p:nth-child(3){
+main#add-work>form>p:nth-child(2),
+main#add-work>form>p:nth-child(3) {
   flex: 48% 0;
 }
 
-main#add-work > form > p:nth-child(2) > select,
-main#add-work > form > p:nth-child(3) > select{
+main#add-work>form>p:nth-child(2)>select,
+main#add-work>form>p:nth-child(3)>select {
   width: 100%;
   height: 6rem;
   border: 2px solid black;
@@ -1802,26 +1835,26 @@ main#add-work > form > p:nth-child(3) > select{
   padding: 0 2rem
 }
 
-main#add-work > form > p > textarea {
+main#add-work>form>p>textarea {
   height: 15rem;
 }
 
-main#add-work > form > p > label {
+main#add-work>form>p>label {
   font-size: 3.5rem;
-} 
+}
 
-main#add-work > form > p:nth-child(1),
-main#add-work > form > p:nth-child(4),
-main#add-work > form > p:nth-child(5),
-main#add-work > form > p:nth-child(6) {
+main#add-work>form>p:nth-child(1),
+main#add-work>form>p:nth-child(4),
+main#add-work>form>p:nth-child(5),
+main#add-work>form>p:nth-child(6) {
   flex: 100% 0;
-} 
+}
 
-main#add-work > form > p:nth-child(6) > input {
+main#add-work>form>p:nth-child(6)>input {
   display: none;
 }
 
-main#add-work > form > p:nth-child(6) > label {
+main#add-work>form>p:nth-child(6)>label {
   border: 2px solid black;
   font-size: 2.5rem;
   padding: 1rem 2rem;
@@ -1829,7 +1862,7 @@ main#add-work > form > p:nth-child(6) > label {
   background-color: var(--gris-fondo);
 }
 
-main#add-work > form > div {
+main#add-work>form>div {
   flex: 100% 0;
   display: flex;
   justify-content: space-between;
@@ -1849,7 +1882,7 @@ article.trabajoUser {
   position: relative;
 }
 
-article.trabajoUser > span {
+article.trabajoUser>span {
   position: absolute;
   left: 25%;
   top: 45%;
@@ -1859,7 +1892,7 @@ article.trabajoUser > span {
   -webkit-text-stroke: 2px black;
 }
 
-main#mis-trabajos > section#trabajosUser {
+main#mis-trabajos>section#trabajosUser {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -1870,9 +1903,7 @@ main#mis-trabajos > section#trabajosUser {
 }
 
 /* Main - Personalizacion enviada  --------------------------------- */
-main#perso-env {
-  
-}
+main#perso-env {}
 
 
 /* Footer  --------------------------------- */
@@ -1882,31 +1913,31 @@ footer {
   flex-flow: row wrap;
   justify-content: space-between;
   color: white;
-  padding:0 3rem;
+  padding: 0 3rem;
   row-gap: 1rem;
 }
 
-footer > nav#redes-f {
+footer>nav#redes-f {
   flex: 100%;
   text-align: center;
   margin-top: 4rem;
   margin-bottom: 2rem;
 }
 
-footer > nav#redes-f > a > img {
+footer>nav#redes-f>a>img {
   width: 4rem;
 }
 
-footer > label[for="newsletter"] {
+footer>label[for="newsletter"] {
   flex: 100%;
   font-size: 3rem;
 }
 
-footer > input#newsletter {
+footer>input#newsletter {
   padding: 3.3rem 2rem;
   padding-right: 8rem;
   width: 100%;
-  flex:60%;
+  flex: 60%;
   font-size: 2.5rem;
   border-radius: 0;
 }
@@ -1917,16 +1948,16 @@ button.suscb {
   cursor: pointer;
 }
 
-button.suscb > img {
+button.suscb>img {
   margin-top: .5rem;
   width: 50%;
 }
 
-footer > p {
+footer>p {
   font-size: 1.9rem;
 }
 
-footer > span#error-newsletter {
+footer>span#error-newsletter {
   color: var(--rojo-claro);
   font-size: 1.9rem;
   margin-top: -1rem;
@@ -1948,6 +1979,154 @@ div.politica a {
   color: white;
 }
 
-/* MODO TABLET */
+/* ESTILOS DE MODO TABLET */
+@media (min-width: 600px) {
 
-/* MODO DESKTOP */
+  /* -- Slider --------------------------------- */
+  div.titulo>h1 {
+    font-size: 3rem;
+  }
+
+  main#index>section#slider {
+    height: 23rem;
+  }
+
+  main#index>section#slider img {
+    object-position: 0 -7rem;
+  }
+
+  main#index>section#artistas-top>article.item-inicial {
+    flex: 48% 0;
+    height: 10rem;
+    line-height: normal;
+  }
+
+  main#index>section#artistas-top>article.item-inicial>a {
+    font-size: 3rem;
+    height: 100%;
+    align-content: center;
+  }
+
+  article#artista1 {
+    background-position: 0 -10rem;
+  }
+
+  article#artista2 {
+    background-position: 0;
+  }
+
+  article#artista3 {
+    background-position: 0;
+  }
+
+  article#artista4 {
+    background-position: 7rem;
+  }
+
+  article#artista5 {
+    background-position: 0;
+  }
+
+  article#artista6 {
+    background-position: 0;
+    background-image: url("https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/sculpture-2406078_1280.webp");
+  }
+
+  article#artista7 {
+    background-position: 0;
+  }
+
+  footer {
+    padding: 0 10rem;
+  }
+
+  footer>label[for="newsletter"] {
+    font-size: 2rem;
+  }
+
+  footer>nav#redes-f>a>img {
+    width: 3.5rem;
+    margin: -1.5rem 0
+  }
+
+  footer>p {
+    font-size: 1.5rem;
+  }
+
+  footer>input#newsletter {
+    padding: 2.5rem 2rem;
+    flex: 58%;
+    font-size: 2rem;
+  }
+
+  footer>span#error-newsletter {
+    font-size: 1.5rem;
+  }
+
+  button.suscb {
+    width: 8.7rem;
+  }
+
+  div.politica {
+    font-size: 1.5rem;
+  }
+
+  /* flecha atras */
+  .titulo>img {
+    width: 2.8rem;
+    top: 1rem
+  }
+
+  section#wish-list-sect {
+    padding: 0 3rem;
+  }
+
+  main#wish-list>section#wish-list-sect {
+    justify-content: space-between;
+  }
+
+  main#wish-list>section#wish-list-sect>article {
+    flex: 30% 0;
+    height: 15rem;
+  }
+
+  section#wish-list-sect>article.wish-list-a>div.comprar-art {
+    height: 3.5rem;
+  }
+
+  div.comprar-art>strong {
+    font-size: 1.7rem;
+  }
+
+  img.aniadir-carro {
+    flex: 4rem;
+  }
+
+  section#wish-list-sect>article.wish-list-a>div>img.corazon {
+    width: 3rem;
+  }
+
+  section#wish-list-sect>article.wish-list-b>img.corazon {
+    width: 2.7rem;
+    bottom: .5rem
+  }
+
+  div#select-lista {
+    width: 20rem;
+    margin-left: 3rem
+  }
+
+  div#select-lista>p {
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+
+  div#select-lista>a {
+    top: .5rem;
+    width: 3rem;
+  }
+
+}
+
+/* ESTILOS DE MODO DESKTOP */
+@media (min-width: 1024px) {}
