@@ -11,10 +11,6 @@
     <!-- <link rel="stylesheet" href="../css/estilos.css" /> -->
     <link rel="stylesheet" href="https://findea-web.s3.us-east-1.amazonaws.com/estilos.css"/>
 
-    <link
-      rel="shortcut icon"
-      href="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/Logo-Findea.svg"
-    />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <style>
@@ -22,7 +18,6 @@
       @import url("https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&display=swap");
     </style>
   </head>
-
   <body>
     <header>
       <nav id="menu">
@@ -147,18 +142,62 @@
       </nav>
     </header>
 
-    <main class="fueraSesion">
-      <section>
-        <strong>¿Seguro que quieres cerrar tu sesión?</strong>
-        <button id="atras" class="btn-peq bac-gris-osc">Volver atrás</button>
-        <button id="eliminar" class="bac-rojo btn-peq " onclick="irHasta('login.html')">
-          Cerrar Sesión
-        </button>
-      </section>
+    <main id="add-work">
+        <div class="titulo">
+            <h1>Añadir Trabajo</h1>
+        </div>
+
+        <form method="get" action="https://findea-web.s3.us-east-1.amazonaws.com/src/editar-perfil.html">
+            <p>
+                <label for="nombre">Nombre</label><br>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre *" required>
+            </p>
+            <p>
+                <label for="categoria">País</label><br>
+                <select id="categoria" name="categoria" required>
+                    <option value="" selected disabled>Seleccionar *</option> 
+                    <option value="1">Pintura</option> 
+                    <option value="2">Escultura</option> 
+                    <option value="3">Diseño</option> 
+
+                </select>                 
+            </p>
+
+            <p>
+                <label for="estado">Estado</label><br>
+                <select id="estado" name="estado" required>
+                    <option value="" selected disabled>Seleccionar *</option> 
+                    <option value="1">Disponible</option> 
+                    <option value="2">Reservado</option> 
+                    <option value="3">Vendido</option> 
+
+                </select>   
+            </p>
+
+            <p>
+                <label for="precio-o">Precio</label><br>
+                <input type="number" name="precio" id="precio-o" placeholder="Precio">
+            </p>
+
+            <p>
+                <label for="descripcion">Dirección de envío</label><br>
+                <textarea name="descripcion" id="descripcion" placeholder="Descripción..."></textarea>
+            </p>
+
+            <p>
+                <label for="imagen">Añadir Imágen</label><br>
+                <input type="file" name="imagen" id="imagen" accept="image/*">
+            </p>
+
+            <div>
+                <button class="btn-peq bac-gris-osc" onclick="irHasta('editar-perfil.html')">Volver atrás</button>
+                <button onclick="irHasta('editar-perfil.html')" class="btn-peq bac-azul">Añadir</button>
+            </div>
+        </form>
     </main>
 
     <!-- SCRIPT -->
-    <!-- <script src="js/script.js"></script> -->
+    <!-- <script src="../js/script.js"></script> -->
     <script src="https://findea-web.s3.us-east-1.amazonaws.com/script.js"></script>
   </body>
 </html>

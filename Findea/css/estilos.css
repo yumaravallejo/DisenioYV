@@ -1,11 +1,11 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0
+  padding: 0;
+  font-family: "Gantari", serif;
 }
 
 body {
-  font-family: "Gantari", serif;
   margin: 0;
   padding: 0;
 }
@@ -22,6 +22,34 @@ body.no-scroll {
   --rojo-oscuro: #A40700;
   --gris-fondo: #F5F5F5;
   --gris-oscuro: #8C8C8C;
+}
+
+#subir {
+  width: 8rem;
+  position:fixed;
+  z-index: 2;
+  bottom: 15rem;
+  right: 3rem;
+  background-color: rgba(255, 255, 255, 0.63);
+  border: .3rem solid var(--azul-claro);
+  border-radius: 5rem;
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input.errorInput {
+  border: 2px solid var(--rojo-claro);
+}
+
+input.normal{
+  border: 2px solid black;
+}
+
+.sombra {
+  box-shadow: -5px 6px .5rem  rgb(104, 104, 104);
 }
 
 .hide {
@@ -43,6 +71,13 @@ a {
 .web-enlace{
   color: var(--azul-claro);
   text-decoration: underline;
+}
+
+input {
+  height: 3rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 0 1rem;
 }
 
 input, select {
@@ -119,6 +154,11 @@ main {
   color: white;
 }
 
+.bac-rojo{
+  background-color: #FF0C01;
+  color: white;
+}
+
 .bac-azul-osc {
   background-color: var(--azul-oscuro);
   color: white;
@@ -155,6 +195,10 @@ div.texto {
 .error{
   color: var(--rojo-claro);
   font-size: 1.5rem;
+}
+
+.bac-gris-osc {
+  background-color: var(--gris-oscuro);
 }
 
 
@@ -340,8 +384,8 @@ nav#utilidades-usuario>a>img {
 nav#utilidades-usuario>a span {
   display: none;
 }
-/* Main - Slider  --------------------------------- */
 
+/* Main - Slider  --------------------------------- */
  .contenedor-slider {
   position: relative;
   overflow: hidden;
@@ -354,7 +398,6 @@ nav#utilidades-usuario>a span {
   width: 80%;
   height: 30rem;
 }
-
 
 .slider-wrapper {
   height: 30rem;
@@ -382,11 +425,6 @@ nav#utilidades-usuario>a span {
   height: auto;
 }
 
-
-/**
- * ---[Caption] ---------------------- 
- **/
-
 .slider-wrapper .caption {
   position: absolute;
   top: 4rem;
@@ -401,11 +439,6 @@ nav#utilidades-usuario>a span {
   text-align: center;
   -webkit-text-stroke: 1px black;
 }
-
-
-/**
- * ---[Botones-Control] ---------------------- 
- **/
 
  #preview-img {
   position: absolute;
@@ -524,7 +557,6 @@ a.articulo {
   -webkit-text-stroke: 1px black;
   text-shadow: 2px 1px 2px black;
   font-weight: bold;
-
 }
 
 article#artista1 {
@@ -562,13 +594,13 @@ article#artista7 {
   background-image: url("https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/maquillajito.webp");
 }
 
-/* Main - USER-PROFILE  --------------------------------- */
-main#user-profile {
+/* Main - USER-PROFILE / EDIT PROFILE  --------------------------------- */
+main#user-profile, main#user-edit {
   display: flex;
   text-align: center;
   flex-flow: column;
   align-items: center;
-
+  background-color: white;
 }
 
 main#user-profile > h1 {
@@ -578,12 +610,16 @@ main#user-profile > h1 {
   margin-bottom: 3rem
 }
 
-main#user-profile > img {
+main#user-edit > img {
+  margin-top: 5em
+}
+
+main#user-profile > img, main#user-edit > img  {
   width: 20rem;
   height: 19rem;
   border-radius: 100%;
   border: 1px solid black;
-  margin-bottom: 1rem
+  margin-bottom: 1rem;
 }
 
 input[type='file']#editar-pic {
@@ -594,6 +630,7 @@ label[for='editar-pic'] {
   font-weight: bold;
   color: var(--azul-oscuro);
   font-size: 2.3rem;
+  cursor: pointer;
 }
 
 section#propiedades-user {
@@ -658,6 +695,70 @@ nav#botones > a:nth-child(4){
   margin-bottom: 15rem;
   color: var(--gris-oscuro);
   font-weight: 500;
+}
+
+form#form-edit-user{
+  width: 75%;
+  display: flex;
+  flex-flow: column wrap;
+  text-align: left;
+  row-gap: 2rem;
+  margin: 5rem 0;
+  padding-bottom: 10rem
+}
+
+form#form-edit-user > span.error{
+  margin-top: -1.5rem;
+  font-size: 2rem;
+  display: none;
+}
+
+form#form-edit-user > input[type='text'],
+form#form-edit-user > input[type='password'],
+form#form-edit-user > textarea{
+  height: 6rem;
+  outline-color: var(--azul-claro);
+  border-radius: 2rem;
+  padding: 2rem;
+  font-size: 2.2rem;
+}
+
+form#form-edit-user > textarea {
+  height: 15rem;
+  font-family: Gantari;
+  font-size: 2.2rem;
+  border: 2px solid black;
+}
+
+
+form#form-edit-user > a{
+  color: rgb(71, 71, 71);
+  border: 2px solid black;
+  width: 50%;
+  height: 6rem;
+  border-radius: 2rem;
+  align-content: center;
+  text-align: center;
+  font-size: 2.5rem;
+  background-color: var(--gris-fondo);
+  cursor: pointer;
+}
+
+input.errorInput {
+  border: 2px solid var(--rojo-claro);
+}
+
+form#form-edit-user > input[type='file']{
+  display: none;
+}
+
+form#form-edit-user > div#btnes-edit {
+  display: flex;
+  justify-content: space-between;
+}
+
+form#form-edit-user > div#btnes-edit > a{
+  text-align: center;
 }
 
 /* Main - WISH-LIST  --------------------------------- */
@@ -775,7 +876,7 @@ img.img-art {
 /* Main - ADD-WISH  --------------------------------- */
 main#add-wish{
   background-color: white;
-  min-height: 65vh;
+  min-height: 67vh;
 }
 section#add-wish-sec {
   display: flex;
@@ -792,6 +893,10 @@ article.cuadrado {
   justify-content: space-between;
   column-gap: 1.5rem;
   cursor: pointer;
+}
+
+article.cuadrado.sombra {
+  border: 2px solid black
 }
 
 article.cuadrado > img:nth-child(1) {
@@ -818,6 +923,11 @@ div#listaNueva {
   align-items: center;
   z-index: 2;
   cursor: pointer;
+}
+
+div#listaNueva.sombra {
+  color: black;
+  border: 2px solid black
 }
 
 div#listaNueva > p{
@@ -1095,6 +1205,38 @@ section#sect-personalizaciones> form > a {
   align-items: center;
 }
 
+section#sect-pers-env {
+  display: flex;
+  flex-flow: column;
+  padding: 5rem;
+  font-size: 2.5rem;
+  row-gap: 3rem;
+  text-align: center;
+  align-items: center;
+}
+
+section#sect-pers-env > p:nth-child(1) {
+  margin-top: 3rem;
+}
+
+section#sect-pers-env > h1 {
+  font-size: 4rem;
+  color: var(--azul-oscuro);
+}
+
+section#sect-pers-env > a {
+  font-weight: 700;
+  color: var(--azul-claro);
+  text-decoration: underline;
+}
+
+section#sect-pers-env > button {
+  background-color: var(--azul-oscuro);
+  font-weight: 600;
+  width: 90%;
+  padding: 2rem 0;
+}
+
 /* Main - Perfil de Artista  --------------------------------- */
 main#perfil_artista {
   display: flex;
@@ -1266,11 +1408,14 @@ main.perfil-obra > section#design-sect > button{
 }
 
 /* Main - Perfil de Obra Pintura  --------------------------------- */
-main.login {
+main.login  {
   background-color: white;
   min-height: 90vh;
   padding: 10rem 5rem;
   margin-top: 7rem;
+}
+
+main.login > form {
   display: flex;
   flex-flow:column; 
   position:relative;
@@ -1283,7 +1428,7 @@ main.login > h1 {
   margin-bottom: 3rem;
 }
 
-main.login > input {
+main.login> * > input {
   border: 1px solid black;
   border-radius: 3rem;
   flex: 9rem 0;
@@ -1291,79 +1436,442 @@ main.login > input {
   padding: 0 3rem;
 }
 
-main.login > span {
+main.login> * > span {
   font-size: 2rem;
   margin-top: -1rem;
   visibility: hidden;
 }
 
-main.login > button {
+main.login> * > button {
   flex: 9rem 0;
   border-radius: 3rem;
   width: 100%;
 }
 
-main.login > img {
+main.login> * > img {
   position: absolute;
   width: 4rem;
   height: auto;
-  right: 7rem;
-  top: 33.5rem;
+  right: 3rem;
+  top: 15rem;
   cursor: pointer;
 }
 
-main.login > p, 
-main.login > u {
+main.login> * > p, 
+main.login> * > u {
   font-size: 2.5rem;
   text-align: center;
   margin: 2rem 0;
 }
 
-main.login > p > a {
+main.login> * > p > a {
   color: var(--azul-oscuro);
   font-weight: 700;
 }
 
+main.crear > * > img#verClave {
+  top: 27.2rem
+}
+
+main.crear> * > img#verClave2 {
+  top: 39.7rem
+}
+
+
 /* Main - Quitar la sesion (eliminar y cerrar)  --------------------------------- */
 main.fueraSesion {
   background-color: white;
+  min-height: 92vh;
+  padding: 0 6rem;
+  align-content: center;
+  text-align: center;
+  column-gap: 1rem;
+  padding-bottom: 10rem
+}
+
+main.fueraSesion > section {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center; 
-  min-height: 92vh;
-  padding: 6rem;
-  align-items: center;
-  text-align: center;
+  row-gap: 4rem;
   column-gap: 1rem;
 }
 
-main.fueraSesion > strong {
+main.fueraSesion > section > strong:nth-child(1) {
+  flex: 100%;
   font-size: 4rem;
-  padding: 0 4rem;
-  margin-top: 15rem
+  padding: 0 2rem
 }
 
-main.fueraSesion button {
-  margin-top: -70rem;
-  flex: 47% 0;
-  height: 6rem;
-  border-radius: 3rem;
-  font-size: 2.2rem;
+main.fueraSesion > section > button:nth-child(2) {
+  flex: 48%;
+}
+
+main.fueraSesion > section > button:nth-child(3) {
+  flex: 48%;
+}
+
+/* Main - Dirección de envío  --------------------------------- */
+main#envio {
+  background-color: white;
+  min-height: 100vh;
+}
+
+main#envio > section {
+  margin-top: 2rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
+  flex-flow: row wrap;
+  padding: 4rem;
+  justify-content: space-between;
+  row-gap: 2rem;
+}
+
+main#envio > section > h2 {
+  font-size: 3.5rem;
   font-weight: 550;
-  color: white;
+  margin-bottom: 2rem;
+}
+
+main#envio > section > article.direccion {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 100% 0;
+  border-bottom: 1px solid black;
+  padding-bottom: 2rem;
+  column-gap: 2rem;
+}
+
+main#envio > section > article.direccion > span.input {
+  margin-top: .5rem;
+  height: 3rem;
+  border: 1px solid black;
+  border-radius: 100%;
+  cursor: pointer;
+  flex: 3rem
+}
+
+main#envio > section > article.direccion > span.input.select,
+main#metodo-pago > section > article.pago > span.input.select {
+  background-color: var(--azul-claro); 
+}
+
+main#envio > section > article.direccion > span.input.unselect,
+main#metodo-pago > section > article.pago > span.input.unselect {
+  background-color: white;
+}
+
+main#envio > section > article.direccion > div {
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 1rem;
+  row-gap: 1rem;
+  flex: 90%
+}
+
+main#envio > section > article.direccion > div > strong,
+main#envio > section > article.direccion > div > span{
+  flex: 100% 0;
+}
+
+main#envio > section > article.direccion > div > span{
+  font-size: 2rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
+
+main#envio > section > article.direccion > div > strong {
+  font-size: 3rem;
+}
+
+main#envio > section > article.direccion > div > button {
+  width: 12rem;
+  height: 4rem;
+  font-size: 2rem;
+  color: var(--gris-oscuro);
+  background-color: white;
+  border: 1px solid rgb(39, 39, 39);
+  border-radius: 1rem;
+}
+
+main#envio > section > a {
+  margin: 2rem 0;
+  flex: 50% 0;
+  border: 1px solid rgb(66, 66, 66);
+  color: var(--gris-oscuro);
+  text-align: center;
+  align-content: center;
+  font-size: 2.1rem;
+  border-radius:1rem;
+  height: 5rem;
+}
+
+main#envio > section > div, main#metodo-pago > section > div {
+  flex: 100% 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+main#envio > section > button {
+  flex: 47% 0;
+}
+
+/* Main - Add direct  --------------------------------- */
+main#add-direct, main#add-work{
+  background-color: white;
+  min-height: 100vh;
+}
+
+main#add-direct > form,  main#add-work > form{
+  padding: 4rem;
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 1rem;
+  row-gap: 4rem;
+  margin-top: 4rem;
+}
+
+main#add-direct > form > p:nth-child(1) {
+  flex: 48%;
+}
+
+main#add-direct > form > p > label {
+  font-size: 3rem;
+  font-weight: 550;
+}
+
+main#add-direct > form > p > input {
+  width: 100%;
+  height: 5rem;
+  font-size: 1.8rem;
+  border: 2px solid black;
+}
+
+main#add-direct > form > p:nth-child(2) {
+  flex: 48%;
+}
+
+main#add-direct > form > p:nth-child(3) {
+  flex: 40%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  justify-content: space-between;
+}
+
+main#add-direct > form > p:nth-child(3) > label{
+  flex: 100%;
+}
+
+main#add-direct > form > p:nth-child(3) > select{
+  flex: 49% 0;
+  border: 2px solid black;
+  border-radius: 1rem;
+  font-size: 1.8rem;
+  color: var(--gris-oscuro);
+  padding: 0 1rem;
+}
+
+main#add-direct > form > p:nth-child(3) > input{
+  flex: 49% 0;
+}
+
+main#add-direct > form > p:nth-child(4) {
+  flex: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  row-gap: 3rem;
+  justify-content: space-between;
+}
+
+main#add-direct > form > p:nth-child(4) > input:nth-child(6) {
+  flex: 49% 0;
+}
+
+main#add-direct > form > p:nth-child(4) > input:nth-child(7) {
+  flex: 49% 0;
+}
+
+main#add-direct > form > p:nth-child(4) > label {
+  margin-bottom: -7rem
+}
+
+main#add-direct > form >div {
+  flex: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+/* Main -  Metodo Pago --------------------------------- */
+main#metodo-pago {
+  background-color: white;
+}
+
+main#metodo-pago > section {
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: column;
+  padding: 4rem;
+  justify-content: space-between;
+  row-gap: 4rem;
+}
+
+main#metodo-pago > section > h2 {
+  font-size: 3.5rem;
+  font-weight: 550;
+  margin-bottom: -2rem;
+  margin-top: 4rem;
+}
+
+main#metodo-pago > section > article.pago {
+  flex: 100%;
+  border: 1px solid black;
+  padding: 2rem;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+main#metodo-pago > section > article.pago > span.input {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid black;
+  border-radius: 3rem;
   cursor: pointer;
 }
 
-main.fueraSesion button:nth-child(2) {
-  background-color: var(--gris-oscuro);
+main#metodo-pago > section > article.pago > strong {
+  font-size: 3rem;
+  font-weight: 550;
 }
 
-main.fueraSesion button:nth-child(3) {
-  background-color: var(--rojo-claro);
+/* Main - Pago Completado  --------------------------------- */
+main#pago-completo {
+  background-color: white;
+  text-align: center;
+  min-height: 96vh;
+  padding: 6rem
+}
+
+main#pago-completo > div {
+  display: flex;
+  flex-flow: column;
+  font-size: 2rem;
+  row-gap: 5rem;
+  align-items: center;
+  padding-top: 10rem
+}
+
+main#pago-completo > div > h1 {
+  color: var(--azul-oscuro);
+}
+
+main#pago-completo > div > p,
+main#pago-completo > div > strong {
+  font-size: 3rem;
+}
+
+main#pago-completo > div > strong {
+  color: var(--azul-oscuro);
+}
+
+/* Main - Add Work  --------------------------------- */
+main#add-work > form > p > input,
+main#add-work > form > p > textarea {
+  width: 100%;
+  height: 6rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+  font-size: 2.5rem;
+  padding: 2rem 2rem;
+} 
+
+main#add-work > form > p:nth-child(2),
+main#add-work > form > p:nth-child(3){
+  flex: 48% 0;
+}
+
+main#add-work > form > p:nth-child(2) > select,
+main#add-work > form > p:nth-child(3) > select{
+  width: 100%;
+  height: 6rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+  font-size: 2.5rem;
+  color: var(--gris-oscuro);
+  padding: 0 2rem
+}
+
+main#add-work > form > p > textarea {
+  height: 15rem;
+}
+
+main#add-work > form > p > label {
+  font-size: 3.5rem;
+} 
+
+main#add-work > form > p:nth-child(1),
+main#add-work > form > p:nth-child(4),
+main#add-work > form > p:nth-child(5),
+main#add-work > form > p:nth-child(6) {
+  flex: 100% 0;
+} 
+
+main#add-work > form > p:nth-child(6) > input {
+  display: none;
+}
+
+main#add-work > form > p:nth-child(6) > label {
+  border: 2px solid black;
+  font-size: 2.5rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background-color: var(--gris-fondo);
+}
+
+main#add-work > form > div {
+  flex: 100% 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Main - Mis Trabajos  --------------------------------- */
+
+article.trabajoUser {
+  flex: 40%;
+  width: 20rem;
+  border: 1px solid var(--gris-oscuro);
+  height: 30rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  position: relative;
+}
+
+article.trabajoUser > span {
+  position: absolute;
+  left: 25%;
+  top: 45%;
+  font-size: 4.5rem;
+  font-weight: 600;
+  color: white;
+  -webkit-text-stroke: 2px black;
+}
+
+main#mis-trabajos > section#trabajosUser {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0 5rem;
+  row-gap: 4rem;
+  column-gap: 4rem;
+  margin-top: 10rem;
+}
+
+/* Main - Personalizacion enviada  --------------------------------- */
+main#perso-env {
+  
 }
 
 
@@ -1395,11 +1903,12 @@ footer > label[for="newsletter"] {
 }
 
 footer > input#newsletter {
-  padding: 1.5rem 2rem;
+  padding: 3.3rem 2rem;
   padding-right: 8rem;
   width: 100%;
   flex:60%;
   font-size: 2.5rem;
+  border-radius: 0;
 }
 
 button.suscb {

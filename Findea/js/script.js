@@ -24,22 +24,66 @@ changeImageOnHover("instagram", baseUrl, "instagram");
 changeImageOnHover("email", baseUrl, "mail");
 
 $(function () {
-  $("img#verClave").on("click", function() {
+  $(document).on("scroll", function () {
+    if ($(this).scrollTop() === 0)
+      $("#subir").finish().fadeOut("fast");
+    else
+      $("#subir").fadeIn("fast");
+    });
+
+  $("#subir").on("click", function() {
+    $("html, body").finish().animate({ scrollTop: 0 }, "smooth");
+  })
+
+  $("article.cuadrado, div#listaNueva")
+    .on("mouseenter", function () {
+      if (!$(this).hasClass("select"))
+      $(this).addClass("sombra");
+    })
+    .on("mouseleave", function () {
+      $(this).removeClass("sombra");
+    });
+
+
+  $("img#verClave").on("click", function () {
     const inputClave = $("#clave");
 
-    if (inputClave.attr("type") === "password") {
+    if (inputClave.attr("type") === "password" ) {
       inputClave.attr("type", "text");
-      $(this).attr("src", "https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/no-ver-contra.svg")
+      $(this).attr(
+        "src",
+        "https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/no-ver-contra.svg"
+      );
     } else {
       inputClave.attr("type", "password");
-      $(this).attr("src", "https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/ver-contra.svg")
+      $(this).attr(
+        "src",
+        "https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/ver-contra.svg"
+      );
+    }
+  });
 
+  $("img#verClave2").on("click", function () {
+    const inputClave = $("#clave2");
+
+    if (inputClave.attr("type") === "password" ) {
+      inputClave.attr("type", "text");
+      $(this).attr(
+        "src",
+        "https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/no-ver-contra.svg"
+      );
+    } else {
+      inputClave.attr("type", "password");
+      $(this).attr(
+        "src",
+        "https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/ver-contra.svg"
+      );
     }
   });
 
   $("div#creandoLista").hide();
 
-  $("#add-wish-sec > article").on("click", function () {
+  $("#add-wish-sec > article, span.input").on("click", function () {
     if ($(this).hasClass("unselect")) {
       $(this).removeClass("unselect").addClass("select");
     } else {
@@ -75,7 +119,6 @@ $(function () {
       $(this).removeClass("bac-azul").addClass("bac-azul-osc");
       $(this).html("Ver Carrito");
       $(this).attr("onclick", "irHasta('user-cart.html')");
-
     } else {
       $(this).removeClass("bac-azul-osc").addClass("bac-azul");
       $(this).html("Añadir al carrito");
@@ -84,14 +127,16 @@ $(function () {
 });
 
 function addWish() {
-  $(this).children("img").removeClass("no-clicked").addClass("clicked");
-  $(this)
-    .children("img")
-    .attr(
-      "src",
-      "https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/no-añadido.svg"
-    );
-  $(this).attr("onclick", "");
+  const cora = localStorage.getItem("corazon");
+  $("#" + cora)
+    .removeClass("no-clicked")
+    .addClass("clicked");
+  $("#" + cora).attr(
+    "src",
+    "https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/no-añadido.svg"
+  );
+  $("#" + cora).attr("onclick", "");
+  atras();
 }
 
 $(function () {
@@ -223,6 +268,10 @@ $("#hamburger").on("change", function () {
   }
 });
 
+function atras() {
+  window.history.back();
+}
+
 $("#atras").on("click", function () {
   window.history.back();
 });
@@ -244,6 +293,14 @@ $(".bac-azul")
     $(this).css("background-color", "#2B538F");
   });
 
+$(".bac-gris-osc")
+  .on("mouseleave", function () {
+      $(this).css("background-color", "#8C8C8C");
+  })
+  .on("mouseenter", function () {
+    $(this).css("background-color", "#afafaf");
+  });
+
 $("#flec-select").on("click", function () {
   var currentTransform = $("#flec-select > img").css("transform");
 
@@ -258,13 +315,16 @@ $("#flec-select").on("click", function () {
 });
 
 function irHasta(nombre, imagen) {
-  localStorage.clear();
   const urlImagen =
     "https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/" + imagen;
   localStorage.setItem("imagen", urlImagen);
-  console.log("Hola" + urlImagen);
+  console.log(urlImagen)
   window.location.href =
     "https://findea-web.s3.us-east-1.amazonaws.com/src/" + nombre;
+}
+
+function guardar(nombre, dato) {
+  localStorage.setItem(nombre, dato);
 }
 
 const imagen = localStorage.getItem("imagen");
@@ -283,5 +343,13 @@ function comprobar(id) {
     $("#error-" + id).hide();
     $("#creandoLista").finish().slideToggle("fast");
     $("#creandoLista").parent().removeClass("select").addClass("unselect");
+  }
+}
+
+function comprobarPago(nombre) {
+  const paymentSelect = document.querySelectorAll("span.select");
+
+  if (paymentSelect.length > 0) {
+    irHasta(nombre);
   }
 }

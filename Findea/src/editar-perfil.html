@@ -8,7 +8,7 @@
     <meta content="findea, arte, pintura, escultura, diseño" name="keywords" />
     <meta name="robots" content="index, follow" />
     <meta name="lang" content="es-ES" />
-    <!-- <link rel="stylesheet" href="css/estilos.css" /> -->
+    <!-- <link rel="stylesheet" href="../css/estilos.css" /> -->
     <link rel="stylesheet" href="https://findea-web.s3.us-east-1.amazonaws.com/estilos.css"/>
 
     <link
@@ -18,189 +18,193 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <style>
-        /* Tipo de letra Gantari */
-        @import url("https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&display=swap");
+      /* Tipo de letra Gantari */
+      @import url("https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&display=swap");
     </style>
   </head>
 
   <body>
-      <header>
-        <nav id="menu">
-          <input type="checkbox" id="hamburger" />
-          <label for="hamburger" class="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
-          <nav class="main-menu">
-            <span id="buscador">
-              <img
-                src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/buscador.svg"
-                alt="Icono de lupa"
-              />
-              <input type="text" name="buscador" placeholder="Buscar" />
-            </span>
+    <header>
+      <nav id="menu">
+        <input type="checkbox" id="hamburger" />
+        <label for="hamburger" class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav class="main-menu">
+          <span id="buscador">
+            <img
+              src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/buscador.svg"
+              alt="Icono de lupa"
+            />
+            <input type="text" name="buscador" placeholder="Buscar" />
+          </span>
 
-            <a href="https://findea-web.s3.us-east-1.amazonaws.com/src/sec-pinturas.html" class="item-menu">Pinturas</a>
-            <a href="https://findea-web.s3.us-east-1.amazonaws.com/src/sec-esculturas.html" class="item-menu">Esculturas</a>
-            <a href="https://findea-web.s3.us-east-1.amazonaws.com/src/sec-designs.html" class="item-menu">Otros diseños</a>
-            <a href="https://findea-web.s3.us-east-1.amazonaws.com/src/sec-personalizaciones.html" class="item-menu">Personalizaciones</a>
-            
-            <nav id="redes">
-              <a href="#">
-                <img
-                  id="pinterest"
-                  src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/pinterest-n.svg"
-                  alt="Icono de Pinterest"
-                  title="Ir a pinterest"
-                />
-              </a>
-              <a href="#">
-                <img
-                  id="facebook"
-                  src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/facebook-n.svg"
-                  alt="Icono de Facebook"
-                  title="Ir a Facebook"
-                />
-              </a>
-              <a href="#">
-                <img
-                  id="instagram"
-                  src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/instagram-n.svg"
-                  alt="Icono de Instagram"
-                  title="Ir a Instagram"
-                />
-              </a>
-              <a href="#">
-                <img
-                  id="email"
-                  src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/mail-n.svg"
-                  alt="Icono de mail"
-                  title="Contactar vía email"
-                />
-              </a>
-            </nav>
+          <a
+            href="https://findea-web.s3.us-east-1.amazonaws.com/src/sec-pinturas.html"
+            class="item-menu"
+            >Pinturas</a
+          >
+          <a
+            href="https://findea-web.s3.us-east-1.amazonaws.com/src/sec-esculturas.html"
+            class="item-menu"
+            >Esculturas</a
+          >
+          <a
+            href="https://findea-web.s3.us-east-1.amazonaws.com/src/sec-designs.html"
+            class="item-menu"
+            >Otros diseños</a
+          >
+          <a
+            href="https://findea-web.s3.us-east-1.amazonaws.com/src/sec-personalizaciones.html"
+            class="item-menu"
+            >Personalizaciones</a
+          >
+
+          <nav id="redes">
+            <a href="#">
+              <img
+                id="pinterest"
+                src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/pinterest-n.svg"
+                alt="Icono de Pinterest"
+                title="Ir a pinterest"
+              />
+            </a>
+            <a href="#">
+              <img
+                id="facebook"
+                src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/facebook-n.svg"
+                alt="Icono de Facebook"
+                title="Ir a Facebook"
+              />
+            </a>
+            <a href="#">
+              <img
+                id="instagram"
+                src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/instagram-n.svg"
+                alt="Icono de Instagram"
+                title="Ir a Instagram"
+              />
+            </a>
+            <a href="#">
+              <img
+                id="email"
+                src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/mail-n.svg"
+                alt="Icono de mail"
+                title="Contactar vía email"
+              />
+            </a>
           </nav>
         </nav>
+      </nav>
+      <a href="https://findea-web.s3.us-east-1.amazonaws.com/index.html">
+        <picture id="logo-findea">
+          <source
+            srcset="
+              https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/Logo-Findea.svg
+            "
+            type="image/svg+xml"
+          />
+          <img
+            src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/Logo-Findea.svg"
+            alt="Logo Findea"
+            title="Ir al inicio"
+          />
+        </picture>
+      </a>
+      <nav id="utilidades-usuario">
         <a
-          href="https://findea-web.s3.us-east-1.amazonaws.com/index.html"
+          href="https://findea-web.s3.us-east-1.amazonaws.com/src/wish-list.html"
         >
-          <picture id="logo-findea">
-            <source
-              srcset="
-                https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/Logo-Findea.svg
-              "
-              type="image/svg+xml"
-            />
-            <img
-              src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/Logo-Findea.svg"
-              alt="Logo Findea"
-              title="Ir al inicio"
-            />
-          </picture>
+          <img
+            src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/a%C3%B1adido.svg"
+            alt="Icono de lista de deseos"
+            title="Lista de deseos"
+          />
+          <span>Lista de Deseos</span>
         </a>
-        <nav id="utilidades-usuario">
-          <a href="https://findea-web.s3.us-east-1.amazonaws.com/src/wish-list.html">
-            <img
-              src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/a%C3%B1adido.svg"
-              alt="Icono de lista de deseos"
-              title="Lista de deseos"
-            />
-            <span>Lista de Deseos</span>
-          </a>
-          <a href="https://findea-web.s3.us-east-1.amazonaws.com/src/user-profile.html">
-            <img
-              src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/icono-usuario.svg"
-              alt="Icono de perfil de usuario"
-              title="Perfil de usuario"
-            />
-            <span>Perfil de usuario</span>
-          </a>
-          <a href="https://findea-web.s3.us-east-1.amazonaws.com/src/user-cart.html">
-            <img
-              src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/icono-carrito.svg"
-              alt="Icono de carrito de compras"
-              title="Carrito de compras"
-            />
-            <span>Carrito</span>
-          </a>
-        </nav>
-      </header>
+        <a
+          href="https://findea-web.s3.us-east-1.amazonaws.com/src/user-profile.html"
+        >
+          <img
+            src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/icono-usuario.svg"
+            alt="Icono de perfil de usuario"
+            title="Perfil de usuario"
+          />
+          <span>Perfil de usuario</span>
+        </a>
+        <a
+          href="https://findea-web.s3.us-east-1.amazonaws.com/src/user-cart.html"
+        >
+          <img
+            src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/icono-carrito.svg"
+            alt="Icono de carrito de compras"
+            title="Carrito de compras"
+          />
+          <span>Carrito</span>
+        </a>
+      </nav>
+    </header>
 
-      <main id="user-profile">
-            <h1>nombredeusuario</h1>
-            <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/usuario.webp"
-                alt="imagen de perfil de usuario">
-            <label for="editar-pic">Editar foto</label>
-            <input type="file" id="editar-pic">
+    <main id="user-edit">
+      <img
+        src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/usuario.webp"
+        alt="imagen de perfil de usuario"
+      />
+      <label for="editar-pic">Editar foto</label>
+      <input type="file" id="editar-pic" accept="image/*" />
 
-            <section id="propiedades-user">
-                <p id="descripcion-user">Descripción</p> 
-                <p id="ubicacion-user">Ubicación</p>
-                <p id="enlace-web-user">Enlace a tu web</p>
-                <p id="movil-user">Móvil</p>
+      <form id="form-edit-user" method="post" enctype="multipart/form-data">
+        <input
+          class="normal"
+          type="text"
+          id="nombre-user"
+          placeholder="Nombre de usuario"
+          value="@nombredeusuario"
+          required
+        />
+        <span class="error" id="error-nombre-user">Rellene este campo</span>
 
+        <input
+          class="normal"
+          type="text"
+          id="email-user"
+          placeholder="Correo electrónico"
+          value="ejemplouser@gmail.com"
+          required
+        />
+        <span  class="error" id="error-email-user">Rellene este campo</span>
 
-                <h2>Mis trabajos</h2>
-                <section id="slider" class="contenedor-slider-peq">
-                  <ul class="slider-wrapper">
-                    <li class="current-slide">
-                      <img alt="Imagen de obra" src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/tattoo-2894318_1920.webp" width="640" height="419">
-                      <div class="caption">
-                        <h2 class="slider-title">Colección 1</h2>
-                      </div>
-                    </li>
-          
-                    <li>
-                      <img alt="Imagen de obra" src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/angel-3740393_1920.webp">
-                      <div class="caption">
-                        <h2 class="slider-title">Colección 2</h2>
-                      </div>
-                    </li>
-          
-                    <li>
-                      <img alt="Imagen de obra" src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/margaritas.webp">
-                      <div class="caption">
-                        <h2 class="slider-title">Colección 3</h2>
-                      </div>
-                    </li>
-                  </ul>
-          
-                  <div class="btn-left-peq">
-                    <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/arrow.svg"
-                      alt="Icono de flecha izquierda" title="Anterior Slider" />
-                  </div>
-                  <div class="btn-right-peq">
-                    <img src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/arrow.svg" alt="Icono de flecha derecha"
-                      title="Siguiente Slider" />
-                  </div>
-          
-                  <!-- Controles de Navegación -->
-                  <ul id="control-buttons" class="control-buttons">
-                    <li class="active"></li>
-                    <li></li>
-                    <li></li>
-                  </ul>
-          
-                  <!-- Contenedor de la imagen previa al hover -->
-                  <div id="preview-img" class="preview-img">
-                    <img src="#" alt="Preview image" />
-                  </div>
-                </section>
-                <nav id="botones">
-                    <a class="enlace" href="mis-trabajos.html">Ver Todo / Editar</a>
-                    <a class="btn-peq bac-rojo" href="cerrar-sesion.html">Cerrar Sesión</a>
-                    <a class="btn-peq bac-azul" href="editar-perfil.html">Editar</a>
-                    <a class="eliminar-cuenta-btn" href="eliminar-cuenta.html">Eliminar Cuenta</a>
-                </nav>
-            </section>
-      </main>
+        <input
+          class="normal"
+          type="password"
+          id="clave-user"
+          placeholder="Contraseña"
+          value="Contraseña"
+          required
+        />
+        <span class="error" id="error-clave-user">Rellene este campo</span>
 
+        <textarea id="descripcion-user" placeholder="Descripción..."></textarea>
 
-      <!-- SCRIPT -->
-      <!-- <script src="js/script.js"></script> -->
-      <script src="https://findea-web.s3.us-east-1.amazonaws.com/script.js"></script>
+        <input class="normal"  type="text" id="ubicacion-user" placeholder="Ubicación" />
 
-</body>
+        <input class="normal"  type="text" id="enlace-web-user" placeholder="Enlace a tu web" />
 
+        <input class="normal"  type="text" id="movil-user" placeholder="Móvil" />
+
+        <a href="https://findea-web.s3.us-east-1.amazonaws.com/src/add-trabajo.html">Añadir Trabajo</a>
+
+        <div id="btnes-edit">
+          <a href="https://findea-web.s3.us-east-1.amazonaws.com/src/user-profile.html" class="btn-peq bac-gris-osc">Volver atrás</a>
+          <a href="https://findea-web.s3.us-east-1.amazonaws.com/src/user-profile.html" class="btn-peq bac-azul">Editar</a>
+        </div>
+      </form>
+    </main>
+
+    <!-- SCRIPT -->
+    <!-- <script src="../js/script.js"></script> -->
+    <script src="https://findea-web.s3.us-east-1.amazonaws.com/script.js"></script>
+  </body>
 </html>

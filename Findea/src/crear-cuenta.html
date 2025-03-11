@@ -8,8 +8,8 @@
     <meta content="findea, arte, pintura, escultura, diseño" name="keywords" />
     <meta name="robots" content="index, follow" />
     <meta name="lang" content="es-ES" />
-    <link rel="stylesheet" href="../css/estilos.css" />
-    <!-- <link rel="stylesheet" href="https://findea-web.s3.us-east-1.amazonaws.com/estilos.css"/> -->
+    <!-- <link rel="stylesheet" href="../css/estilos.css" /> -->
+    <link rel="stylesheet" href="https://findea-web.s3.us-east-1.amazonaws.com/estilos.css"/>
 
     <link
       rel="shortcut icon"
@@ -147,24 +147,26 @@
       </nav>
     </header>
 
-    <main class="login">
+    <main class="login crear">
       <h1>Crear Cuenta</h1>
-      <input type="text" placeholder="Nombre de usuario" name="nombre" id="nombre">
+      <form method="get" action="https://findea-web.s3.us-east-1.amazonaws.com/index.html">
+      <input type="text" placeholder="Nombre de usuario" name="nombre" id="nombre" required>
       <span class="error" id="error-nombre">Nombre de usuario incorrecto</span>
 
-      <input type="text" placeholder="Correo electrónico" name="email" id="email">
+      <input type="text" placeholder="Correo electrónico" name="email" id="email" required>
       <span class="error" id="error-email">Correo electrónico incorrecto</span>
 
-      <img id="verClave" src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/ver-contra.svg" alt="icono de ojo">
-      <input type="password" placeholder="Contraseña" name="clave" id="clave">
+      <img id="verClave" src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/ver-contra.svg" alt="icono de ojo" >
+      <input type="password" placeholder="Contraseña" name="clave" id="clave" required>
       <span class="error" id="error-clave">Contraseña incorrecta</span>
 
       <img id="verClave2" src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/ver-contra.svg" alt="icono de ojo">
-      <input type="password" placeholder="Confirmar contraseña" name="clave2" id="clave2">
+      <input type="password" placeholder="Confirmar contraseña" name="clave2" id="clave2" required>
       <span class="error" id="error-clave2">Contraseña incorrecta</span>
 
-      <button onclick="comprobar('nombre'), comprobar('clave')" class="btn-grande bac-azul">Iniciar Sesión</button>
+      <button type="submit" class="btn-grande bac-azul">Iniciar Sesión</button>
       <p>¿Ya tienes cuenta? <a href="https://findea-web.s3.us-east-1.amazonaws.com/src/login.html">Entrar</a></p>
+    </form>
     </main>
 
     <!-- SCRIPT -->

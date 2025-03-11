@@ -9,12 +9,15 @@
     <meta name="robots" content="index, follow" />
     <meta name="lang" content="es-ES" />
     <!-- <link rel="stylesheet" href="../css/estilos.css" /> -->
-    <link rel="stylesheet" href="https://findea-web.s3.us-east-1.amazonaws.com/estilos.css"/>
-
+    <link
+      rel="stylesheet"
+      href="https://findea-web.s3.us-east-1.amazonaws.com/estilos.css"
+    />
     <link
       rel="shortcut icon"
       href="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/Logo-Findea.svg"
     />
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <style>
@@ -22,7 +25,6 @@
       @import url("https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&display=swap");
     </style>
   </head>
-
   <body>
     <div id="contenedor">
       <header>
@@ -148,84 +150,29 @@
         </nav>
       </header>
 
-      <main id="add-wish">
-        <div class="titulo">
-          <h1>Añadir a lista de deseos</h1>
-        </div>
+      <main class="fondo-gris" id="perso-env">
+        <section id="sect-pers-env">
+          <p>Tu idea parece interesante...</p>
+          <h1>¡Gracias por tu confianza!</h1>
+          <p>
+            Tu solicitud está siendo registrada, comprobaremos los datos y lo
+            intentaremos asociar con algún artista que pueda ayudarte.
+          </p>
+          <strong>
+            Te enviaremos todo a tu correo electrónico
+          </strong>
+          <p>
+            Si encuentras algún artista que sea de tu estilo.... 
+          </p>
+          <strong>¡No dudes en contactar con él!</strong>
+          <p>
+            Solo tú sabes exactamente lo que buscas
+          </p>
 
-        <img
-          id="atras"
-          src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/flecha-atras-n.svg"
-          alt="Flecha atrás"
-        />
+          <button class="btn-grande">¡Solicitud Enviada!</button>
 
-        <section id="add-wish-sec">
-          <article id="list1" class="unselect cuadrado">
-            <img
-              src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/margaritas.webp"
-              alt="Imagen de lista"
-            />
-            <span>Nombre Lista 1</span>
-            <img
-              src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/normal.svg"
-              alt="icono de basura para eliminar lista"
-            />
-          </article>
+          <a href="https://findea-web.s3.us-east-1.amazonaws.com/index.html">Volver al Inicio</a>
 
-          <article id="list2" class="unselect cuadrado">
-            <img
-              src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/moda1.webp"
-              alt="Imagen de lista"
-            />
-            <span>Nombre Lista 2</span>
-            <img
-              src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/normal.svg"
-              alt="icono de basura para eliminar lista"
-            />
-          </article>
-
-          <article id="list3" class="unselect cuadrado">
-            <img
-              src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/motillo.webp"
-              alt="Imagen de lista"
-            />
-            <span>Nombre Lista 3</span>
-            <img
-              src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/normal.svg"
-              alt="icono de basura para eliminar lista"
-            />
-          </article>
-
-          <article id="list4" class="unselect cuadrado">
-            <img
-              src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Imagenes-Findea/pintura.webp"
-              alt="Imagen de lista"
-            />
-            <span>Nombre Lista 4</span>
-            <img
-              src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/normal.svg"
-              alt="icono de basura para eliminar lista"
-            />
-          </article>
-
-          <div id="listaNueva" class="unselect">
-            <p id="crearLista">+ &nbsp;&nbsp;&nbsp; Crear Lista</p>
-            <div id="creandoLista">
-              <label for="nombreLista">Nombre de la Lista</label>
-              <input
-                type="text"
-                id="nombreLista"
-                name="nombreLista"
-                placeholder="Introduce el nombre de la lista..."
-              />
-              <span class="error" id="error-nombreLista"
-                >Este campo es obligatorio</span
-              >
-              <button id="addwishlist" class="bac-azul cuadro" onclick="comprobar('nombreLista')">Guardar lista</button>
-            </div>
-          </div>
-
-          <button class="bac-azul cuadro" onclick="addWish()">Añadir</button>
         </section>
       </main>
 
@@ -272,11 +219,15 @@
           id="newsletter"
           placeholder="Correo Electrónico"
         />
-        <button id="subscribe-btn" class="bac-azul suscb" onclick="comprobar('newsletter')">
+        <button
+          id="subscribe-btn"
+          class="bac-azul suscb"
+          onclick="comprobar('newsletter')"
+        >
           <img
             src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/newsletter-icon.svg"
             alt="icono de mail"
-            />
+          />
         </button>
         <p>Al suscribirte estás aceptando nuestra política de datos</p>
         <span id="error-newsletter" class="error"
@@ -295,6 +246,7 @@
         </div>
       </footer>
     </div>
+
     <!-- SCRIPT -->
     <!-- <script src="../js/script.js"></script> -->
     <script src="https://findea-web.s3.us-east-1.amazonaws.com/script.js"></script>

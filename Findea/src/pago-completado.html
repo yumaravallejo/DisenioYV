@@ -9,12 +9,11 @@
     <meta name="robots" content="index, follow" />
     <meta name="lang" content="es-ES" />
     <!-- <link rel="stylesheet" href="../css/estilos.css" /> -->
-    <link rel="stylesheet" href="https://findea-web.s3.us-east-1.amazonaws.com/estilos.css"/>
-
     <link
-      rel="shortcut icon"
-      href="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/Logo-Findea.svg"
+      rel="stylesheet"
+      href="https://findea-web.s3.us-east-1.amazonaws.com/estilos.css"
     />
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <style>
@@ -22,7 +21,6 @@
       @import url("https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&display=swap");
     </style>
   </head>
-
   <body>
     <header>
       <nav id="menu">
@@ -147,18 +145,34 @@
       </nav>
     </header>
 
-    <main class="fueraSesion">
-      <section>
-        <strong>¿Seguro que quieres cerrar tu sesión?</strong>
-        <button id="atras" class="btn-peq bac-gris-osc">Volver atrás</button>
-        <button id="eliminar" class="bac-rojo btn-peq " onclick="irHasta('login.html')">
-          Cerrar Sesión
-        </button>
-      </section>
+    <main id="pago-completo">
+        <div>
+      <h1>¡Pago Completado!</h1>
+
+        <p>
+            Muchas gracias por tu compra
+        </p>
+
+        <p>
+            Este es tu número de pedido:
+        </p>
+
+        <strong>
+            1232312321313
+        </strong>
+
+        <p>
+            Recibirás un email cuando comience el envío
+        </p>
+
+      <button class="btn-peq bac-gris-osc" onclick="irHasta('index.html')">
+        Volver al Inicio
+      </button>
+    </div>
     </main>
 
     <!-- SCRIPT -->
-    <!-- <script src="js/script.js"></script> -->
+    <!-- <script src="../js/script.js"></script> -->
     <script src="https://findea-web.s3.us-east-1.amazonaws.com/script.js"></script>
   </body>
 </html>

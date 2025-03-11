@@ -149,16 +149,20 @@
 
     <main class="login">
       <h1>Iniciar Sesión</h1>
-      <input type="text" placeholder="Nombre de usuario" name="nombre" id="nombre">
+      <form method="get" action="https://findea-web.s3.us-east-1.amazonaws.com/index.html">
+
+      <input type="text" placeholder="Nombre de usuario" name="nombre" id="nombre" required>
       <span class="error" id="error-nombre">Nombre de usuario incorrecto</span>
 
       <img id="verClave" src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/ver-contra.svg" alt="icono de ojo">
-      <input type="password" placeholder="Contraseña" name="clave" id="clave">
+      <input type="password" placeholder="Contraseña" name="clave" id="clave" required>
       <span class="error" id="error-clave">Contraseña incorrecta</span>
 
       <button onclick="comprobar('nombre'), comprobar('clave')" class="btn-grande bac-azul">Iniciar Sesión</button>
       <p>¿Aún no tienes cuenta? <a href="https://findea-web.s3.us-east-1.amazonaws.com/src/crear-cuenta.html">Crear</a></p>
       <u href="#">¿Has olvidado tu contraseña?</u>
+    </form>
+
     </main>
 
     <!-- SCRIPT -->

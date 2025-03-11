@@ -11,10 +11,6 @@
     <!-- <link rel="stylesheet" href="../css/estilos.css" /> -->
     <link rel="stylesheet" href="https://findea-web.s3.us-east-1.amazonaws.com/estilos.css"/>
 
-    <link
-      rel="shortcut icon"
-      href="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/Logo-Findea.svg"
-    />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <style>
@@ -22,7 +18,6 @@
       @import url("https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&display=swap");
     </style>
   </head>
-
   <body>
     <header>
       <nav id="menu">
@@ -147,18 +142,54 @@
       </nav>
     </header>
 
-    <main class="fueraSesion">
-      <section>
-        <strong>¿Seguro que quieres cerrar tu sesión?</strong>
-        <button id="atras" class="btn-peq bac-gris-osc">Volver atrás</button>
-        <button id="eliminar" class="bac-rojo btn-peq " onclick="irHasta('login.html')">
-          Cerrar Sesión
-        </button>
-      </section>
+    <main id="add-direct">
+        <div class="titulo">
+            <h1>Añadir dirección</h1>
+        </div>
+
+        <form method="get" action="https://findea-web.s3.us-east-1.amazonaws.com/src/direccion-envio.html">
+            <p>
+                <label for="nombre">Nombre</label><br>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre *" required>
+            </p>
+            <p>
+                <label for="apellidos">Apellidos</label><br>
+                <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos *" required>
+            </p>
+            <p>
+                <label for="pais">País</label><br>
+                <select id="pais" name="pais" required>
+                    <option value="0" selected disabled>País *</option> 
+                    <option value="1">España</option> 
+                    <option value="2">Inglaterra</option> 
+                    <option value="3">Irlanda</option> 
+
+                </select>
+                <input type="text" name="movil" id="movil" placeholder="Móvil *" required>
+            </p>
+
+            <p>
+                <label for="direccion">Dirección de envío</label><br>
+                <input type="text" name="direccion" id="direccion" placeholder="Dirección y número (Calle Ejemplo, 8)*" required>
+
+                <input type="text" name="adicional" id="adicional" placeholder="Datos adicionales (Piso 2, Puerta 4 ...)">
+
+                <input type="text" name="adicionales" id="adicionales" placeholder="Observaciones necesarias para el envío...">
+
+                <input type="text" name="observaciones" id="observaciones" placeholder="Código Postal *" required>
+
+                <input type="text" name="poblacion" id="poblacion" placeholder="Población *" required>
+            </p>
+
+            <div>
+                <button class="btn-peq bac-gris-osc" onclick="irHasta('direccion-envio.html')">Volver atrás</button>
+                <button class="btn-peq bac-azul">Añadir</button>
+            </div>
+        </form>
     </main>
 
     <!-- SCRIPT -->
-    <!-- <script src="js/script.js"></script> -->
+    <!-- <script src="../js/script.js"></script> -->
     <script src="https://findea-web.s3.us-east-1.amazonaws.com/script.js"></script>
   </body>
 </html>

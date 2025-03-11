@@ -11,10 +11,6 @@
     <!-- <link rel="stylesheet" href="../css/estilos.css" /> -->
     <link rel="stylesheet" href="https://findea-web.s3.us-east-1.amazonaws.com/estilos.css"/>
 
-    <link
-      rel="shortcut icon"
-      href="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/Logo-Findea.svg"
-    />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <style>
@@ -22,7 +18,6 @@
       @import url("https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&display=swap");
     </style>
   </head>
-
   <body>
     <header>
       <nav id="menu">
@@ -147,18 +142,43 @@
       </nav>
     </header>
 
-    <main class="fueraSesion">
-      <section>
-        <strong>¿Seguro que quieres cerrar tu sesión?</strong>
-        <button id="atras" class="btn-peq bac-gris-osc">Volver atrás</button>
-        <button id="eliminar" class="bac-rojo btn-peq " onclick="irHasta('login.html')">
-          Cerrar Sesión
-        </button>
-      </section>
+    <main id="envio">
+        <div class="titulo">
+            <h1>Dirección de Envío</h1>
+        </div>
+
+        <section>
+            <h2>Direcciones</h2>
+            <article class="direccion">
+                <span class="input unselect"></span>
+                <div class="cont-direc">
+                    <strong>Nombre Persona</strong>
+                    <span>C/ Ejemplo, 6. Palencia 28860</span>
+                    <button class="btn-enano">Borrar</button>
+                    <button class="btn-enano">Editar</button>
+                </div>
+            </article>
+            <article class="direccion">
+                <span class="input unselect"></span>
+                <div class="cont-direc">
+                    <strong>Nombre Persona</strong>
+                    <span>C/ Ejemplo4, 2 Piso 3. Sevilla 29802</span>
+                    <button class="btn-enano">Borrar</button>
+                    <button class="btn-enano">Editar</button>
+                </div>
+            </article>
+
+            <a href="https://findea-web.s3.us-east-1.amazonaws.com/src/add-direct.html">+ Añadir otra dirección</a>
+
+            <div>
+                <button class="btn-peq bac-gris-osc">Volver atrás</button>
+                <button class="btn-peq bac-azul" onclick="comprobarPago('metodos-pago.html')">Pagar</button>
+            </div>
+        </section>
     </main>
 
     <!-- SCRIPT -->
-    <!-- <script src="js/script.js"></script> -->
+    <!-- <script src="../js/script.js"></script> -->
     <script src="https://findea-web.s3.us-east-1.amazonaws.com/script.js"></script>
   </body>
 </html>
