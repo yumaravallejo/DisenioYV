@@ -24,6 +24,18 @@ changeImageOnHover("instagram", baseUrl, "instagram");
 changeImageOnHover("email", baseUrl, "mail");
 
 $(function () {
+  $("article.item-inicial")
+    .on("mouseenter", function () {
+      if ($(this).children().hasClass("pc")) {
+        $(this).children().finish().fadeIn('fast')
+      }
+    })
+    .on("mouseleave", function () {
+      if ($(this).children().hasClass("pc")) {
+        $(this).children().finish().fadeOut('fast')
+      }
+    });
+
   $(document).on("scroll", function () {
     if ($(this).scrollTop() === 0)
       $("#subir").finish().fadeOut("fast");

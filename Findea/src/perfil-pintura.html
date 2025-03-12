@@ -8,6 +8,8 @@
     <meta content="findea, arte, pintura, escultura, diseño" name="keywords" />
     <meta name="robots" content="index, follow" />
     <meta name="lang" content="es-ES" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- <link rel="stylesheet" href="../css/estilos.css" /> -->
     <link rel="stylesheet" href="https://findea-web.s3.us-east-1.amazonaws.com/estilos.css"/>
 
@@ -26,6 +28,13 @@
   <body>
     <div id="contenedor">
       <header>
+        <span id="buscador">
+          <img
+            src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/buscador.svg"
+            alt="Icono de lupa"
+          />
+          <input type="text" name="buscador" placeholder="Buscar" />
+        </span>
         <nav id="menu">
           <input type="checkbox" id="hamburger" />
           <label for="hamburger" class="menu-toggle">
@@ -33,6 +42,7 @@
             <span></span>
             <span></span>
           </label>
+          
           <nav class="main-menu">
             <span id="buscador">
               <img
@@ -41,8 +51,8 @@
               />
               <input type="text" name="buscador" placeholder="Buscar" />
             </span>
-
-            <a href="https://findea-web.s3.us-east-1.amazonaws.com/src/sec-pinturas.html" class="item-menu">Pinturas</a>
+  
+            <a href="https://findea-web.s3.us-east-1.amazonaws.com/src/sec-pinturas.html" class="item-menu marked">Pinturas</a>
             <a href="https://findea-web.s3.us-east-1.amazonaws.com/src/sec-esculturas.html" class="item-menu">Esculturas</a>
             <a href="https://findea-web.s3.us-east-1.amazonaws.com/src/sec-designs.html" class="item-menu">Otros diseños</a>
             <a href="https://findea-web.s3.us-east-1.amazonaws.com/src/sec-personalizaciones.html" class="item-menu">Personalizaciones</a>
@@ -86,19 +96,11 @@
         <a
           href="https://findea-web.s3.us-east-1.amazonaws.com/index.html"
         >
-          <picture id="logo-findea">
-            <source
-              srcset="
-                https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/Logo-Findea.svg
-              "
-              type="image/svg+xml"
-            />
             <img
               src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/Logo-Findea.svg"
               alt="Logo Findea"
               title="Ir al inicio"
             />
-          </picture>
         </a>
         <nav id="utilidades-usuario">
           <a href="https://findea-web.s3.us-east-1.amazonaws.com/src/wish-list.html">
@@ -139,7 +141,7 @@
 
         <section>
             <img id="imagen-producto" src="#" alt="Imagen de producto">
-            <span id="precio">00.00€</span>
+            <span id="precio">00.00 €</span>
             <span id="heart" onclick="guardar('corazon', 'cora-add1'), irHasta('add-wish.html')"><img class="no-clicked" id="cora-add1" src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/añadido.svg" alt="Imagen de corazon"></span>
             <h2>Nombre de pintura</h2>
             <h3 onclick="irHasta('perfil_artista.html')">Nombre de artista</h3>

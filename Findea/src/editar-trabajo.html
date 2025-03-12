@@ -8,6 +8,8 @@
     <meta content="findea, arte, pintura, escultura, diseño" name="keywords" />
     <meta name="robots" content="index, follow" />
     <meta name="lang" content="es-ES" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- <link rel="stylesheet" href="../css/estilos.css" /> -->
     <link rel="stylesheet" href="https://findea-web.s3.us-east-1.amazonaws.com/estilos.css"/>
 
@@ -20,6 +22,13 @@
   </head>
   <body>
     <header>
+      <span id="buscador">
+        <img
+          src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/buscador.svg"
+          alt="Icono de lupa"
+        />
+        <input type="text" name="buscador" placeholder="Buscar" />
+      </span>
       <nav id="menu">
         <input type="checkbox" id="hamburger" />
         <label for="hamburger" class="menu-toggle">
@@ -27,6 +36,7 @@
           <span></span>
           <span></span>
         </label>
+        
         <nav class="main-menu">
           <span id="buscador">
             <img
@@ -36,27 +46,11 @@
             <input type="text" name="buscador" placeholder="Buscar" />
           </span>
 
-          <a
-            href="https://findea-web.s3.us-east-1.amazonaws.com/src/sec-pinturas.html"
-            class="item-menu"
-            >Pinturas</a
-          >
-          <a
-            href="https://findea-web.s3.us-east-1.amazonaws.com/src/sec-esculturas.html"
-            class="item-menu"
-            >Esculturas</a
-          >
-          <a
-            href="https://findea-web.s3.us-east-1.amazonaws.com/src/sec-designs.html"
-            class="item-menu"
-            >Otros diseños</a
-          >
-          <a
-            href="https://findea-web.s3.us-east-1.amazonaws.com/src/sec-personalizaciones.html"
-            class="item-menu"
-            >Personalizaciones</a
-          >
-
+          <a href="https://findea-web.s3.us-east-1.amazonaws.com/src/sec-pinturas.html" class="item-menu">Pinturas</a>
+          <a href="https://findea-web.s3.us-east-1.amazonaws.com/src/sec-esculturas.html" class="item-menu">Esculturas</a>
+          <a href="https://findea-web.s3.us-east-1.amazonaws.com/src/sec-designs.html" class="item-menu">Otros diseños</a>
+          <a href="https://findea-web.s3.us-east-1.amazonaws.com/src/sec-personalizaciones.html" class="item-menu">Personalizaciones</a>
+          
           <nav id="redes">
             <a href="#">
               <img
@@ -93,25 +87,17 @@
           </nav>
         </nav>
       </nav>
-      <a href="https://findea-web.s3.us-east-1.amazonaws.com/index.html">
-        <picture id="logo-findea">
-          <source
-            srcset="
-              https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/Logo-Findea.svg
-            "
-            type="image/svg+xml"
-          />
+      <a
+        href="https://findea-web.s3.us-east-1.amazonaws.com/index.html"
+      >
           <img
             src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/Logo-Findea.svg"
             alt="Logo Findea"
             title="Ir al inicio"
           />
-        </picture>
       </a>
       <nav id="utilidades-usuario">
-        <a
-          href="https://findea-web.s3.us-east-1.amazonaws.com/src/wish-list.html"
-        >
+        <a href="https://findea-web.s3.us-east-1.amazonaws.com/src/wish-list.html">
           <img
             src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/a%C3%B1adido.svg"
             alt="Icono de lista de deseos"
@@ -119,9 +105,7 @@
           />
           <span>Lista de Deseos</span>
         </a>
-        <a
-          href="https://findea-web.s3.us-east-1.amazonaws.com/src/user-profile.html"
-        >
+        <a href="https://findea-web.s3.us-east-1.amazonaws.com/src/user-profile.html">
           <img
             src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/icono-usuario.svg"
             alt="Icono de perfil de usuario"
@@ -129,9 +113,7 @@
           />
           <span>Perfil de usuario</span>
         </a>
-        <a
-          href="https://findea-web.s3.us-east-1.amazonaws.com/src/user-cart.html"
-        >
+        <a href="https://findea-web.s3.us-east-1.amazonaws.com/src/user-cart.html">
           <img
             src="https://fotos-yvv.s3.us-east-1.amazonaws.com/Iconos-Findea/icono-carrito.svg"
             alt="Icono de carrito de compras"
@@ -179,8 +161,7 @@
 
             <p>
                 <label for="descripcion">Dirección de envío</label><br>
-                <textarea name="descripcion" id="descripcion" placeholder="Descripción..." required>
-                  Lorem ipsum dolor sit amet consectetur. Eget urna sodales id venenatis urna elementum nunc ipsum sed. Rhoncus sed lorem amet adipiscing. Sit felis tristique ac viverra. Libero viverra auctor nisl tristique congue. Ac libero id et ac posuere est nunc. Morbi ullamcorper eu ut adipiscing.
+                <textarea name="descripcion" id="descripcion" placeholder="Descripción..." required>Lorem ipsum dolor sit amet consectetur. Eget urna sodales id venenatis urna elementum nunc ipsum sed. Rhoncus sed lorem amet adipiscing. Sit felis tristique ac viverra. Libero viverra auctor nisl tristique congue. Ac libero id et ac posuere est nunc. Morbi ullamcorper eu ut adipiscing.
                 </textarea>
             </p>
 
